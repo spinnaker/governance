@@ -17,7 +17,7 @@ Everyone is a welcome community member! Here are some things that we find extrao
 * Leave feedback on PRs - questions, code style, and bug spotting are all helpful
 * Help new developers get started
 * Reproduce bugs and add detail to issues
-* Join a SIG, discuss community issues, and/or lead a SIG
+* Join (or lead!) a SIG and discuss issues facing our community
 
 ### Reviewers
 
