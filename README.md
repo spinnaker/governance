@@ -6,7 +6,7 @@ This is the starting point for joining and contributing to the Spinnaker communi
 
 ### How the project works
 
-To learn more about the project structure and organization, please refer to the[Project's Governance](governance.md) information.
+To learn more about the project structure and organization, please refer to the [Project's Governance](governance.md) information.
 
 ### How to get involved
 
