@@ -115,6 +115,5 @@ The steering committee is initially seeded by Netflix and Google as the project 
 
 ## SIGS
 
-SIGs (special interest groups) are created as community interest and demand around particular topics become self evident, and continue on as their relevance and needs do. SIGs and their leads are ratified and greenlit by the [steering committee](#steering-committee).
+SIGs (special interest groups) are created as community interest and demand around particular topics become self evident, and continue on as their relevance and needs do. SIGs and their leads are ratified and green-lit by the steering committee via a [SIG proposal process](sig-lifecycle.md). 
 
-[See the SIG list here](/community/governance/sigs).
