@@ -35,8 +35,7 @@ Qualification guidelines
 
 [Current Reviewers](https://github.com/spinnaker/spinnaker/blob/master/reviewers.md)
 
-If you’d like to nominate yourself as a Reviewer, please reach out to the [TOC](#technical-oversight-committee), or 
-self-nominate using [this form](https://docs.google.com/forms/d/e/1FAIpQLScJtnQc4VJNSoZj9JivoMBNzbULDCzpg3IZgp5ScIeeGF1onQ/viewform?usp=sf_link)
+If you’d like to nominate yourself as a Reviewer, please create an [Issue in the community repository](https://github.com/spinnaker/community/issues). 
 
 ### Approvers
 
@@ -56,8 +55,7 @@ Qualification guidelines
 
 [Current Approvers](https://github.com/spinnaker/spinnaker/blob/master/approvers.md)
 
-If you’d like to nominate yourself as an Approver, please reach out to the [TOC](#technical-oversight-committee), or
-self-nominate using [this form](https://docs.google.com/forms/d/e/1FAIpQLSfmDfZWTSG2uQ66i9mSD7zuBO59Fg31sNkx47M3KpqlLK_wAg/viewform?usp=sf_link).
+If you’d like to nominate yourself as an Approver, please create an [Issue in the community repository](https://github.com/spinnaker/community/issues). 
 
 ### Technical Oversight Committee
 
