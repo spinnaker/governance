@@ -111,7 +111,7 @@ Current SC members:
 
 The steering committee is initially seeded by Netflix and Google as the project matures and its structure stabilizes. We will leave further details such as number of seats, qualifications, tenure, appointing measures, TBD for the time being.
 
-## SIGS
+## Special Interest Groups
 
-SIGs (special interest groups) are created as community interest and demand around particular topics become self evident, and continue on as their relevance and needs do. SIGs and their leads are ratified and green-lit by the steering committee via a [SIG proposal process](sig-lifecycle.md). 
+Special Interest Groups (SIGs) are created as community interest and demand around particular topics become self evident, and continue on as their relevance and needs do. SIGs and their leads are ratified and green-lit by the steering committee via a [SIG proposal process](sig-lifecycle.md). 
 
