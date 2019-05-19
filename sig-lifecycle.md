@@ -1,4 +1,4 @@
-# SIG Life-cycle
+# SIG Lifecycle
  
 SIGs exist so members of the community can discuss some of Spinnaker’s core feature areas, and guide design in those areas.
 
