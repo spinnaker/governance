@@ -93,7 +93,7 @@ The steering committee’s responsibility and function lies in the continual sha
 Duties:
 
 * Set governance structure of the project
-* Address questions or concerns from the community about project culture, structure, and clarifications of roles, responsibilities and duties.
+* Address questions or concerns from the community about project culture, structure, and clarifications of roles, responsibilities and duties
 * Ratify new SIGs
 
 Logistics
