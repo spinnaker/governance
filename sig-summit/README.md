@@ -6,6 +6,8 @@ This SIG is focused on planning and alignment for the annual Spinnaker Summit co
 
 * Regular SIG Meeting
   * Every other Tuesday, 1 PM EST / 10AM PST
+  
+  [Agenda](https://docs.google.com/document/d/1Z65IHImNlJbYq3XvVgnWtijhWj3iUlMGG5uQudjhTe4/edit)
 
 ## Leadership
 
