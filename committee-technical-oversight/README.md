@@ -12,7 +12,7 @@ _TODO description_
 * TOC / SIG Lead Sync
   * Every 4 weeks, Thursday at 4:40pm EST, 1:30pm PST
   * [Agenda](sig-lead-meeting-notes/AGENDA.md)
-  * [Meeting Notes](sig-lead-meeting-notes/2019/md)
+  * [Meeting Notes](sig-lead-meeting-notes/2019.md)
 
 ## Members
 
