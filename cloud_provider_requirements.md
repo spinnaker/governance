@@ -11,6 +11,7 @@ In order for an integration to remain in the project, the following conditions m
 * The maintainers handle routine maintenance tasks for the integration, such as:
   * Keeping it compatible with updates to the cloud provider itself
   * Making any cloud-provider specific changes in response to global architecture changes in Spinnaker
+* The maintainers agree to setup and maintain a Special Interest Group for the cloud provider integration
 
 In order for an integration to be accepted, the organization proposing the integration must agree to provide the
 support outlined above.  If at any point an integration is no longer being supported as outlined above, it may be
