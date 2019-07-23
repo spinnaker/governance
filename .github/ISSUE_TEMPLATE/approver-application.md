@@ -15,6 +15,7 @@ e.g. (at)github_user
 - [ ] Belongs to an organization with significant stake in project
 - [ ] Known active participant in the community
 - [ ] Has submitted at least 5 PRs of significant scope that are merged
+- [ ] Is already fulfilling the Reviewer role
 - [ ] Has reviewed 5 PRs of significant scope
 - [ ] Sponsored by 2 Approvers
 
