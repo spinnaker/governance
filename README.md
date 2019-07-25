@@ -3,6 +3,7 @@
 Welcome to the Spinnaker community!
 
 This is the starting point for joining and contributing to the Spinnaker community.
+A good place to start is by viewing the [Roadmap](roadmap.md).
 
 ### How the project works
 
