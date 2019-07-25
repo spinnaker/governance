@@ -5,6 +5,23 @@ The deliverables below are a combination of independent contributions from priva
 
 For Spinnaker Release deliverables, please see [Releases](https://github.com/spinnaker/spinnaker/projects?utf8=%E2%9C%93&query=is%3Aopen+Release) on GitHub.
 
+- [Active Investment](#active-investment)
+  - [Increase Adoption](#increase-adoption)
+  - [Spinnaker-as-a-Platform](#spinnaker-as-a-platform)
+  - [Multi-Location Active-Active](#multi-location-active-active)
+  - [Dynamic External Configuration](#dynamic-external-configuration)
+  - [Kubernetes](#kubernetes)
+  - [Spinnaker-as-Code](#spinnaker-as-code)
+  - [Security](#security)
+  - [UI/UX](#ui/ux)
+- [Future Investment](#future-investment)
+  - [Increasing Adoption](#increasing-adoption)
+- [Internal Investment](#internal-investment)
+  - [Groovy Deprecation](#groovy-deprecation)
+  - [Spectator to Micrometer Migration](#spectator-to-micrometer-migration)
+  - [SQL as a Common Datastore](#sql-as-a-common-datastore)
+
+
 ## Active Investment
 
 _Themes that are currently under active development or continued iteration._
@@ -32,7 +49,7 @@ _This process could be made easier by investing in more strongly typed APIs and 
   - V3 public API
   - V2 event stream
 
-### Multi-location active-active
+### Multi-Location Active-Active
 
 **Synoposis**: _Our intent is to run Spinnaker's various services out of multiple datacenters in an active-active fashion so as to provide resilience in the event of a major datacenter outage_.
 
@@ -113,7 +130,7 @@ _This process could be made easier by investing in more strongly typed APIs and 
 
 _Themes that have not started development but are slated to be started soon._
 
-### Increase Adoption
+### Increasing Adoption
 
 **Synoposis**: _Accelerate adoption by showcasing best-practice pipelines and community usage stats._
 
