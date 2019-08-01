@@ -11,6 +11,7 @@ For Spinnaker Release deliverables, please see [Releases](https://github.com/spi
   - [Multi-Location Active-Active](#multi-location-active-active)
   - [Dynamic External Configuration](#dynamic-external-configuration)
   - [Kubernetes](#kubernetes)
+  - [Amazon ECS](#amazon-ecs)
   - [Spinnaker-as-Code](#spinnaker-as-code)
   - [Security](#security)
   - [UI/UX](#ui/ux)
@@ -83,6 +84,19 @@ _This process could be made easier by investing in more strongly typed APIs and 
   - Performance enhancements
   - Improved isolation between accounts and startup time
   - Partially apply manifests
+
+### Amazon ECS
+
+**Synopsis**: _Continued investment in Amazon ECS provider._
+
+- **Lead**: AWS SIG
+- **Beneficiary**: Amazon ECS users
+- **Area of Investment**: Cloud Providers
+- **Deliverables**:
+  - Support for services with multiple load balancer target groups
+  - Performance enhancements for accounts with large number of resources
+  - Custom placement strategies configuration UI
+  - Daemon service deployments
 
 ### Spinnaker-as-Code
 
