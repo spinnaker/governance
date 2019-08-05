@@ -1,7 +1,5 @@
 # Committee: Technical Oversight
 
-_TODO description_
-
 ## Meetings
 
 
