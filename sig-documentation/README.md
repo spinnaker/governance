@@ -1,4 +1,4 @@
-# Proposal: Spinnaker Documentation Special Interest Group
+# Spinnaker Documentation Special Interest Group
 
 ## Roles & Responsibilities of the SIG Leads
 
