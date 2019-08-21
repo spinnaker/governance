@@ -10,7 +10,8 @@ Technical Writer at Armory
 **[Ben Klein](https://github.com/fifthposition)**  
 Technical Writer at Pivotal
 
-TBD
+**[David Dorbin](https://github.com/dorbin)**  
+Technical Writer at Google
 
 ### SIG Lead Responsibility
 
@@ -40,4 +41,5 @@ SIG leads and members will develop, maintain, and prioritize a backlog of docume
 * Establish a common framework for evaluating and improving documentation.
 * Develop, encourage, and maintain a clearly defined structure and organization for the Spinnaker documentation.
 * Assist developers and SIGs with creating documentation for new features in Spinnaker.
-* Facilitating community contributions to the Spinnaker documentation by creating templates and style guides.
+* Propose and drive initiatives for code-driven doc generation.
+* Facilitate community contributions to the Spinnaker documentation by creating templates and style guides.
