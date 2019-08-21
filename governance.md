@@ -59,7 +59,7 @@ If you’d like to nominate yourself as an Approver, please create an [Issue in 
 
 ### Technical Oversight Committee
 
-The TOC is responsible for the overall technical management of the project, ultimately managing the day-to-day running of the project.
+The TOC is responsible for the overall technical management of the project, ultimately managing the day-to-day running of the project. 
 
 Duties
 
@@ -70,8 +70,10 @@ Duties
 
 Qualifications
 
-* Nominated by community
-* Appointed by Steering Committee
+* Nominated and Appointed by Steering Committee
+  * 2 year terms, term limit of consecutive 4 years (after, individual must take off 1 year)
+  * Terms should be staggered within the TOC and off by 6 months from SC
+  * Calendar year starts with annual Spinnaker Summit 
 
 Logistics
 
@@ -84,7 +86,7 @@ Current TOC members:
 * Rob Zienert (Netflix)
 * Travis Tomsu (Google)
 
-The technical oversight committee is initially seeded with core members from Netflix and Google. We will leave further details such as number of seats, qualifications, tenure, TBD for the time being.
+The TOC should remain with an odd number of members so as to avoid deadlock. The TOC will nominate a chair person for a 1 year term. Their duty is to run/call meetings, take meeting notes, and call votes.  
 
 ### Steering Committee
 
@@ -95,6 +97,13 @@ Duties:
 * Set governance structure of the project
 * Address questions or concerns from the community about project culture, structure, and clarifications of roles, responsibilities and duties
 * Ratify new SIGs
+
+Qualifications:
+
+* Nominated and Appointed by Steering Committee
+  * 2 year terms, term limit of consecutive 4 years (after, individual must take off 1 year)
+  * Terms should be staggered
+  * Calendar year starts with annual Spinnaker Summit
 
 Logistics
 
@@ -109,7 +118,7 @@ Current SC members:
 * Ruslan Meshenberg (Netflix)
 * Steven Kim (Google)
 
-The steering committee is initially seeded by Netflix and Google as the project matures and its structure stabilizes. We will leave further details such as number of seats, qualifications, tenure, appointing measures, TBD for the time being.
+The SC should remain with an odd number of members so as to avoid deadlock. The SC will nominate a chair person for a 1 year term. Their duty is to run/call meetings, take meeting notes, and call votes.  
 
 ## Special Interest Groups
 
