@@ -16,7 +16,7 @@ _TODO_
 * Matt Duftler (Google)
 * Peter Stout (Netflix)
 * Ruslan Meshenberg (Netflix)
-* Steven Kim (Google)
+* Andrew Phillips (Google)
 
 ## Contact
 
