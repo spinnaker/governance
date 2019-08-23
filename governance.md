@@ -86,7 +86,7 @@ Current TOC members:
 * Rob Zienert (Netflix)
 * Travis Tomsu (Google)
 
-The TOC should remain with an odd number of members so as to avoid deadlock. The TOC will nominate a chair person for a 1 year term. Their duty is to run/call meetings, take meeting notes, and call votes.  
+The TOC should remain with an odd number of members (between 3 to 7) so as to avoid deadlock. In the event that someone from TOC leaves prematurely, the SC should be proactive in filling the spot to ensure an odd number of members. The TOC will nominate a chair person for a 1 year term. Their duty is to run/call meetings, take meeting notes, and call votes.  
 
 ### Steering Committee
 
