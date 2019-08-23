@@ -118,7 +118,7 @@ Current SC members:
 * Ruslan Meshenberg (Netflix)
 * Steven Kim (Google)
 
-The SC should remain with an odd number of members so as to avoid deadlock. The SC will nominate a chair person for a 1 year term. Their duty is to run/call meetings, take meeting notes, and call votes.  
+The SC should remain with an odd number of members so as to avoid deadlock. The SC will nominate a chairperson for a 1 year term. Their duty is to run/call meetings, take meeting notes, and call votes. 
 
 ## Special Interest Groups
 
