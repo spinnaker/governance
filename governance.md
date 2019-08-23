@@ -73,7 +73,7 @@ Qualifications
 * Nominated and Appointed by Steering Committee
   * 2-year terms, term limit of consecutive 4 years (after, individual must take 1 year off)
   * Terms should be staggered within the TOC and off by 6 months from SC
-  * Calendar year starts with annual Spinnaker Summit 
+  * Term starts w/calendar year (i.e. January 1st) 
 
 Logistics
 
@@ -103,7 +103,7 @@ Qualifications:
 * Nominated and Appointed by Steering Committee
   * 2 year terms, term limit of consecutive 4 years (after, individual must take off 1 year)
   * Terms should be staggered
-  * Calendar year starts with annual Spinnaker Summit
+  * Term starts w/calendar year (i.e. January 1st)
 
 Logistics
 
