@@ -20,7 +20,7 @@ Technical Writer at Google
 3. Curate agenda for each meeting.
 4. Raise awareness and invite appropriate participants.
 5. Encourage and foster an inclusive environment.
-6. Facilitate the identification and development of resources (people or funding) in support of documentation for Spinnaker.
+6. Identify and develop resources (people or funding) in support of documentation for Spinnaker.
 
 
 ### Meeting Cadence
