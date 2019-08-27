@@ -59,7 +59,7 @@ If you’d like to nominate yourself as an Approver, please create an [Issue in 
 
 ### Technical Oversight Committee
 
-The TOC is responsible for the overall technical management of the project, ultimately managing the day-to-day running of the project. 
+The TOC is responsible for the overall technical management of the project, ultimately managing the day-to-day running of the project.
 
 Duties
 
