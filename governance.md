@@ -86,7 +86,7 @@ Current TOC members:
 * Rob Zienert (Netflix)
 * Travis Tomsu (Google)
 
-The TOC should remain with an odd number of members (between 3 to 7) so as to avoid deadlock. In the event that someone from TOC leaves prematurely, the SC should be proactive in filling the spot to ensure an odd number of members. The TOC will nominate a chair person for a 1 year term. Their duty is to run/call meetings, take meeting notes, and call votes.  
+The TOC will have three, five, or seven members, as deemed appropriate by the Steering Committee. In the event that someone from the TOC leaves during their term, the Steering Committee shall appoint someone to fill the remainder of the term. Each year, the TOC will nominate a member to serve as the Chairperson for that year. The Chair's duties will include calling and runnings meetings, calling votes, and ensuring that meeting notes are recorded. 
 
 ### Steering Committee
 
@@ -118,7 +118,7 @@ Current SC members:
 * Ruslan Meshenberg (Netflix)
 * Steven Kim (Google)
 
-The SC should remain with an odd number of members so as to avoid deadlock. The SC will nominate a chairperson for a 1 year term. Their duty is to run/call meetings, take meeting notes, and call votes. 
+The Steering Committee will initially have five members. The Steering Committee may adjust the size of the committee each year as they deems appropriate, with a bias towards an odd number of members to avoid voting deadlocks. In the event that someone from the Steering Committee leaves during their term, the Steering Committee shall appoint someone to fill the remainder of the term. Each year, the Steering Committee will nominate a member to serve as the Chairperson for that year. The Chair's duties will include calling and runnings meetings, calling votes, and ensuring that meeting notes are recorded. 
 
 ## Special Interest Groups
 
