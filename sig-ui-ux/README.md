@@ -5,12 +5,11 @@ _TODO description_
 ## Meetings
 
 * Regular SIG Meeting
-  * Every other Monday, 2 PM EST / 11 AM PST
+  * Monthly on the fourth Monday, 2 PM EST / 11 AM PST
 
 ## Leadership
 
 * Maggie Neterval ([maggieneterval](https://github.com/maggieneterval))
-* Chris Berry ([anotherchrisberry](https://github.com/anotherchrisberry))
 * Chris Thielen ([christopherthielen](https://github.com/christopherthielen))
 
 ## Contact
