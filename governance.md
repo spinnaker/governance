@@ -74,7 +74,7 @@ Qualifications
   * 2-year terms, term limit of consecutive 4 years (after, individual must take 1 year off)
   * Terms should be staggered within the TOC and off by 6 months from SC 
   * Staggering should result in approximately half of the committee up for election each year
-  * Term starts w/calendar year (i.e. July 1st) 
+  * Term starts mid-calendar year (i.e. July 1st) 
 
 Logistics
 
