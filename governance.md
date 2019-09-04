@@ -70,8 +70,13 @@ Duties
 
 Qualifications
 
-* Nominated by community
-* Appointed by Steering Committee
+* Nominated and Appointed by Steering Committee
+  * 2-year terms, term limit of consecutive 4 years (after, individual must take at least 1 year off)
+  * Terms should be staggered within the TOC and off by 6 months from SC 
+  * Staggering should result in approximately half of the committee up for election each year
+  * Term starts mid-calendar year (i.e. July 1st) 
+  
+Election to the TOC requires a majority of the SC. 
 
 Logistics
 
@@ -84,7 +89,7 @@ Current TOC members:
 * Rob Zienert (Netflix)
 * Eric Zimanyi (Google)
 
-The technical oversight committee is initially seeded with core members from Netflix and Google. We will leave further details such as number of seats, qualifications, tenure, TBD for the time being.
+The TOC will have three, five, or seven members, as deemed appropriate by the Steering Committee. In the event that someone from the TOC leaves during their term, the Steering Committee shall appoint someone to fill the remainder of the term. Each year, the TOC will nominate a member to serve as the Chairperson for that year. The Chair's duties will include calling and runnings meetings, calling votes, and ensuring that meeting notes are recorded. 
 
 ### Steering Committee
 
@@ -95,6 +100,13 @@ Duties:
 * Set governance structure of the project
 * Address questions or concerns from the community about project culture, structure, and clarifications of roles, responsibilities and duties
 * Ratify new SIGs
+
+Qualifications:
+
+* Nominated and Appointed by Steering Committee
+  * 2 year terms, term limit of consecutive 4 years (after, individual must take off at least 1 year)
+  * Terms should be staggered, which should result in approximately half of the committee up for election each year
+  * Term starts w/calendar year (i.e. January 1st)
 
 Logistics
 
@@ -107,9 +119,9 @@ Current SC members:
 * Matt Duftler (Google)
 * Peter Stout (Netflix)
 * Ruslan Meshenberg (Netflix)
-* Andrew Phillips (Google)
+* Andrew Philips (Google)
 
-The steering committee is initially seeded by Netflix and Google as the project matures and its structure stabilizes. We will leave further details such as number of seats, qualifications, tenure, appointing measures, TBD for the time being.
+Election to the SC requires a majority of the SC. If a person is up for reelection they are not allowed to vote for their reelection. 
 
 ## Special Interest Groups
 
