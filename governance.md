@@ -119,8 +119,6 @@ Current SC members:
 * Ruslan Meshenberg (Netflix)
 * Andrew Philips (Google)
 
-The Steering Committee will initially have five members. The Steering Committee may adjust the size of the committee each year as they deem appropriate, with a bias towards an odd number of members to avoid voting deadlocks. In the event that someone from the Steering Committee leaves during their term, the Steering Committee shall appoint someone to fill the remainder of the term. Each year, the Steering Committee will nominate a member to serve as the Chairperson for that year. The Chair's duties will include calling and runnings meetings, calling votes, and ensuring that meeting notes are recorded. 
-
 Election to the SC requires a majority of the SC voting. If a person is up for reelection they are not allowed to vote for their reelection. 
 
 ## Special Interest Groups
