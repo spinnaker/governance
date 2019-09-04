@@ -71,7 +71,7 @@ Duties
 Qualifications
 
 * Nominated and Appointed by Steering Committee
-  * 2-year terms, term limit of consecutive 4 years (after, individual must take 1 year off)
+  * 2-year terms, term limit of consecutive 4 years (after, individual must take at least 1 year off)
   * Terms should be staggered within the TOC and off by 6 months from SC 
   * Staggering should result in approximately half of the committee up for election each year
   * Term starts mid-calendar year (i.e. July 1st) 
@@ -102,7 +102,7 @@ Duties:
 Qualifications:
 
 * Nominated and Appointed by Steering Committee
-  * 2 year terms, term limit of consecutive 4 years (after, individual must take off 1 year)
+  * 2 year terms, term limit of consecutive 4 years (after, individual must take off at least 1 year)
   * Terms should be staggered, which should result in approximately half of the committee up for election each year
   * Term starts w/calendar year (i.e. January 1st)
 
@@ -117,9 +117,11 @@ Current SC members:
 * Matt Duftler (Google)
 * Peter Stout (Netflix)
 * Ruslan Meshenberg (Netflix)
-* Steven Kim (Google)
+* Andrew Philips (Google)
 
 The Steering Committee will initially have five members. The Steering Committee may adjust the size of the committee each year as they deem appropriate, with a bias towards an odd number of members to avoid voting deadlocks. In the event that someone from the Steering Committee leaves during their term, the Steering Committee shall appoint someone to fill the remainder of the term. Each year, the Steering Committee will nominate a member to serve as the Chairperson for that year. The Chair's duties will include calling and runnings meetings, calling votes, and ensuring that meeting notes are recorded. 
+
+Election to the SC requires a majority of the SC voting. If a person is up for reelection they are not allowed to vote for their reelection. 
 
 ## Special Interest Groups
 
