@@ -75,6 +75,8 @@ Qualifications
   * Terms should be staggered within the TOC and off by 6 months from SC 
   * Staggering should result in approximately half of the committee up for election each year
   * Term starts mid-calendar year (i.e. July 1st) 
+  
+Election to the TOC requires a majority of the SC. 
 
 Logistics
 
@@ -119,7 +121,7 @@ Current SC members:
 * Ruslan Meshenberg (Netflix)
 * Andrew Philips (Google)
 
-Election to the SC requires a majority of the SC voting. If a person is up for reelection they are not allowed to vote for their reelection. 
+Election to the SC requires a majority of the SC. If a person is up for reelection they are not allowed to vote for their reelection. 
 
 ## Special Interest Groups
 
