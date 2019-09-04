@@ -67,6 +67,7 @@ Duties
 * Final escalation point for technical guidance
 * Review, approve and revoke appointments for Reviewers and Approvers
 * Drive technical management and any specific guidelines (e.g. code requirements/conventions, SLA on PR reviews)
+* Promoting the best interests of the project
 
 Qualifications
 
