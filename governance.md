@@ -88,6 +88,7 @@ Current TOC members:
 * Adam Jordens (Netflix)
 * Rob Zienert (Netflix)
 * Eric Zimanyi (Google)
+* Michael Plump (Google)
 
 The TOC will have three, five, or seven members, as deemed appropriate by the Steering Committee. In the event that someone from the TOC leaves during their term, the Steering Committee shall appoint someone to fill the remainder of the term. Each year, the TOC will nominate a member to serve as the Chairperson for that year. The Chair's duties will include calling and runnings meetings, calling votes, and ensuring that meeting notes are recorded. 
 
