@@ -3,7 +3,7 @@
 | | |
 |-|-|
 | **Status**     | **Proposed** |
-| **RFC #**      | _Update after PR has been made_ |
+| **RFC #**      | https://github.com/spinnaker/community/pull/41 |
 | **Author(s)**  | Nicolas Cohen (`@ncknt`) |
 | **SIG / WG**   | Kubernetes SIG |
 
