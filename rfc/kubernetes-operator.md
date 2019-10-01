@@ -55,7 +55,7 @@ We considered that [operator](https://operatorhub.io/operator/spinnaker-operator
 
 ## Known Unknowns
 
-The `spec` of the CRD is still in flux. As we add more features, it will need to evolve before being stable. As an example, new fields are needed to track validation options. The existing `status` is also a first stab.
+The `spec` of the [CRD](https://github.com/armory/spinnaker-operator/blob/master/deploy/crds/spinnaker_v1alpha1_spinnakerservice_crd.yaml) is still in flux. As we add more features, it will need to evolve before being stable. As an example, new fields are needed to track validation options. The existing `status` is also a first stab.
 
 We'd love to get feedback on the user workflows that this enables (or that are lacking). We already heard about support for Kubernetes secret as a common requirement.
 
