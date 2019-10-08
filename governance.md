@@ -57,6 +57,22 @@ Qualification guidelines
 
 If you’d like to nominate yourself as an Approver, please create an [Issue in the community repository](https://github.com/spinnaker/community/issues). 
 
+### SIG Leads
+
+SIG Leads are responsible for management of a particular Special Interest Group within the project, managing day-to-day operations of their interest scope.
+
+Duties
+
+* Set agenda for, facilitate, and drive SIG meetings
+* Review and sponsor proposals related to the SIG
+* Triage inbound spinnaker/spinnaker issues related to the SIG
+* Review and merge or decline pull requests from the community
+
+Qualifications
+
+* Approver status
+* Self-nominated, elected by SIG attendees
+
 ### Technical Oversight Committee
 
 The TOC is responsible for the overall technical management of the project, ultimately managing the day-to-day running of the project.
@@ -79,17 +95,7 @@ Qualifications
   
 Election to the TOC requires a majority of the SC. 
 
-Logistics
-
-* [Agenda doc](https://docs.google.com/document/d/1PxIA1XE3nzqLykOFW-AqdU5u9F8cFh3jDvUA41P2cUM/edit)
-* Email: [toc@spinnaker.io](mailto:toc@spinnaker.io)
-
-Current TOC members:
-
-* Adam Jordens (Netflix)
-* Rob Zienert (Netflix)
-* Eric Zimanyi (Google)
-* Michael Plump (Google)
+[Technical Oversight Committee](committee-technical-oversight/README.md)
 
 The TOC will have three, five, or seven members, as deemed appropriate by the Steering Committee. In the event that someone from the TOC leaves during their term, the Steering Committee shall appoint someone to fill the remainder of the term. Each year, the TOC will nominate a member to serve as the Chairperson for that year. The Chair's duties will include calling and runnings meetings, calling votes, and ensuring that meeting notes are recorded. 
 
