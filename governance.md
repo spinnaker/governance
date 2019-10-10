@@ -70,7 +70,6 @@ Duties
 
 Qualifications
 
-* Approver status
 * Self-nominated, elected by SIG attendees
 
 ### Technical Oversight Committee
