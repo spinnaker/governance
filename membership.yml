@@ -84,10 +84,12 @@ organization:
     release-managers:
       description: People who are allowed to merge to release branches
       members:
+      - duftler
       - ezimanyi
       - louisjimenez
       - maggieneterval
       - plumpy
+      - ttomsu
     sc:
       description: Spinnaker Steering Committee
       members:
