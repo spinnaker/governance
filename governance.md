@@ -68,9 +68,6 @@ Duties
 * Triage inbound spinnaker/spinnaker issues related to the SIG
 * Review and merge or decline pull requests from the community
 
-Qualifications
-
-* Self-nominated, elected by SIG attendees
 
 ### Technical Oversight Committee
 
@@ -132,5 +129,5 @@ Election to the SC requires a majority of the SC. If a person is up for reelecti
 
 ## Special Interest Groups
 
-Special Interest Groups (SIGs) are created as community interest and demand around particular topics become self evident, and continue on as their relevance and needs do. SIGs and their leads are ratified and green-lit by the steering committee via a [SIG proposal process](sig-lifecycle.md). 
+Special Interest Groups (SIGs) are created as community interest and demand around particular topics become self evident, and continue on as their relevance and needs do. SIGs and their Leads are ratified and green-lit by the Steering Committee via a [SIG proposal process](sig-lifecycle.md). 
 
