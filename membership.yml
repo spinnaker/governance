@@ -1,0 +1,107 @@
+organization:
+  groups:
+    amazon:
+      description: Team for Amazon employees, so they can triage & manage their GitHub Project
+      members:
+      - allisaurus
+      - anshrma
+      - clareliguori
+      - edwinavalos
+      - pauljrob
+    docs-approvers:
+      description: Approvers for documentation repos
+      members:
+      - brian-armory
+      - dorbin
+      - gcomstock
+    netflix-new-hires:
+      description: A no-permissions group for new Netflix hires such that they can be assigned as reviewers of PRs.
+      members:
+      - gal-yardeni
+      - jonsie
+      - luispollo
+      - srekapalli
+    oss-reviewers:
+      description: Reviewers Role
+      members:
+      - andrewbackes
+      - dotdotdotpaul
+      - german-muzquiz
+      - imosquera
+      - jmelchio
+      - kathrynlewis
+      - link108
+      - michaeljqzq
+      - mybayern1974
+      - ncknt
+      - scottfrederick
+      - stuart-pollock
+    oss-approvers:
+      description: Approvers Role
+      members:
+      - aglover
+      - ajordens
+      - alanmquach
+      - anph
+      - asher
+      - brandonnelson3
+      - cfieber
+      - christopherthielen
+      - clareliguori
+      - claymccoy
+      - csanden
+      - danielpeach
+      - dibyom
+      - dorbin
+      - dreynaud
+      - duftler
+      - edwinavalos
+      - emjburns
+      - erikmunson
+      - ethanfrogers
+      - ezimanyi
+      - fieldju
+      - gardleopard
+      - jammy-louie
+      - jeyrschabu
+      - joonlim
+      - kevinawoo
+      - maggieneterval
+      - marchello2000
+      - plumpy
+      - robfletcher
+      - robzienert
+      - sbwsg
+      - skim1420
+      - stewchen
+      - ttomsu
+      - wjoel
+    oss-kayenta-approvers:
+      description: Approvers limited in scope to kayenta and kayenta-deck only
+      members:
+      - fieldju
+      - skandragon
+    release-managers:
+      description: People who are allowed to merge to release branches
+      members:
+      - duftler
+      - ezimanyi
+      - louisjimenez
+      - maggieneterval
+      - plumpy
+      - ttomsu
+    sc:
+      description: Spinnaker Steering Committee
+      members:
+      - aglover
+      - demobox
+      - duftler
+      - pstout
+      - rmeshenberg
+    toc:
+      description: Spinnaker Technical Oversight Committee
+      members:
+      - ajordens
+      - ezimanyi
+      - plumpy
+      - robzienert
