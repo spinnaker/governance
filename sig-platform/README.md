@@ -11,6 +11,7 @@ The Platform SIG is tasked with the oversight of internal processes and tooling 
 
 * Adam Jordens ([@ajordens](https://github.com/ajordens))
 * Michael Plump ([@plumpy](https://github.com/plumpy))
+* Cameron Motevasselani ([@link108](https://github.com/link108))
 
 ## Contact
 
