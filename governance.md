@@ -59,7 +59,7 @@ If you’d like to nominate yourself as an Approver, please create an [Issue in 
 
 ### SIG Leads
 
-SIG Leads are responsible for management of a particular Special Interest Group within the project, managing day-to-day operations of their interest scope. If a particular SIG involves alerting Spinnaker's codebase, then SIG leads must be active Approvers. 
+SIG Leads are responsible for management of a particular Special Interest Group within the project, managing day-to-day operations of their interest scope. If a particular SIG involves altering Spinnaker's codebase, then SIG leads must be active Approvers. 
 
 Duties
 
