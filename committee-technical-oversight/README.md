@@ -12,9 +12,10 @@
 ## Members
 
 * @ajordens (Netflix)
-* @robzienert (Netflix) (Chair)
+* @ethanfrogers (Armory)
 * @ezimanyi (Google)
 * @plumpy (Google)
+* @robzienert (Netflix) (Chair)
 
 ## Contact
 
