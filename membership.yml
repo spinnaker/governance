@@ -43,7 +43,6 @@ organization:
       - aglover
       - ajordens
       - alanmquach
-      - anph
       - asher
       - brandonnelson3
       - cfieber
@@ -52,6 +51,7 @@ organization:
       - claymccoy
       - csanden
       - danielpeach
+      - demobox
       - dibyom
       - dorbin
       - dreynaud
@@ -103,6 +103,7 @@ organization:
       description: Spinnaker Technical Oversight Committee
       members:
       - ajordens
+      - ethanfrogers
       - ezimanyi
       - plumpy
       - robzienert
