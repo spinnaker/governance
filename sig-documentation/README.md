@@ -2,8 +2,8 @@
 
 ## Meeting Info
 * First Wednesday of every month at 11:00 AM Pacific/2:00 PM Eastern
-* [Agenda and notes](https://www.google.com/url?q=https://docs.google.com/document/d/1uErNfK3Yr6LKELNSO7YfsRFyJVHqjivfzIO4nBmMCUw/edit?usp%3Dsharing&sa=D&ust=1571845713765000&usg=AOvVaw0Tv3BNYsj99yoV4B1kGHB-)
-* [Meeting link](https://meet.google.com/umg-qugw-mjy?hs=122)
+* [Agenda and notes](https://docs.google.com/document/d/1uErNfK3Yr6LKELNSO7YfsRFyJVHqjivfzIO4nBmMCUw/edit)
+* [Meeting link](https://meet.google.com/umg-qugw-mjy)
 
 
 ## Roles & Responsibilities of the SIG Leads
