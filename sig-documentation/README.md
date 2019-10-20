@@ -1,5 +1,11 @@
 # Spinnaker Documentation Special Interest Group
 
+## Meeting Info
+* First Wednesday of every month at 11:00 AM Pacific/2:00 PM Eastern
+* [Agenda and notes](https://docs.google.com/document/d/1uErNfK3Yr6LKELNSO7YfsRFyJVHqjivfzIO4nBmMCUw/edit)
+* [Meeting link](https://meet.google.com/umg-qugw-mjy)
+
+
 ## Roles & Responsibilities of the SIG Leads
 
 ### SIG Lead(s):
@@ -21,11 +27,6 @@ Technical Writer at Google
 * Raise awareness of documentation gaps, including stale docs, and invite appropriate participants.
 * Encourage and foster an inclusive environment.
 * Identify and develop resources (people or funding) in support of documentation for Spinnaker.
-
-
-### Meeting Cadence
- - 1 hour every month on Google Hangouts
- - TBD of every month at TBD PM PST
 
 # Responsibilities
 
