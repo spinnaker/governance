@@ -6,6 +6,7 @@ _TODO description_
 
 * Regular SIG Meeting
   * Every other Tuesday, 4 PM EST / 1 PM PST
+  * [Agenda](https://docs.google.com/document/d/1qgtwod1WC9pGNLyq7j1pXDLCAhO3Norf3Afx1FP4Jag/edit#heading=h.h9ro0baz3lei)
 
 ## Leadership
 
