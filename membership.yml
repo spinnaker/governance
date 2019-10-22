@@ -24,10 +24,12 @@ organization:
     oss-reviewers:
       description: Reviewers Role
       members:
+      - amanya
       - andrewbackes
       - dotdotdotpaul
       - german-muzquiz
       - imosquera
+      - jervi
       - jmelchio
       - jonsie
       - kathrynlewis
@@ -35,8 +37,10 @@ organization:
       - michaeljqzq
       - mybayern1974
       - ncknt
+      - PerGon
       - scottfrederick
       - stuart-pollock
+      - xavileon
     oss-approvers:
       description: Approvers Role
       members:
@@ -50,7 +54,6 @@ organization:
       - clareliguori
       - claymccoy
       - csanden
-      - danielpeach
       - demobox
       - dibyom
       - dorbin
@@ -73,7 +76,6 @@ organization:
       - robfletcher
       - robzienert
       - sbwsg
-      - skim1420
       - stewchen
       - ttomsu
       - wjoel
