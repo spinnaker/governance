@@ -26,7 +26,7 @@ Principal Architect at OpsMx
 Senior Data Scientist at Netflix
 
 **[Matt Duftler](https://github.com/duftler)**
-Senior Software Engineer at Google
+Staff Software Engineer at Google
 
 ### SIG Lead Responsibility
 
