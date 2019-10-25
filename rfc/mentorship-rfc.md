@@ -3,7 +3,7 @@
 | | |
 |-|-|
 | **Status**     | _**Proposed**, Accepted, Implemented, Obsolete_ |
-| **RFC #**      | _Update after PR has been made_ |
+| **RFC #**      | #51 |
 | **Author(s)**  | _Emily Burns (`@emjburns`)_ |
 | **SIG / WG**   | _?_ |
 
