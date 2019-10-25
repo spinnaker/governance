@@ -16,7 +16,7 @@ This proposal describes an idea for a mentorship program for the Spinnaker OSS c
 
 The goal of this program is to create a more visible and structured way for new contributers to get the feedback they need to contribute successfully.
 
-A secondary goal is to creating more Approvers in the community and to encourage existing Approvers to provide more detailed PR review. 
+A secondary goal is to create more Approvers in the community and to encourage existing Approvers to provide more detailed PR review. 
 
 
 ## Motivation and Rationale
