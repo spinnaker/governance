@@ -50,12 +50,13 @@ Qualification guidelines
 * Is already fulfilling the Reviewer role
 * Belongs to an organization with significant stake in project
 * Known active participant in the community
+* Has reviewed 5 PRs of significant scope
 * Has submitted at least 5 PRs of significant scope that are merged
 * Sponsored by 2 Approvers
 
 [Current Approvers](https://github.com/spinnaker/spinnaker/blob/master/approvers.md)
 
-If you’d like to nominate yourself as an Approver, please create an [Issue in the community repository](https://github.com/spinnaker/community/issues). If you are already a Reviewer who meets the above Qualifications, you do not need to wait before submitting for Approver status.
+If you’d like to nominate yourself as an Approver, please create an [Issue in the community repository](https://github.com/spinnaker/community/issues). 
 
 ### SIG Leads
 
