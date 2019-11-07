@@ -2,8 +2,9 @@
 name: Approver Application
 about: Request OSS Approver status
 title: 'REQUEST: New Approver status for <your-GH-username>'
-labels: committee/toc
-assignees: 'spinnaker/toc'
+labels: ''
+assignees: ajordens, ethanfrogers, ezimanyi, plumpy, robzienert
+
 ---
 
 ### Github Username

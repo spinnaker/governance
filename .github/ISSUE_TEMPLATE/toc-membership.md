@@ -3,7 +3,8 @@ name: TOC Membership Request
 about: Request nomination for Technical Oversight Committee
 title: 'REQUEST: New TOC member for <your-GH-username>'
 labels: committee/steering
-assignees: 'spinnaker/sc'
+assignees: aglover, demobox, duftler, pstout, rmeshenberg
+
 ---
 
 ### Github Username

@@ -2,8 +2,9 @@
 name: Reviewer Application
 about: Request OSS Reviewer status
 title: 'REQUEST: New Reviewer status for <your-GH-username>'
-labels: committee/toc
-assignees: 'spinnaker/toc'
+labels: ''
+assignees: ajordens, ethanfrogers, ezimanyi, plumpy, robzienert
+
 ---
 
 ### Github Username

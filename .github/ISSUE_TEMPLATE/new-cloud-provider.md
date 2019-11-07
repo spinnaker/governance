@@ -2,8 +2,9 @@
 name: New Cloud Provider
 about: Propose the addition of a new Cloud Provider
 title: 'PROPOSAL: New Cloud Provider for <cloud provider name>'
-labels: committee/toc
-assignees: 'spinnaker/toc'
+labels: ''
+assignees: ajordens, ethanfrogers, ezimanyi, plumpy, robzienert
+
 ---
 
 ### Cloud Provider
