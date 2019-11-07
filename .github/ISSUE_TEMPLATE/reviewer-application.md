@@ -2,7 +2,7 @@
 name: Reviewer Application
 about: Request OSS Reviewer status
 title: 'REQUEST: New Reviewer status for <your-GH-username>'
-labels: ''
+labels: committee/technical-oversight
 assignees: ajordens, ethanfrogers, ezimanyi, plumpy, robzienert
 
 ---

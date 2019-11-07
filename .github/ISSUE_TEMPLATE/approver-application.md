@@ -2,7 +2,7 @@
 name: Approver Application
 about: Request OSS Approver status
 title: 'REQUEST: New Approver status for <your-GH-username>'
-labels: ''
+labels: committee/technical-oversight
 assignees: ajordens, ethanfrogers, ezimanyi, plumpy, robzienert
 
 ---
