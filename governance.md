@@ -47,6 +47,7 @@ Duties
 
 Qualification guidelines
 
+* Is already fulfilling the Reviewer role
 * Belongs to an organization with significant stake in project
 * Known active participant in the community
 * Has submitted at least 5 PRs of significant scope that are merged
