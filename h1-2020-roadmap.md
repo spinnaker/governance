@@ -1,6 +1,6 @@
 # Spinnaker Roadmap for H1 2020
 
-These items were pulled from discussions with the major vendors supporting
+These items were pulled from discussions with the major contributors supporting
 Spinnaker. It is not meant to be inclusive of all work going on in the
 community, nor will all this necessarily get done in the first half of 2020.
 Rather, it is meant to give an general sense of direction and priorities.
