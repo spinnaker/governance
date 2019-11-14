@@ -54,7 +54,7 @@ Rather, it is meant to give an general sense of direction and priorities.
 *   Further static code analysis / testing tools / testing standardization
     (Netflix)
 
-## Runtime support in Spinnaker
+## Spinnaker support for runtimes
 
 *   Pivotal CF: Enhanced support for networking and security (Pivotal)
 *   Pivotal Spring: Additional coordination for blue/green of message driven and
