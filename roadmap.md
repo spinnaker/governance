@@ -4,7 +4,7 @@ This OSS Roadmap outlines high-level deliverables and is broken down into loosel
 The deliverables below are a combination of independent contributions from private organizations and a rollup of SIG-specific roadmaps.
 
 In advance of [the 2019 summit](https://www.spinnakersummit.com/), we have also
-put together a succinct list of what the major vendors supporting Spinnaker are
+put together a succinct list of what the major contributors supporting Spinnaker are
 [working on in the first half of 2020](h1-2020-roadmap.md).
 
 For Spinnaker Release deliverables, please see [Releases](https://github.com/spinnaker/spinnaker/projects?utf8=%E2%9C%93&query=is%3Aopen+Release) on GitHub.
