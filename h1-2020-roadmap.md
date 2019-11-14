@@ -50,7 +50,7 @@ Rather, it is meant to give an general sense of direction and priorities.
 ## Community enablement
 
 *   Run integration tests in a cloud CI environment (Google)
-*   Framework for making aggregated Spinnaker stats available (Google/Armory)
+*   Framework for making Spinnaker community stats available (Google/Armory)
 *   Further static code analysis / testing tools / testing standardization
     (Netflix)
 
