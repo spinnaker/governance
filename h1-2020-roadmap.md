@@ -62,4 +62,4 @@ Rather, it is meant to give an general sense of direction and priorities.
 *   AWS: Support for services with multiple load balancer target groups (Amazon)
 *   AWS: Performance enhancements for accounts with large number of resources
     (Amazon)
-*   Google: Documented approach to using Spinnaker with Cloud Run (Google)
+*   Google Cloud: Documented approach to using Spinnaker with Cloud Run (Google)
