@@ -13,7 +13,7 @@ This Special Interest Group (SIG) main goal is to coordinate Operations (Ops) ac
 
 ## Leadership
 
-* Edgar Magana (emagana](https://github.com/emagana))
+* Edgar Magana [emagana](https://github.com/emagana))
 * 
 
 ## Contact
