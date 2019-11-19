@@ -10,3 +10,4 @@ Don't see a SIG here that fits what you're looking for? [Submit a Proposal](sig-
 * [Security](sig-security/README.md)
 * [Summit](sig-summit/README.md)
 * [UI / UX](sig-ui-ux/README.md)
+* [Documentation](sig-documentation/README.md)
