@@ -33,7 +33,7 @@ Qualification guidelines
 * Has submitted at least 5 PRs of significant scope that are correspondingly merged
 * Sponsored by 2 Approvers
 
-[Current Reviewers](https://github.com/spinnaker/community/blob/master/membership.yml#L23)
+[Current Reviewers](https://github.com/spinnaker/community/blob/master/membership.yml)
 
 If you’d like to nominate yourself as a Reviewer, please create an [Issue in the community repository](https://github.com/spinnaker/community/issues). 
 
@@ -54,7 +54,7 @@ Qualification guidelines
 * Has reviewed 5 PRs of significant scope
 * Sponsored by 2 Approvers
 
-[Current Approvers](https://github.com/spinnaker/community/blob/master/membership.yml#L44)
+[Current Approvers](https://github.com/spinnaker/community/blob/master/membership.yml)
 
 If you’d like to nominate yourself as an Approver, please create an [Issue in the community repository](https://github.com/spinnaker/community/issues). 
 
