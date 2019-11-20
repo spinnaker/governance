@@ -16,7 +16,7 @@ This SIG is focused on CI expirence within Spinnaker
 
 ## Contact
 
-* [Slack](XXX)
+* [Slack](https://spinnakerteam.slack.com/archives/CQJP8H05P)
 
 ## Scope
 
