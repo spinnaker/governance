@@ -21,10 +21,14 @@ This SIG is focused on CI (continuous integration) experience within Spinnaker.
 ## Scope
 
 *Status and Alignment*
-  * Define a contract for CI providers to supply data to the CI view in Spinnaker
-  * Share designs for a view of CI in Spinnaker
-  * Current implementation of CI in Spinnaker
-  * Supported CI providers
+  * `Igor` (https://github.com/spinnaker/igor)
+    * Review issues and PRs
+  
+  * `CI view in Spinnaker`
+    * Define a contract for CI providers to supply data to the CI view in Spinnaker
+    * Share designs for a view of CI in Spinnaker
+    * Current implementation of CI in Spinnaker
+    * Supported CI providers
 
 *CI features*
   * Additional or removed supported CI providers
