@@ -18,7 +18,6 @@ organization:
       description: A no-permissions group for new Netflix hires such that they can be assigned as reviewers of PRs.
       members:
       - gal-yardeni
-      - jonsie
       - luispollo
       - srekapalli
     oss-reviewers:
@@ -68,12 +67,14 @@ organization:
       - ethanfrogers
       - ezimanyi
       - fieldju
+      - gal-yardeni
       - gardleopard
       - jammy-louie
       - jeyrschabu
       - jonsie
       - joonlim
       - kevinawoo
+      - luispollo
       - maggieneterval
       - marchello2000
       - plumpy
