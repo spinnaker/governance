@@ -99,25 +99,32 @@ well.
 
 For this release, we will do two things:
 
-1.  Compile with JDK 11 using the `-source 8 -target 8` flags. This produces
+1.  Remove the `java8` container variants.
+2.  Compile with JDK 11 using the `-source 8 -target 8` flags. This produces
     builds that are still compatible with Java 8, and means the build will still
     fail if anyone tries to use Java 11 APIs or language features.
-2.  Remove the `java8` container variants
 
-If the compiler change causes issues, we can revert that change and push that
-out to the next release.
+These changes are separable and don't _need_ to be done together. Either can be
+delayed for a release if there are issues. The change in the next section
+(tentatively scheduled for release 1.21) will not happen until both these
+changes have shipped for an entire release cycle, however.
 
-If we know for a fact (from previous discussions) that removing the `java8`
-variants will cause problems for some customers, or if a customer complains
-after the release, we can put back the `java8` containers and delay this part
-(but keep the compiler change) until the next release.
+Since removing the `java8` containers removes the possibility of running with
+the old JRE, the old statement of "we will not adjust the timeline for any other
+reason" no longer applies. If we know for a fact (from previous discussions)
+that removing the `java8` variants will cause problems for some customers, or if
+a customer complains after the release, we can put back the `java8` containers
+and delay this part (but keep the compiler change) until the next release.
+
+Similarly, if the compiler change causes issues, we can revert that change and
+push that out to the next release.
 
 ### 1.21 (early July)
 
-Change `-source 8 -target 8` to `-source 11 -target11`. At this point,
-developers are able to commit Java 11 code to the repositories. Undoing this
-change is possible, but will require some work. As such, this should only be
-done after
+The compiler flags will change from `-source 8 -target 8` to `-source 11 -target
+11`. At this point, developers are able to commit Java 11 code to the
+repositories. Undoing this change is possible, but will require some work. As
+such, this should only be done after
 
 1.  the `java8` containers have been removed for a while without complaint
 2.  we don't know of any other non-container customers still running on Java 8
