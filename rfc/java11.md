@@ -66,7 +66,7 @@ convert to a Java 11 JRE too.
 ### 1.18 (early January)
 
 For our container builds, we'll first move just two (of approximately ten)
-services to the new JRE. Thee two services will be `igor` and `orca`. By
+services to the new JRE. The two services will be `igor` and `orca`. By
 default, anyone who uses Halyard to deploy these containers will get the Java 11
 JRE for these services. Users who experience problems or aren't ready to use
 Java 11 can use the `java8` variant by specifying `imageVariant: slim-java8` (or
