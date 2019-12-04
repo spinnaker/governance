@@ -80,7 +80,9 @@ discuss their concerns, which will allow us to adjust the timeline as needed.
 
 Separately, postings to `#dev` will encourage developers to start running their
 development environments under Java 11. Explanations of how to do so will be
-posted to the channel.
+posted to the channel. The [Spinnaker Developer
+Guide](https://www.spinnaker.io/guides/developer/getting-set-up/) will also be
+updated to strongly recommend using Java 11.
 
 If issues are found in Spinnaker that are caused by running under a Java 11
 runtime, we will switch the containers back to Java 8 and shift the timeline
