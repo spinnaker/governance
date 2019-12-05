@@ -21,7 +21,7 @@ This SIG is focused on CI (continuous integration) experience within Spinnaker.
 ## Scope
 
 *Status and Alignment*
-  * `Igor` (https://github.com/spinnaker/igor)
+  * [Igor](https://github.com/spinnaker/igor)
     * Review issues and PRs
   
   * `CI view in Spinnaker`
@@ -33,6 +33,5 @@ This SIG is focused on CI (continuous integration) experience within Spinnaker.
 *CI features*
   * Additional or removed supported CI providers
   * Future evolution of CI in Spinnaker
-
 
 
