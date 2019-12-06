@@ -29,12 +29,10 @@ Connect with us via:
 
 If you're using Spinnaker and could not find your answer in the documentation, start with [Slack](https://spinnakerteam.slack.com/). Many Spinnaker contributors and users are active on the Spinnaker Slack. It's a great place to get answers to questions or start a discussion about a feature or topic. Good places to begin on Slack include the following channels: 
 
-* A SIG channel if there is a relevant one, such as `#sig-security`. All SIG slack channels start with the prefix `sig`.
+* A SIG channel if there is a relevant one, such as [#sig-security](https://spinnakerteam.slack.com/archives/C0DPVDMQE). All SIG slack channels start with the prefix `sig`.
 * A narrowly focused channel, such as #auth
 * #general for general questions and discussion 
 * #dev for help contributing to Spinnaker
-
-All SIG slack channels start with the prefix `sig`. For example, the documentation SIG channel is `#sig-documentation`.
 
 After engaging with the community to work through a problem , we encourage you to file an issue for the appropriate repo based if appropriate. Reasons you might file an issue include the following: 
 
