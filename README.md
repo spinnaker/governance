@@ -39,3 +39,7 @@ After engaging with the community to work through a problem , we encourage you t
 * Your problems are due to a bug or limitation that is not documented
 * The documentation for something is confusing
 * The behavior of a feature or field is unclear
+
+File bugs or feature requests for Spinnaker [here](https://github.com/spinnaker/spinnaker/issues).
+
+File documentation issues [here](https://github.com/spinnaker/spinnaker.github.io/issues/).
