@@ -34,12 +34,14 @@ If you're using Spinnaker and could not find your answer in the documentation, s
 * [#general](https://spinnakerteam.slack.com/archives/C091CCWRJ) for general questions and discussion 
 * [#dev](https://spinnakerteam.slack.com/archives/C0DPVDMQE) for help contributing to Spinnaker
 
-After engaging with the community to work through a problem , we encourage you to file an issue for the appropriate repo based if appropriate. Reasons you might file an issue include the following: 
+After engaging with the community to work through a problem, we encourage you to file an issue for the appropriate repo if you think it's needed. Reasons you might file an issue include the following: 
 
 * Your problems are due to a bug or limitation that is not documented
 * The documentation for something is confusing
 * The behavior of a feature or field is unclear
 
-File bugs or feature requests for Spinnaker [here](https://github.com/spinnaker/spinnaker/issues).
+File issues for Spinnaker [here](https://github.com/spinnaker/spinnaker/issues).
 
-File documentation issues [here](https://github.com/spinnaker/spinnaker.github.io/issues/).
+File issues for documentation [here](https://github.com/spinnaker/spinnaker.github.io/issues/).
+
+
