@@ -1,8 +1,11 @@
 # SIG: Ops
 
-This Special Interest Group (SIG) main goal is to coordinate Operations (Ops) activities and best practices across Spinnaker Operators.
+The Operations (Ops) Special Interest Group (SIG) provides a forum for groups that are operating Spinnaker deployments to coordinate their activities and identify and share best practices.
 * Production Readiness
 * Security Requirements
+* Monitoring and Logging
+* Performance and Scalability
+* HA & DR
 * Reference Architecture(s)  
 
 ## Meetings
@@ -13,8 +16,9 @@ This Special Interest Group (SIG) main goal is to coordinate Operations (Ops) ac
 
 ## Leadership
 
-* Edgar Magana [emagana](https://github.com/emagana))
-* 
+* Edgar Magana [emagana](https://github.com/emagana)
+* Cameron Fieber [cfieber](https://github.com/cfieber)
+* Chris Gruel [devorbitus](https://github.com/devorbitus
 
 ## Contact
 
