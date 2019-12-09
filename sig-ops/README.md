@@ -12,7 +12,7 @@ The Operations (Ops) Special Interest Group (SIG) provides a forum for groups th
 
 * Regular SIG Meeting
   * Every other TBD
-  * [Agenda] (https://docs.google.com/document/d/1-YAEe1MrbgqtobyHyz2s5FvZFJGBM5wcYH-hE6sVgQw/edit?usp=sharing)
+  * [Agenda](https://docs.google.com/document/d/1-YAEe1MrbgqtobyHyz2s5FvZFJGBM5wcYH-hE6sVgQw/edit?usp=sharing)
 
 ## Leadership
 
