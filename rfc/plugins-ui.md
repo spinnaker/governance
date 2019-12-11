@@ -1,4 +1,12 @@
 # Plugins UI Design Doc
+| | |
+|-|-|
+| **Status** | **Proposed**, Accepted, Implemented, Obsolete |
+| **RFC  Num** | [#74](https://github.com/spinnaker/community/pull/74) |
+| **Author(s)** | Brandon Powell (`@bpowell`), Cameron Motevasselani (`@link108`), Clay Mccoy (`@claymccoy`) |
+| **SIG / WG** | Platform SIG |
+| **Obsoletes** | [Google Doc](https://docs.google.com/document/d/16WmRSziTJsSBZ1kuKUfVleLAYMIxmfvz/edit) |
+
 ## Motivation
 Just like the backend in Spinnaker, the frontend needs to be extensible for others to add more functionality. Deck should be able to be extended by well defined extension points. Some examples of extension points could be:
 1. Custom stages
