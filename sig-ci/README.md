@@ -11,8 +11,9 @@ This SIG is focused on CI (continuous integration) experience within Spinnaker.
 
 ## Leadership
 
-* Elise McCallum (https://github.com/emccallum)
-* Gal Yardeni (https://github.com/gal-yardeni/) 
+* Elise McCallum - Netflix (https://github.com/emccallum)
+* Gal Yardeni - Netflix (https://github.com/gal-yardeni)
+* Jens Vanderhaeghe - Airbnb (https://github.com/jensvdh)
 
 ## Contact
 
