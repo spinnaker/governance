@@ -28,23 +28,19 @@ In order for plugins to have a UI component, they must be loaded into Deck’s r
 * The location of the resources a plugin needs.
 
 ### Plugin Configuration via Front50
-In order for Deck to know which plugins it can load, it must have access to some configuration information, including the name of the plugin and where to download the plugin resource(s). Upon page load, Deck reaches out to Front50 to get the enabled plugin metadata.
-
+In order for Deck to know which plugins it can load, it must have access to some configuration information, including the name of the plugin and where to download the plugin resource(s).
 
 Please see the current [Plugins RFC](./plugins.md) for details around Front50 as the source of truth for plugin metadata. 
 
-
 ### Gathering plugin metadata
-The Deck microservice does not need to download plugin resources; however, the browser does need to know where the plugin resources are located. 
+Using native Javascript `import`, plugin resources have to be served up by Deck. `import` does not allow resources to be imported from external sources. Therefore all plugin resources need to be added to Deck before Deck starts.
 
-Deck provides a function to lookup plugin metadata in Front50, which is exposed via Gate, so the browser can gather that information. In order for resources to be loaded appropriately, Deck must gather the resources prior to the application being bootstrapped.  
-
+In a Kubernetes world, Halyard can place the plugin resources into an init container for Deck to consume. The init container will download the plugin resources and place the plugins into their own folders. The plugins will be mounted into the Deck container under `/opt/deck/html/plugins/`.
 
 ### Loading a Plugin
 After Deck queries Front50 for enabled plugins, it gathers the metadata necessary to load the enabled plugins. Deck will then use native module loading to import all required plugins. 
 
 Downloading of plugin resources occurs before the app boots (Check out Bootstrapping Deck to learn more). Once those resources are downloaded, plugins are initialized as described below. We accomplish this by moving the loading of the netflix.spinnaker module to a finally block after initializing the plugins. This ensures that it is always called. This is seen below:
-
 
 ```
 loadPlugins()
