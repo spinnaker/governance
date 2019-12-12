@@ -25,7 +25,3 @@ The Operations (Ops) Special Interest Group (SIG) provides a forum for groups th
 * [Slack](http://spinnakerteam.slack.com/messages/sig-ops)
 * [Mailing List](https://groups.google.com/a/spinnaker.io/forum/#!forum/sig-ops)
 * [Community Issues/PRs](https://github.com/spinnaker/spinnaker/labels/sig%2Fops)
-
-## Subprojects
-
-TBD
