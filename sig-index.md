@@ -14,7 +14,7 @@ Don't see a SIG here that fits what you're looking for? [Submit a Proposal](sig-
 
 # SIG Meeting Calendar
 
-To view the calendar, [click here](https://calendar.google.com/calendar/b/3/embed?showPrint=0&showCalendars=0&mode=AGENDA&height=500&wkst=1&bgcolor=%23FFFFFF&src=spinnaker.io_tr65rjf5mfij7p6vucprkhulcc%40group.calendar.google.com&color=%2342104A&ctz=America%2FLos_Angeles).
+To view the calendar, [click here](https://calendar.google.com/calendar/b/3/embed?showPrint=0&showCalendars=0&mode=AGENDA&height=500&wkst=1&bgcolor=%23FFFFFF&src=spinnaker.io_tr65rjf5mfij7p6vucprkhulcc%40group.calendar.google.com&color=%2342104A).
 
 If you use Google Calendar, [click here to subscribe](https://calendar.google.com/calendar/b/3?cid=c3Bpbm5ha2VyLmlvX3RyNjVyamY1bWZpajdwNnZ1Y3Bya2h1bGNjQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20).
 
