@@ -3,7 +3,7 @@
 | | |
 |-|-|
 | **Status**     | _**Proposed**, Accepted, Implemented, Obsolete_ |
-| **RFC #**      | [62](https://github.com/spinnaker/community/pull/62) |
+| **RFC #**      | [62](https://github.com/spinnaker/governance/pull/62) |
 | **Author(s)**  | Michael Plump ([`@plumpy`](https://github.com/plumpy)) |
 | **SIG / WG**   | Platform SIG |
 
