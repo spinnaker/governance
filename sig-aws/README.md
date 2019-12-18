@@ -8,7 +8,7 @@
 Principal Software Engineer \
 _AWS_
 
-**[Rob Zienert](https://github.com/robzienert)** \
+**[Jeyrs Chabu](https://github.com/jeyrschabu)** \
 Senior Software Engineer \
 _Netflix_
 
