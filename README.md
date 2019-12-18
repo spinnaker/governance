@@ -1,6 +1,6 @@
-# Spinnaker Community
+# Spinnaker Governance
 
-Welcome to the Spinnaker Community! 
+Welcome to the Spinnaker Community!
 
 This is the starting point for joining and contributing to the Spinnaker community.
 A good place to start is by viewing the [Roadmap](roadmap.md).
