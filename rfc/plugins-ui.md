@@ -33,7 +33,7 @@ This doc focuses on:
 ## Loading Plugin code into Deck
 
 ### Gathering plugin metadata
-In order for Deck to know which plugins it can load, it must have access to some configuration information, including the name of the plugins that are enabled and where to download the plugin resources (JavaScript bundles, CSS, images, etc).  This Plugin Configuration will be fetched from Front50.
+In order for Deck to know which plugins it can load, it must have access to some configuration information, including the name of the plugins that are enabled and where to download the plugin resources (JavaScript bundles, CSS, images, etc).  This Plugin Configuration will be fetched from Front50 via Gate.
 
 Please see the current [Plugins RFC](./plugins.md) for details around Front50 as the source of truth for plugin metadata.  Until the Front50 work is completed, a stop-gap solution using `settings.js` to locate the plugin resources should suffice.
 
@@ -49,39 +49,18 @@ Some potential servers may be:
 [1] Halyard could configure an init container which would download plugin resources into the container.  The resources would be served by served by Apache in the same way that the standard resources are served.  Note: if such an init container were created, it could potentially serve the same purpose to front-load plugin assets for backend services.
 
 ## Bootstrapping Deck
-Plugins will be able to use shared library code which is provided by Deck itself (see [Plugin Structure](#plugin-structure) below).  These shared libraries should be loaded before the plugins themselves.  Because of this, the bootstrapping process must change.  The order of operations likely should be:
+Plugins will be able to use shared library code which is provided by Deck itself (see [Plugin Structure](#plugin-structure) below).  These shared libraries should be loaded before the plugins themselves.  Because of this, plugins should be loaded after Deck has exposed the shared libraries.  The order of operations likely should be:
 
 - Load Deck assets
+- Deck Bootstrap
 - Load plugin manifest
 - Load plugin assets
-- Deck Bootstrap
-- Plugin Initialization
-- Start Deck
-
-####  Deck Bootstrap
-Today, Deck is bootstrapped via AngularJS as soon as all the declared AngularJS modules dependencies and available.  We have to delay starting AngularJS while the plugins load. In order to delay the starting of AngularJS, we have to manually bootstrap the application after all the plugins are loaded.  A small snippet such as the this pseudocode can be added to `index.html`.
-
-```
-// loadPluginsPromises is an array of Promise
-Promise.all(loadPluginsPromises).then(loadedPlugins => {
-  // Tell AngularJS to start
-  bootstrap(document.documentElement, ['netflix.spinnaker']);
-}).catch(error => {
-  // Handle plugin loading errors
-});
-```
+- Register plugin extensions
+- Start Deck (initialze the router)
 
 ### Plugin Initialization
 
-During Deck's bootstrap, it should call all enabled plugins' `initialize()` method passing in a Plugin API object.  This object will expose a set of hand-picked functions that are hand picked for Spinnaker Core and register.
-
-When each plugin initializes, it should register Extensions via the Plugin API object.  
-Pseudocode:
-```
-export function initialize(registries: ISpinnakerRegistries) {
-  registries.stageRegistry.register(myCustomStage);
-}
-```
+During Deck's bootstrap it should inspect the object the plugin exports.  It should find and register each well-known extension. For example, Deck will inspect the plugin object and look for the `stages` property and register each as a Deck stage.
 
 ## Extension Points
 
