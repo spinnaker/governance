@@ -103,7 +103,11 @@ The build system should not include the transitive dependencies that are already
 Instead, it should share those curated dependencies with the plugin at runtime from the existing code loaded into core deck.
 
 ## Bootstrapping Deck
-Plugins will be able to use shared library code which is provided by Deck itself (see [Plugin Structure](#plugin-structure) below).  These shared libraries should be loaded before the plugins themselves.  Because of this, plugins should be loaded after Deck has exposed the shared libraries.  The order of operations likely should be:
+
+Plugins will be able to use shared library code which is provided by Deck itself.
+These shared libraries should be loaded before the plugins themselves.
+Because of this, plugins should be loaded after Deck has exposed the shared libraries.
+The order of operations likely should be:
 
 - Load Deck assets
 - Deck Bootstrap
