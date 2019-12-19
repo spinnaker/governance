@@ -26,9 +26,9 @@ This design doc references the [Plugins RFC](./plugins.md).
 
 This doc focuses on:
 * [Loading Plugin code into Deck](#Loading-Plugin-code-into-Deck)
-* [Bootstrapping Deck](#Bootstraping-Deck)
 * [Extension points](#Extension-Points)
 * [Plugin development](#Plugin-development)
+* [Bootstrapping Deck](#bootstrapping-deck)
 
 ## Loading Plugin code into Deck
 
@@ -50,7 +50,7 @@ Some potential servers may be:
 - A proxy service that serves Deck resources as well as resources from a storage service such as S3 (this is the case at Netflix)
 - Front50 itself, via Gate.  This seems like a promising option.
 
-[1] Halyard could configure an init container which would download plugin resources into the container.  The resources would be served by served by Apache in the same way that the standard resources are served.  Note: if such an init container were created, it could potentially serve the same purpose to front-load plugin assets for backend services.
+[1] Halyard could configure an init container which would download plugin resources into the container.  The resources would be served by Apache in the same way that the standard resources are served.  Note: if such an init container were created, it could potentially serve the same purpose to front-load plugin assets for backend services.
 
 ## Extension Points
 
@@ -64,7 +64,7 @@ Examples include:
 - Application tabs/routes
 - Component Overrides
 
-Todayt, these extension points are imperative, e.g., `Registry.pipeline.registerStage(stage)`.
+Today, these extension points are imperative, e.g., `Registry.pipeline.registerStage(stage)`.
 Deck will define a Plugin interface, `IDeckPlugin`, which will have declarative fields for each extension point.
 Some extension points (such as application tabs) may not support a purely declarative model.
 For such extension points, we may define initialization callback signatures that allow the plugin to initialize those Extensions.
