@@ -2,6 +2,9 @@
 
 This SIG is focused on CI (continuous integration) experience within Spinnaker.
 
+* We plan to tackle all CI elements within Spinnaker - Igor, CI view/configuration, potentially adding a CI stage, and so on.
+* We will collaborate with the UI/UX SIG when we'll be considering adding elements to the UI such as the CI view.
+
 ## Meetings
 
 * Regular SIG Meeting
