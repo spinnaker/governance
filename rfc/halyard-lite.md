@@ -165,8 +165,8 @@ far from the case.
 ## Timeline
 
 * Spinnaker 1.19 (March 2020)
-  * An alpha version of Halyard Lite is released and is able to generate service
-  configurations from the Halyard config.
+  * An alpha version of Halyard Lite is released along with documentation, and
+  is able to generate service configurations from the Halyard config.
   * A simple Kustomize kustomization is released that can deploy Spinnaker to
   Kubernetes in simple cases.
 * Spinnaker 1.20 (May 2020)
@@ -177,6 +177,8 @@ far from the case.
 * Spinnaker 1.21 (July 2020)
   * Halyard Lite, as well as the kustomize install path are GA and the
    recommended install path for new users of Spinnaker.
+  * Documentation (such as install documentation) referencing old Halyard
+  commands is updated to reference Halyard Lite.
   * Based on adoption of Halyard Lite, a plan is formulated around how and when
   to deprecate and cease support of Halyard. The details of this plan will be a
   separate RFC.
