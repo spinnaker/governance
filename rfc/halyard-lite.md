@@ -238,9 +238,13 @@ firewalls prevent the Halyard instance from communicating with external services
 individual microservices do have access to.
 
 Halyard will reduce the scope of its validation efforts.  It will focus on
-validating the well-formedness of values in the Halyard config, but will no longer
+validating the well-formedness of the Halyard config, but will no longer
 act as the other microservices to try to actually build instances of credentials
-and make requests using them.
+and make requests using them.  Validating the well-formedness of the config will
+involve both:
+* Validating the structure of the config
+* Performing simple validation on the values supplied in the config, such as
+  ensuring that a value is an integer or a valid URL
 
 #### Secret management
 
@@ -279,9 +283,17 @@ that the operator is using some external tool to version and back up the configu
 Halyard handles publishing and deprecating Spinnaker versions; this functionality
 is only used by maintainers of the project and requires having a GCP service
 account with write permissions to the GCS bucket that stores Spinnaker version
-info. To simplify the surface area for end users, this functionality will be
+info. It is possible to use this functionality to publish custom BOMs to a private
+GCS bucket, so users who publish and consume custom BOMs may also be using these
+commands.
+
+To simplify the surface area for end users, this functionality will be
 removed from Halyard and migrated to a separate admin-specific tool to handle
-these changes.
+these changes. Any users that are using the `hal admin` commands to publish
+custom BOMs will need to migrate to the new tool; given that users publishing a
+custom BOM are in general advanced users, this should not be a difficult migration.
+(More research will also be done at that stage to determine if there are even any
+end-users relying on these commands as part of their custom BOM workflow.)
 
 ## Retained core competency
 
