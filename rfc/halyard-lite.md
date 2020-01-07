@@ -48,6 +48,8 @@ correct directory.
 
 Installing to a Kubernetes cluster has the additional complexity of:
 *   Adding each service’s config file as a `ConfigMap` to your cluster
+*   Adding any files referenced in the service configs as `ConfigMap`s or `Secret`s
+    to the cluster.
 *   Writing a workload (`Deployment`/`ReplicaSet`) manifest for each microservice,
 making sure to mount the appropriate configuration into each workload.
 *   Writing a `Service` for any workloads (deck, gate) that should be exposed
@@ -69,7 +71,9 @@ As Spinnaker positions itself as a Kubernetes-native deployment tool, operators
 are expecting to deploy and operate Spinnaker using the same Kubernetes-native
 tools they use for other software.  In particular, the workflow for updating
 Spinnaker using Halyard is to SSH to a VM (or a pod) and run a series of imperative
-commands.
+commands.  Halyard's client/server nature does not lend itself well to GitOps or
+Infrastructure as Code workflows; while some users have worked around this, the
+process is error prone and difficult to automate.
 
 The desire for a Kubernetes-native path to install Spinnaker has led to a number
 of alternate install paths built on top of Halyard:
@@ -306,7 +310,9 @@ service configurations but only adds fields to the output deployment YAML.)
 
 As the Halyard config is not currently well-documented (with the documentation
 instead living on the hal command reference), we will add extensive documentation
-on this config file.
+on this config file. In order to ensure the documentation stays up to date, the
+technical implementation will keep the documentation alongside the code and
+auto-generate user-facing documentation from this documented code.
 
 #### Output
 
