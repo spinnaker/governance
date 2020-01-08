@@ -29,6 +29,9 @@ Non-goals:
 * This document focuses primarily on the motivation behind replacing Halyard with
 a smaller tool as well as the broad design and surface of of this tool. A more detailed
 technical design of this tool is not in scope for this document.
+* While this document focuses on making the experience of deploying Spinnaker to
+Kubernetes easier, it does not intend to deprecate or eliminate the ability to
+deploy Spinnaker to other platforms.
 
 ## Motivation and Rationale
 
@@ -379,6 +382,18 @@ Users with enough Kubernetes experience, or with enough special use cases may
 want to manually write the YAML for their Spinnaker deployment.  In this case, they’d
 use Halyard Lite to generate the required service configuration files, and would
 then feed these into their process for generating the YAML required to deploy Spinnaker.
+
+### Non-Kubernetes
+
+Users who are not using Kubernetes will still be able to use Halyard Lite to generate
+their config files and stage any dependent files.  As is the case for Kubernetes,
+Halyard will no longer handle actually deploying the services to VMs; users will
+be responsible for putting the generated configs in the expected location and
+fetching/starting the services.  As Halyard currently only supports deploying
+all services to the same machine where Halyard is running, it's not clear that this
+was commonly used for actual production setups; the fact that Halyard Lite will
+have an explicit contract to output the required config files should make it easier
+to build downstream tooling for deploying to VMs for users that want this functionality.
 
 ### Technical Overview
 
