@@ -2,7 +2,7 @@
 
 | | |
 |-|-|
-| **Status**     | _**Proposed**, Accepted, Implemented, Obsolete_ |
+| **Status**     | In-Process |
 | **RFC #**      | [62](https://github.com/spinnaker/governance/pull/62) |
 | **Author(s)**  | Michael Plump ([`@plumpy`](https://github.com/plumpy)) |
 | **SIG / WG**   | Platform SIG |
@@ -63,7 +63,9 @@ convert to a Java 11 JRE too.
 
 ## Timeline
 
-### 1.18 (early January)
+Completed sections are marked with a ✔️
+
+### ✔️ 1.18 (early January)
 
 For our container builds, we'll first move just two (of approximately ten)
 services to the new JRE. The two services will be `igor` and `front50`. By
