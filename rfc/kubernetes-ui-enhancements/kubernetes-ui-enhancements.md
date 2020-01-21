@@ -15,7 +15,7 @@
 
 ## Overview
 
-This project is split into two components. The first section covers the building of an enhanced Kubernetes object UI .The second section covers the changes needed as part of the terminology alignment.
+This project is split into two components. The first section covers the building of an enhanced Kubernetes object UI. The second section covers the changes needed as part of the terminology alignment.
 
 ## Out of Scope
 
@@ -256,5 +256,4 @@ Secrets are a volume type that can be used to store sensitive information. Due t
 ## Additional Terminology Updates
 
 Terminology changes can be expanded beyond the infrastructure view and across Deck's UI.
-
 
