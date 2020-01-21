@@ -194,9 +194,9 @@ Cluster → Workloads
 
 Spinnaker uses the term “cluster” in the infrastructure view as an all encompassing term for the metadata, instances, and environments that comprise an application. This term is incongruent with the Kubernetes definition of a cluster. The term “workload” aligns Spinnaker with other tools and accurately refers to the set of Kubernetes application resources.
 
-Load Balancers
+Load Balancers → Load Balancers
 
-The load balancer tab of Spinnaker’s infrastructure view is used to display deployed Service and Ingress objects. While updating this to “Services & Ingresses” would bring Spinnaker into alignment with other tools, it would require further tweaking if the category is expanded to include future object types. Unlike Spinnaker’s overloaded usage of the term “cluster”, the load balancer label is not applied in direct conflict with a pre-existing Kubernetes specific term.
+The load balancer tab of Spinnaker’s infrastructure view is used to display deployed Service and Ingress objects. As part of this terminology review, I considered renaming this to “Services & Ingresses”. While that would bring Spinnaker into alignment with other tools, it would require further tweaking if the category is expanded to include future object types. Unlike Spinnaker’s overloaded usage of the term “cluster”, the load balancer label is not applied in direct conflict with a pre-existing Kubernetes specific term and can remain unchanged.
 
 Firewalls →  Network Policies
 
@@ -244,6 +244,9 @@ The scope of this project’s first phase has been detailed above. There exists 
 ## Custom CRDs
 
 Spinnaker currently offers [extension points](https://www.spinnaker.io/guides/developer/crd-extensions/) for advanced users seeking to accomplish a deeper integration with their own Custom Resource Definitions. This functionality offers users the ability to override the default model class for a CRD, implement a custom naming strategy, or offer a custom UI. To accomplish this, users must be comfortable working in Spinnaker’s code base and running a layered build. The complexity of this approach may act as a significant obstacle. Approaches such as general resource browser may present a more accessible alternative.
+
+Work is currently ongoing to make Spinnaker extensible through the form of frontend and backend plugins. The [plugin effort](https://github.com/spinnaker/governance/blob/master/rfc/plugins.md) is currently in flight with initial work occurring around pipeline stages. This may eventually present a simpler means for extending Spinnaker to support Custom CRDs.
+
 
 ## Config Map / Pod Relationship
 
