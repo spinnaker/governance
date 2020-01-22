@@ -8,6 +8,7 @@ This SIG is focused on CI (continuous integration) experience within Spinnaker.
 ## Meetings
 
 * Regular SIG Meeting
+
   * Every other Wedensday, 1 PM EST / 10AM PST
   
   [Agenda](https://docs.google.com/document/d/1vV5lzBydtPQVwIADxdb7eKqq5yoBhA4pEJrxksLuXdE/edit?usp=sharing)

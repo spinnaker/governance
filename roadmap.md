@@ -97,10 +97,8 @@ _This process could be made easier by investing in more strongly typed APIs and 
 - **Beneficiary**: Amazon ECS users
 - **Area of Investment**: Cloud Providers
 - **Deliverables**:
-  - Support for services with multiple load balancer target groups
-  - Performance enhancements for accounts with large number of resources
-  - Custom placement strategies configuration UI
-  - Daemon service deployments
+  - Performance enhancements for accounts with large numbers of resources
+  - UI fixes & enhancements for load balancers, container images
 
 ### Spinnaker-as-Code
 

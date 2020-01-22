@@ -20,6 +20,7 @@ organization:
       - gal-yardeni
       - luispollo
       - srekapalli
+      - anotherchrisberry
     oss-reviewers:
       description: Reviewers Role
       members:
@@ -39,6 +40,7 @@ organization:
       - pdelagrave
       - PerGon
       - scottfrederick
+      - srekapalli
       - stuart-pollock
       - xavileon
     oss-approvers:
@@ -81,6 +83,7 @@ organization:
       - robfletcher
       - robzienert
       - sbwsg
+      - srekapalli
       - stewchen
       - ttomsu
       - wjoel

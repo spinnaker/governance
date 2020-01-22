@@ -2,8 +2,8 @@
 
 | | |
 |-|-|
-| **Status** | **Proposed**, Accepted, Implemented, Obsolete |
-| **RFC  Num** | [#43](https://github.com/spinnaker/community/pull/43) |
+| **Status** | Proposed, **Accepted**, Implemented, Obsolete |
+| **RFC  Num** | [#43](https://github.com/spinnaker/governance/pull/43) |
 | **Author(s)** | Rob Zienert (`@robzienert`), Cameron Motevasselani (`@link108`) |
 | **SIG / WG** | Platform SIG |
 | **Obsoletes** | [spinnaker/spinnaker#4181](https://github.com/spinnaker/spinnaker/issues/4181) |

@@ -13,9 +13,6 @@
 **[Brian Le](https://github.com/brian-armory)**  
 Technical Writer at Armory
 
-**[Ben Klein](https://github.com/fifthposition)**  
-Technical Writer at Pivotal
-
 **[David Dorbin](https://github.com/dorbin)**  
 Technical Writer at Google
 
