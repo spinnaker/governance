@@ -1,9 +1,10 @@
 # Special Interest Groups: Index
 
-This is an index of all minted SIGs within the Spinnaker Community. 
+This is an index of all minted SIGs within the Spinnaker Community.
 Don't see a SIG here that fits what you're looking for? [Submit a Proposal](sig-lifecycle.md)
 
 * [AWS](sig-aws/README.md)
+* [CI](sig-ci/README.md)
 * [Documentation](sig-documentation/README.md)
 * [Kubernetes](sig-kubernetes/README.md)
 * [Platform](sig-platform/README.md)
@@ -23,5 +24,3 @@ If you don't use Google Calendar or have trouble with the first link, you can co
    ```
    https://calendar.google.com/calendar/ical/spinnaker.io_tr65rjf5mfij7p6vucprkhulcc%40group.calendar.google.com/public/basic.ics
    ```
-
-
