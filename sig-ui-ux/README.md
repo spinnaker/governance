@@ -5,7 +5,7 @@ _TODO description_
 ## Meetings
 
 * Regular SIG Meeting
-  * Monthly on the first Monday, 2 PM EST / 11 AM PST
+  * Monthly on the first Monday, 11 AM US/Pacific ([See in your time zone](https://www.thetimezoneconverter.com/?t=11am&tz=San%20Francisco))
   * [Agenda](https://docs.google.com/document/d/1E7b-2CXvdh23fyKu2BjJzKg2KK4245hWqy7mDz7IkBQ/edit)
 
 ## Leadership

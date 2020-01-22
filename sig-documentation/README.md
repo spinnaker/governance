@@ -1,7 +1,7 @@
 # Spinnaker Documentation Special Interest Group
 
 ## Meeting Info
-* First Wednesday of every month at 11:00 AM Pacific/2:00 PM Eastern
+* First Wednesday of every month at 11 AM US/Pacific ([See in your time zone](https://www.thetimezoneconverter.com/?t=11am&tz=San%20Francisco))
 * [Agenda and notes](https://docs.google.com/document/d/1uErNfK3Yr6LKELNSO7YfsRFyJVHqjivfzIO4nBmMCUw/edit)
 * [Meeting link](https://meet.google.com/umg-qugw-mjy)
 
