@@ -102,6 +102,25 @@ The build system should ideally support code splitting to enable lazy loading of
 The build system should not include the transitive dependencies that are already loaded by core Deck.
 Instead, it should share those curated dependencies with the plugin at runtime from the existing code loaded into core deck.
 
+### Mixins Mode
+To make front end plugins more similar to way in which back end plugins work, there needs to be way for plugin creators to be able to do things that there are currently no extensions for. This mixin mode will allow plugin developers to add extra functionality that is currently not a well defined extension point. Over time as more plugins are created, extension points will be added. To do this the `plugin` that each plugin has to export can have a method attached to it called `mixin` that will be executed by Deck for any code that is defined in there to run.
+
+```
+import { fancyStage } from './fancyStage';
+import { myMixin } from './myMixin';
+export const plugin = {
+  stages: [fancyStage],
+  mixin: myMixin,
+}
+```
+
+Then were we call to register the stages, the `mixin` method will be called if it is defined:
+```
+plugin.mixins && plugin.mixins();
+```
+
+Doing this solves the chicken and egg problem that we currently have. Only Stages are exposed for plugin developers. If a plugin developer wanted to do anything else as a plugin in Deck, there is no way to do it.
+
 ## Bootstrapping Deck
 
 Plugins will be able to use shared library code which is provided by Deck itself.
