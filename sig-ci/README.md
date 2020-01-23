@@ -9,7 +9,7 @@ This SIG is focused on CI (continuous integration) experience within Spinnaker.
 
 * Regular SIG Meeting
 
-  * Every other Wednesay, 10 AM US/Pacific ([See in your time zone](https://www.thetimezoneconverter.com/?t=10am&tz=San%20Francisco))
+  * Every other Wednesday, 10 AM US/Pacific ([See in your time zone](https://www.thetimezoneconverter.com/?t=10am&tz=San%20Francisco))
 
   [Agenda](https://docs.google.com/document/d/1vV5lzBydtPQVwIADxdb7eKqq5yoBhA4pEJrxksLuXdE/edit?usp=sharing)
 
