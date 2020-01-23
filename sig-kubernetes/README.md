@@ -5,7 +5,7 @@ The Kubernetes SIG is responsible for the integration between Spinnaker and Kube
 ## Meetings
 
 * Regular SIG Meeting
-  * Every other Tuesday, 1 PM ET / 10AM PT
+  * Every other Tuesday, 10 AM US/Pacific ([See in your time zone](https://www.thetimezoneconverter.com/?t=10am&tz=San%20Francisco))
   * [Agenda](https://docs.google.com/document/d/1db_yw1uru99Byvin4lQgm7aUZ9xMmvsARtEiiNUrmBo/edit)
   * [Meeting Link](https://meet.google.com/oto-qwpw-dgt)
 
