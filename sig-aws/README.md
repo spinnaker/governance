@@ -1,6 +1,6 @@
 # Proposal: Spinnaker AWS Special Interest Group
 
-## Roles & Responsibilities of the SIG Leads 
+## Roles & Responsibilities of the SIG Leads
 
 ### SIG Lead(s):
 
@@ -12,8 +12,8 @@ _AWS_
 Senior Software Engineer \
 _Netflix_
 
-**[Isaac Mosquera](https://github.com/imosquera)** \
-Software Engineer  \
+**[Akshay Dayal](https://github.com/akshayabd)** \
+Technical Product Manager \
 _Armory_
 
 
@@ -34,9 +34,9 @@ _Armory_
 
 # Responsibilities
 
-## Description 
+## Description
 
-AWS SIG is responsible for the creation and maintenance of subprojects & subservices necessary to integrate AWS services for the operation and management of Spinnaker on AWS as well as using AWS as a deployment target. 
+AWS SIG is responsible for the creation and maintenance of subprojects & subservices necessary to integrate AWS services for the operation and management of Spinnaker on AWS as well as using AWS as a deployment target.
 
 AWS SIG also acts as a forum for discussions and feature demos for Spinnaker users on AWS users/developers to raise their feature requests and support issues. SIG leads in collaboration with SIG members will develop, maintain and prioritize a backlog of features.  This prioritization will be published as the AWS SIG Roadmap.
 
@@ -63,5 +63,3 @@ Spinnaker integrations specific to AWS including:
     *   Review escalation implications of feature and API designs as it relates to core Spinnaker components (orca, clouddriver, echo, deck, etc)
     *   AWS Clouddriver implementation and interface design
     *   Implementing and improving core functionality (such as tests and documentation) to clarify and validate the contract between the core and and the AWS specific functionality
-
-
