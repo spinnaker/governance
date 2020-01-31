@@ -150,6 +150,8 @@ The Job metadata panel serves as an effective means of surfacing the status and 
 
 The infrastructure view can be updated to display a list of jobs deployed to each cluster. Selecting a job from this list would then display the job metadata panel. This change would increase the visibility of deployed jobs and make it easier for users to monitor job resources across multiple clusters within Spinnaker.
 
+Jobs applied through the Deploy Manifest stage will have their associated pods grouped when rendered in the UI. This grouping may be extended to Jobs applied through the Run Job Stage by leveraging annotations.
+
 ##### Cron job improvements
 
 Cron jobs have additional attributes that are crucial in understanding how and when a given job will execute. There is a set of attributes present in other Kubernetes tools that is not available in Spinnaker’s Cron Job metadata panel. This includes:
@@ -160,6 +162,8 @@ Cron jobs have additional attributes that are crucial in understanding how and w
 - Suspension status. 
 
 Surfacing these attributes in the panel would allow users to quickly understand the state of their cron jobs across clusters. They can be added as collapsible windows to the existing panel UI.
+
+Determining the association between a Cron Job and each of its Job Runs should be possible through Job owner references. This can be reflected in the UI by extending the pattern for how Replica Sets currently render Pods.
 
 ### Editing Actions
 
