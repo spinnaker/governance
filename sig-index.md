@@ -7,6 +7,8 @@ Don't see a SIG here that fits what you're looking for? [Submit a Proposal](sig-
 * [CI](sig-ci/README.md)
 * [Documentation](sig-documentation/README.md)
 * [Kubernetes](sig-kubernetes/README.md)
+* [Operational Validation](sig-operational-validation/README.md)
+* [Operations](sig-ops/README.md)
 * [Platform](sig-platform/README.md)
 * [Security](sig-security/README.md)
 * [Spinnaker-as-Code](sig-spinnaker-as-code/README.md)
