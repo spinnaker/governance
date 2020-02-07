@@ -123,7 +123,7 @@ Current SC members:
 * Andy Glover (Netflix)
 * Matt Duftler (Google)
 * Peter Stout (Netflix)
-* Ruslan Meshenberg (Netflix)
+* Erin Kidwell (Netflix)
 * Andrew Philips (Google)
 
 Election to the SC requires a majority of the SC. If a person is up for reelection they are not allowed to vote for their reelection. 
