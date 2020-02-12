@@ -2,7 +2,7 @@
 
 | | |
 |-|-|
-| **Status**     | _**Proposed**, Accepted, Implemented, Obsolete_ |
+| **Status**     | _Proposed, **Accepted**, Implemented, Obsolete_ |
 | **RFC #**      | [89](https://github.com/spinnaker/governance/pull/89) |
 | **Author(s)**  | Eric Zimanyi (@ezimanyi) |
 | **SIG / WG**   | Kubernetes SIG |
