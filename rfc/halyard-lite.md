@@ -12,9 +12,8 @@
 The current recommended way to deploy Spinnaker is by using Halyard. While Halyard
 has greatly simplified some aspects of installing and configuring Spinnaker, it
 has a number of shortcomings that are particularly apparent when deploying to
-Kubernetes. This document proposes replacing Halyard with a smaller tool that
-integrates better into the Kubernetes ecosystem. Throughout this document, the new
-tool is referred to by the temporary name _Halyard Lite_.
+Kubernetes. This document proposes replacing Halyard with a smaller tool called
+_kleat_ that integrates better into the Kubernetes ecosystem.
 
 ### Goals and Non-Goals
 
@@ -172,21 +171,21 @@ far from the case.
 ## Timeline
 
 * Spinnaker 1.19 (March 2020)
-  * An alpha version of Halyard Lite is released along with documentation, and
+  * An alpha version of kleat is released along with documentation, and
   is able to generate service configurations from the Halyard config.
   * A simple Kustomize kustomization is released that can deploy Spinnaker to
   Kubernetes in simple cases.
 * Spinnaker 1.20 (May 2020)
-  * Feedback from early users of Halyard Lite and the kustomization are
+  * Feedback from early users of kleat and the kustomization are
    addressed, and the kustomization now supports more advanced use cases (ex:
    high availability, custom BOM, etc.)
-  * The Armory operator is moved to depend on Halyard Lite
+  * The Armory operator is moved to depend on kleat
 * Spinnaker 1.21 (July 2020)
-  * Halyard Lite, as well as the kustomize install path are GA and the
+  * Kleat, as well as the kustomize install path are GA and the
    recommended install path for new users of Spinnaker.
   * Documentation (such as install documentation) referencing old Halyard
-  commands is updated to reference Halyard Lite.
-  * Based on adoption of Halyard Lite, a plan is formulated around how and when
+  commands is updated to reference kleat.
+  * Based on adoption of kleat, a plan is formulated around how and when
   to deprecate and cease support of Halyard. The details of this plan will be a
   separate RFC.
 
@@ -315,10 +314,10 @@ This command will roughly map onto the current `hal config generate` command.
 
 #### Input
 
-The input to Halyard Lite will be a Halyard config file, expressed as YAML.
+The input to kleat will be a Halyard config file, expressed as YAML.
 In order to promote backwards compatibility, the format of this config file will
-not change.  There will be some fields that are no longer relevant in Halyard Lite;
-these fields will be documented as being ignored by Halyard Lite and it will emit
+not change.  There will be some fields that are no longer relevant in kleat;
+these fields will be documented as being ignored by kleat and it will emit
 a non-fatal warning if these fields are set.  (An example of such a field is
 `deploymentEnvironment.tolerations`, which does not affect the generation of
 service configurations but only adds fields to the output deployment YAML.)
@@ -331,10 +330,10 @@ auto-generate user-facing documentation from this documented code.
 
 #### Output
 
-The output to Halyard Lite will be a directory containing the service YAML of
+The output to kleat will be a directory containing the service YAML of
 each microservice, as well as files that depend on it.  As a baseline,
 `hal config generate` currently outputs this data to a staging directory and we
-will use the same format for the output from Halyard Lite.
+will use the same format for the output from kleat.
 
 There are a few open questions around whether we might want to deviate from this format:
 *   Currently the service config files contain absolute references to files in
@@ -350,20 +349,20 @@ resolve the BOM themselves.
 
 ### Install Pathways
 
-With the new Halyard Lite, there will be a number of install pathways available
+With kleat, there will be a number of install pathways available
 to users.
 
 #### Operator
 
 The operator being built by Armory will replace its dependency on the existing
-Halyard with Halyard Lite.  As the operator already abstracts away the parts of
+Halyard with kleat.  As the operator already abstracts away the parts of
 Halyard that are being removed, this change should be transparent to the end user.
 
 #### Kustomize
 
 We’ll provide a Kustomize repo that contains canonical examples of the Kubernetes
 YAML for deploying Spinnaker.  In order to generate a full deployment, users will
-first run Halyard Lite to generate their config files, then will point Kustomize
+first run kleat to generate their config files, then will point Kustomize
 at the output directory containing these files so that it can generate the
 required ConfigMaps as well as overrides for the docker container versions.
 
@@ -371,7 +370,7 @@ required ConfigMaps as well as overrides for the docker container versions.
 
 The solution here is less clear, as there is not a great way to pass config files
 to Helm; to have a native Helm installation, it would be necessary to reproduce
-the entire Halyard config in the values file, and re-implement Halyard Lite in
+the entire Halyard config in the values file, and re-implement kleat in
 Helm’s templating language.  A better solution would be to have Helm install the
 operator, which is similar to how the chart currently just installs Halyard but
 should provide a more Kubernetes-native experience.
@@ -380,18 +379,18 @@ should provide a more Kubernetes-native experience.
 
 Users with enough Kubernetes experience, or with enough special use cases may
 want to manually write the YAML for their Spinnaker deployment.  In this case, they’d
-use Halyard Lite to generate the required service configuration files, and would
+use kleat to generate the required service configuration files, and would
 then feed these into their process for generating the YAML required to deploy Spinnaker.
 
 ### Non-Kubernetes
 
-Users who are not using Kubernetes will still be able to use Halyard Lite to generate
+Users who are not using Kubernetes will still be able to use kleat to generate
 their config files and stage any dependent files.  As is the case for Kubernetes,
 Halyard will no longer handle actually deploying the services to VMs; users will
 be responsible for putting the generated configs in the expected location and
 fetching/starting the services.  As Halyard currently only supports deploying
 all services to the same machine where Halyard is running, it's not clear that this
-was commonly used for actual production setups; the fact that Halyard Lite will
+was commonly used for actual production setups; the fact that kleat will
 have an explicit contract to output the required config files should make it easier
 to build downstream tooling for deploying to VMs for users that want this functionality.
 
@@ -405,8 +404,8 @@ the current functionality, we will re-implement this core part instead of
 refactoring Halyard.
 
 This has the advantage of allowing the existing Halyard to be maintained while
-the new “Halyard Lite” is being implemented and adopted by end users; it also
-insulates the existing Halyard from quick iteration on Halyard Lite. One disadvantage
+the new kleat is being implemented and adopted by end users; it also
+insulates the existing Halyard from quick iteration on kleat. One disadvantage
 of this approach is that there will be a period of time where we need to maintain
 both the old and new Halyard.
 
@@ -419,9 +418,9 @@ The new tool will replace this with a CLI only, with no background daemon proces
 
 #### Language
 
-Halyard Lite will be written in Go, which has the following advantages:
-*   The primary initial consumer of Halyard Lite will be the Armory Operator,
-which is also written in Go and will be able to consume parts of Halyard Lite
+kleat will be written in Go, which has the following advantages:
+*   The primary initial consumer of kleat will be the Armory Operator,
+which is also written in Go and will be able to consume parts of kleat
 as a library
 *   Operators deploying to Kubernetes are usually much more familiar with Go than
 with Java, so this will likely lead to an easier path to contribution from the
@@ -431,7 +430,7 @@ community
 ## Drawbacks
 
 This change will require users to change their workflow for deploying Spinnaker in
-order to adopt Halyard Lite. While the format of the Halyard config itself will not
+order to adopt kleat. While the format of the Halyard config itself will not
 change, users will need to change the way they actually deploy Spinnaker from running
 `hal deploy apply` to using one of the above-described install pathways.
 
@@ -473,7 +472,7 @@ and eliminating one potential vulnerability point.
 
 ## Operations
 
-Migration to Halyard Lite will involve some one-time work to update any scripts or
+Migration to kleat will involve some one-time work to update any scripts or
 procedures that organizations have developed to deploy Spinnaker. In particular,
 some configuration that existed in the Halyard configuration will now be moved to
 the Helm or Kustomize layer, and will require users to update their configuration
@@ -487,14 +486,14 @@ tooling and instead leveraging their knowledge of more general Kubernetes tools.
 
 ## Risks
 
-The primary risk here is that users do not want to migrate to Halyard Lite, either
+The primary risk here is that users do not want to migrate to kleat, either
 because there is an important user story that it does not support, or because it
 does not provide enough of an improvement as incentive for the one-time migration
 costs. As the existing Halyard will continue to be supported during the transition,
-the primary risk here is wasted effort if Halyard Lite does not get enough adoption
+the primary risk here is wasted effort if kleat does not get enough adoption
 to warrant continued maintenance. A more likely outcome is that feedback from
 initial testers results in updates to this plan to better support their use cases,
-which might delay the full GA availability of Halyard Lite.
+which might delay the full GA availability of kleat.
 
 ## Future Possibilities
 
