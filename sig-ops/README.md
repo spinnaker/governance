@@ -11,7 +11,7 @@ The Operations (Ops) Special Interest Group (SIG) provides a forum for groups th
 ## Meetings
 
 * Regular SIG Meeting
-  * Every other TBD
+  * Every other Thursday, 10 AM US/Pacific ([See in your time zone](https://www.thetimezoneconverter.com/?t=11am&tz=San%20Francisco))
   * [Agenda](https://docs.google.com/document/d/1-YAEe1MrbgqtobyHyz2s5FvZFJGBM5wcYH-hE6sVgQw/edit?usp=sharing)
 
 ## Leadership
