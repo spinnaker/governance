@@ -29,7 +29,7 @@ _Armory_
 
 ### Meeting Cadence
  - 1 hour, monthly, on **[Google Hangouts](https://meet.google.com/yfp-ekod-sxj)**
- - Third Wednesday of every month at 3 PM US/Pacific ([See in your time zone](https://www.thetimezoneconverter.com/?t=3pm&tz=San%20Francisco))
+ - Third Wednesday of every month at 9:30 AM US/Pacific ([See in your time zone](https://www.thetimezoneconverter.com/?t=9:30am&tz=San%20Francisco))
  - [AWS SIG Notes](https://docs.google.com/document/d/1TB7dSQDTM9jFBsttuevxOsP6MGQ3-z0wrYMIGxYxhYQ/edit)
 
 # Responsibilities
