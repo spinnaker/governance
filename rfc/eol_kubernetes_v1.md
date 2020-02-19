@@ -2,7 +2,7 @@
 
 | | |
 |-|-|
-| **Status**     | _**Proposed**, Accepted, Implemented, Obsolete_ |
+| **Status**     | _Proposed, **Accepted**, Implemented, Obsolete_ |
 | **RFC #**      | [88](https://github.com/spinnaker/governance/pull/88) |
 | **Author(s)**  | Maggie Neterval (`@maggieneterval`) |
 | **SIG / WG**   | Kubernetes SIG |
@@ -69,11 +69,11 @@ Each set of milestones should be complete by the time the corresponding Spinnake
   - [] How can I successfully execute a zero-downtime migration from the V1 provider to the V2 provider? What are some first-hand lessons from teams who have done this?
 
 - [] Audit existing Spinnaker content to update.
-  - [] Ensure all guides on spinnaker.io reference V2 only.
+  - [x] Ensure all guides on spinnaker.io reference V2 only ([spinnaker.github.io/pull/1649](https://github.com/spinnaker/spinnaker.github.io/pull/1649)).
   - [] Standardize how we refer to the V2 provider (currently, mix of “V2” and “Manifest Based”) and the V1 provider (currently, mix of “V1” and “Legacy”).
-  - [] Add documentation to spinnaker.io on why and when the V1 provider will be / was removed.
-  - [] Add an addendum to any blog posts on the Spinnaker Community Blog that reference the V1 provider highlighting that it is no longer supported.
-  - [] Compile a list of Armory documentation and blog posts for Armory to update.
+  - [x] Add documentation to spinnaker.io on why and when the V1 provider will be / was removed ([spinnaker.github.io/pull/1710](https://github.com/spinnaker/spinnaker.github.io/pull/1710)).
+  - [] Add an addendum to any blog posts on the Spinnaker Community Blog that reference the V1 provider highlighting that it is no longer supported ([spinnaker/spinnaker/5463](https://github.com/spinnaker/spinnaker/issues/5463)).
+  - [x] Compile a list of Armory documentation and blog posts for Armory to update ([spinnaker/spinnaker/5463](https://github.com/spinnaker/spinnaker/issues/5463)).
   
 - [] Ensure clear and consistent communication of the plan:
   - [] Highlight the upcoming removal in each release’s curated changelog leading up to the release in which V1 will be officially removed.
