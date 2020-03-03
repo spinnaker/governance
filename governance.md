@@ -13,7 +13,6 @@ Roles are appointed by the Technical Oversight Committee (TOC). Roles can be rev
 Everyone is a welcome community member! Here are some things that we find extraordinarily helpful:
 
 * Answering questions in our [Slack team](https://spinnakerteam.slack.com/)
-* Answering questions in our [forum](https://community.spinnaker.io/)
 * Leave feedback on PRs - questions, code style, and bug spotting are all helpful
 * Help new developers get started
 * Reproduce bugs and add detail to issues
