@@ -33,7 +33,7 @@ To that end, these are the specific goals we are working toward:
 
 ## Motivation and Rationale
 
-Spinnaker.io has operated with one basic design look/feel since March 22, 2017. Given the current momentum and size of the project, it is time for a refresh. The Docs SIG feels it’s time to evolve .io beyond a documentation site and into a project hub, providing a presence for Spinnaker that is clearly segmented for different user personas.
+spinnaker.io has operated with one basic design look/feel since March 22, 2017. Given the current momentum and size of the project, it is time for a refresh. The Docs SIG feels it’s time to evolve .io beyond a documentation site and into a project hub, providing a presence for Spinnaker that is clearly segmented for different user personas.
 
 We need to provide context to attract new companies and ICs as they encounter Spinnaker. This aligns with Travis Tomsu’s efforts to add more context and persuasive oomph to READMEs across the project. The window for Spinnaker inevitability is threatened by a crowded marketplace and will close; this project will boost Spinnaker’s profile and chances for inevitability.
 
@@ -73,14 +73,14 @@ The current top nav will be condensed into 5 tabs:
 
 ### The refreshed home page should:
 * Answer the question “Why Spinnaker” at high level and provide easy links to segmented answers (dev, c-level, director, partner etc)
-  * IC: What does my life look like if I use Spinnaker?
+  * Individual Contributor: What does my life look like if I use Spinnaker?
   * Manager/Director: What does my life look like if my team uses Spinnaker?
   * C-level: What does my life look like if many of my key business objectives are tied to using Spinnaker?
 
 ### Documentation Features
 
-* Versioned documentation that corresponds to Spinnaker versions. This is a small widget in the top nav. See K8s docs for an example.
-* Page-level table of contents that is always visible. This provides context and makes navigation within a page easier. See Istio docs for an example. 
+* Versioned documentation that corresponds to Spinnaker versions. This is a small widget in the top nav. See [K8s docs](kubernetes.io/docs/home) for an example.
+* Page-level table of contents that is always visible. This provides context and makes navigation within a page easier. See [Istio docs](https://istio.io/docs/concepts/what-is-istio/) for an example. 
 
 ## Drawbacks
 Will cost money, and cost needs to be negotiated amongst stakeholders.
