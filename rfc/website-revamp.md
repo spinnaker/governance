@@ -3,7 +3,7 @@
 | | |
 |-|-|
 | **Status**     | Proposed|
-| **RFC #**      | TBD |
+| **RFC #**      | [#110](https://github.com/spinnaker/governance/pull/110) |
 | **Author(s)**  | Aimee Ukasick ([@aimeeu](https://github.com/aimeeu)), Brian Le ([@brian-armory](https://github.com/brian-armory)), Rosalind Benoit ([@dnilasor](https://github.com/dnilasor)) |
 | **SIG / WG**   | Documentation SIG |
 
