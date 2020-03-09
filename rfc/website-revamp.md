@@ -9,7 +9,7 @@
 
 ## Overview
 
-spinnaker.io is the public face of the Spinnaker project. This RFC proposes several improvements to .io and a pathway to achieving them.
+Spinnaker.io is the public face of the Spinnaker project. This RFC proposes several improvements to .io and a pathway to achieving them.
 
 ## Goals and Non-Goals
 
@@ -33,7 +33,7 @@ To that end, these are the specific goals we are working toward:
 
 ## Motivation and Rationale
 
-spinnaker.io has operated with one basic design look/feel since March 22, 2017. Given the current momentum and size of the project, it is time for a refresh. The Docs SIG feels it’s time to evolve .io beyond a documentation site and into a project hub, providing a presence for Spinnaker that is clearly segmented for different user personas.
+Spinnaker.io has operated with one basic design look/feel since March 22, 2017. Given the current momentum and size of the project, it is time for a refresh. The Docs SIG feels it’s time to evolve .io beyond a documentation site and into a project hub, providing a presence for Spinnaker that is clearly segmented for different user personas.
 
 We need to provide context to attract new companies and ICs as they encounter Spinnaker. This aligns with Travis Tomsu’s efforts to add more context and persuasive oomph to READMEs across the project. The window for Spinnaker inevitability is threatened by a crowded marketplace and will close; this project will boost Spinnaker’s profile and chances for inevitability.
 
