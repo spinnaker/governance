@@ -17,7 +17,7 @@ Spinnaker.io is the public face of the Spinnaker project. This RFC proposes seve
 
 The ultimate goal is a more modern looking and consistently styled spinnaker.io.
 
-To that end, these are the specific goals we are working toward: 
+To that end, these are the specific goals we are working toward:
 
 * Provide clear entryways and paths for the different personas spinnaker.io should speak to. For example, a more clear and opinionated navigation for someone brand new to Spinnaker.
 * Provide a clear and compelling answer to anyone asking, “Why Spinnaker for Continuous Delivery?”
@@ -49,9 +49,13 @@ From a technical standpoint, the way GitHub pages manages themes has changed to 
 * Work begins in May, validated with Docs SIG continuously.
 * Work completed by July 1.
 
-## Design 
+## Design
 
-(In progress)
+### Spinnaker Personas
+* Individual Contributor: I am a developer who contributes code to the core Spinnaker project, or maintains a fork or custom extensions of Spinnaker for my company.
+* Operator: I manage a Spinnaker installation for my company.
+* App Developer: I am on an application team and use Spinnaker to manage my continuous delivery workflow as an end-user.
+* Non-technical stakeholder/Executive: I am evaluating Spinnaker as a means to achieve some business objective.
 
 ### Top Nav Menu
 The current top nav will be condensed into 5 tabs:
@@ -71,16 +75,40 @@ The current top nav will be condensed into 5 tabs:
     * Featured videos
 * Blog
 
-### The refreshed home page should:
-* Answer the question “Why Spinnaker” at high level and provide easy links to segmented answers (dev, c-level, director, partner etc)
-  * Individual Contributor: What does my life look like if I use Spinnaker?
-  * Manager/Director: What does my life look like if my team uses Spinnaker?
-  * C-level: What does my life look like if many of my key business objectives are tied to using Spinnaker?
+### Entrypoints & Tracks:
+Check out [the mock-up draft](https://docs.google.com/drawings/d/1FCzzvnK0a-_dQ5Nn1T4jz4DrXfr4tMzc9BrObMdEw3k/edit) to visualize the proposed content.
+
+*Note: tracks overlap just as personas overlap for real individuals, based on roles and experience*
+
+* Executive track: Should answer "What does my life look like if my team(s) use Spinnaker?" for Executives
+  * Card prompting clicks from those seeking to achieve business objectives, "Accelerate the velocity of your engineering teams"
+    * leads to a persona-tailored content link in Getting Started
+  * Case study content cards
+  * Who should use Spinnaker card
+
+* App Developer track: Should answer "What does my life look like if I use Spinnaker?" for AppDevs
+  * Card prompting appdevs to, "Take your code from commit to production in one pipeline"
+    * leads to a persona-tailored content link in Getting Started
+    * Video carousel
+    * Spinnaker Universe Calendar card
+    * Slack join card
+
+* Operator track: Should answer "What does my life look like if I use Spinnaker?" for Operators
+  * Card prompting operators to, "Create and operationalize a golden path to production for AppDevs"
+    * leads to a persona-tailored content link in Getting Started
+    * Video carousel
+    * Spinnaker Universe Calendar card
+    * Slack join card
+
+* Individual Contributor track: Should answer "What are my next steps?" for potential contributors
+  * Contributor card
+    * leads to Contributor section in the Community area
+  * Spinnaker Universe Calendar card
 
 ### Documentation Features
 
 * Versioned documentation that corresponds to Spinnaker versions. This is a small widget in the top nav. See [K8s docs](kubernetes.io/docs/home) for an example.
-* Page-level table of contents that is always visible. This provides context and makes navigation within a page easier. See [Istio docs](https://istio.io/docs/concepts/what-is-istio/) for an example. 
+* Page-level table of contents that is always visible. This provides context and makes navigation within a page easier. See [Istio docs](https://istio.io/docs/concepts/what-is-istio/) for an example.
 
 ## Drawbacks
 Will cost money, and cost needs to be negotiated amongst stakeholders.
@@ -112,4 +140,4 @@ Should be minimal work, but unforeseen re-work could come up, expanding project 
 We could alienate the community with misaligned branding or documentation organization.
 
 ## Future Possibilities
-If we demonstrate that this refresh significantly increases traffic to spinnaker.io and supports Spinnaker success (i.e. increased traffic correlated with increased contributions/contributing company growth), we may later propose a more significant refresh. In doing so we’d like to avoid the K8S problem of having several contractors work on the site piecemeal, creating tech debt and knowledge scarcity. Our goal is to take a more pre-planned phased approach to improving the site. 
+If we demonstrate that this refresh significantly increases traffic to spinnaker.io and supports Spinnaker success (i.e. increased traffic correlated with increased contributions/contributing company growth), we may later propose a more significant refresh. In doing so we’d like to avoid the K8S problem of having several contractors work on the site piecemeal, creating tech debt and knowledge scarcity. Our goal is to take a more pre-planned phased approach to improving the site.
