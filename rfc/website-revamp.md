@@ -19,10 +19,10 @@ The ultimate goal is a more modern looking and consistently styled spinnaker.io.
 
 To that end, these are the specific goals we are working toward:
 
-* Provide clear entryways and paths for the different personas spinnaker.io should speak to. For example, a more clear and opinionated navigation for someone brand new to Spinnaker.
+* Provide clear entryways and paths for the different personas spinnaker.io should speak to; for example, a more clear and opinionated navigation for someone brand new to Spinnaker.
 * Provide a clear and compelling answer to anyone asking, “Why Spinnaker for Continuous Delivery?”
 * Add useful documentation features, e.g. versioned documentation and a better in-page table of contents
-* Improve operator, end-user, and contributor experience by providing more navigable documentation.
+* Improve operator, end-user, and contributor experience by providing more navigable documentation as well as a search bar on the spinnaker.io landing page.
 * Improve content organization to facilitate easy contribution.
 * Improve local build time and adopt the new way GitHub pages uses themes
 
@@ -42,6 +42,7 @@ From a technical standpoint, the way GitHub pages manages themes has changed to 
 ## Timeline
 * Achieve buy-in from stakeholders by March.
 * Finalize Statement of Work and share with community in March.
+* Obtain funding for a contractor from the Continuous Delivery Foundation after Statement of Work has been finalized.
 * Finalize SIG-validated high-level design in April.
 * Sitemap
 * Accept contractor bids, including billing rate and time estimate, in April.
@@ -108,6 +109,10 @@ Check out [the mock-up draft](https://docs.google.com/drawings/d/1FCzzvnK0a-_dQ5
 ### Documentation Features
 
 * Versioned documentation that corresponds to Spinnaker versions. This is a small widget in the top nav. See [K8s docs](kubernetes.io/docs/home) for an example.
+  - The version navigation widget will show the current version as default and include up to four previous versions.
+  - We are currently working on a release handbook. Authors push PRs for new features to a `dev-[future-release]` branch. Authors push PRs addressing issues in the current documentation to `master`. So the PR process for most docs committers will not change.  
+  - Docs PRs would not be pushed to a previous release branch unless a code patch was cherry picked to a previous branch. In that case, the Docs PR would be pushed to master and cherry picked to the previous branch.
+
 * Page-level table of contents that is always visible. This provides context and makes navigation within a page easier. See [Istio docs](https://istio.io/docs/concepts/what-is-istio/) for an example.
 
 ## Drawbacks
@@ -129,7 +134,7 @@ What is the impact of Spinnaker.io on the contributor experience and Spinnaker a
 
 ## Security, Privacy & Compliance
 
-n/a
+We plan to display usage stats, as defined in [Review of Project Telemetry Data Collection and Usage](https://www.linuxfoundation.org/wp-content/uploads/2020/01/Spinnaker-Review-of-Telemetry-Data-Collection-and-Usage-2020-01-09.pdf)
 
 ##  Operations
 Our goal at this phase is to deliver a refresh that will not introduce significant operational changes for spinnaker.io. This refresh shouldn’t change anything from a contributor’s perspective, other than file locations.
