@@ -89,20 +89,24 @@ artifacts configured in Produces Artifacts sections of stages.
 
 - [] Document and resolve all bugs discovered while manually testing the new UI.
 
-- [] For release 1.20, remove Deck's `artifacts` and `artifactsRewrite` feature
-flags from both Deck and Halyard. The default UI will be the new UI,
+- [] For release 1.20, remove the `artifacts` and `artifactsRewrite` feature
+flags from Deck. The default UI will be the new UI,
 previously gated by the `artifactsRewrite` flag. Users can revert to the legacy
 UI by enabling a new temporary feature flag, `legacyArtifactsEnabled`. We will
 not expose this flag in Halyard and require it be added manually to
-`settings-local.js`. Communicate this change by updating the artifacts
-documentation and adding a section to the 1.20 release notes.
+`settings-local.js`. Communicate this change by adding the
+`@ValidForSpinnakerVersion` annotation to the `artifacts` and `artifactsRewrite`
+feature flags in Halyard with an appropriate `upperBound` and `tooHighMessage`,
+updating the artifacts documentation, and adding a section to the 1.20 release
+notes.
 
 - [] For release 1.21, remove the `legacyArtifactsEnabled` flag and all legacy
 UI code. Communicate this change by updating the artifacts documentation and
 adding a section to the 1.21 release notes.
 
-- [] After release 1.23, we can remove the legacy UI documentation because no
-supported release (1.21, 1.22, 1.23) will include legacy UI support.
+- [] After release 1.23, we can remove the legacy UI documentation and Halyard
+feature flags because no supported release (1.21, 1.22, 1.23) will include
+legacy UI support.
 
 ## Prior Art and Alternatives
 
