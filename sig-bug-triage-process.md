@@ -21,7 +21,7 @@ Each issue should have one of three outcomes:
     > Thanks for filing the issue. Unfortunately, no one is available to work on
     > this at the moment, but we welcome contributions from our community.
     > Before starting work on it, we'd strongly encourage you to discuss your
-    > plans here or on the SIG's [slack channel](https://join.spinnaker.io/).
+    > plans here or on the SIG's \[slack channel](https://join.spinnaker.io/).
 
     Add the `no-lifecycle` tag if the issue represents a bug that shouldn't be
     automatically closed just because no one is available to fix it right now.
@@ -35,9 +35,9 @@ Each issue should have one of three outcomes:
 
     > Thanks for filing this issue. It looks like this might be a request for
     > help rather than a bug. In that case, you're probably better off looking
-    > for answers [from our Slack community](https://join.spinnaker.io/), since
+    > for answers \[from our Slack community](https://join.spinnaker.io/), since
     > there is a larger pool of users there. Use the search functionality to
-    > find users who have a similar experience, or post a message in `#general`
+    > find users who have a similar experience, or post a message in \`#general`
     > or another related channel.
 
     Alternately, this might be a bug with no reproduction steps and not enough
