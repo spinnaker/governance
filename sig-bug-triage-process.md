@@ -3,16 +3,15 @@
 SIGs should be triaging the issues with their matching label during every SIG
 meeting. You can view
 [a list of recently filed issues](https://github.com/spinnaker/spinnaker/labels/sig%2Fplatform)
-on GitHub to click through the ones filed since your last meeting. (That
-link shows issues for the Platform SIG, but you can easily edit the filter from
+on GitHub to click through the ones filed since your last meeting. (That link
+shows issues for the Platform SIG, but you can easily edit the filter from
 there.)
 
 Each issue should have one of three outcomes:
 
 1.  **Assigned to a user or added to an actively-maintained GitHub project.** An
     actively-maintained project has a team of people who are using it to plan
-    future work. If you assign it to a project, you should also add the
-    `no-lifecycle` tag so that Spinnakerbot doesn't automatically close it.
+    future work.
 
 1.  **Marked with the label "contributions welcome".** This is an indicator that
     we don't know anyone who will be working on the issue, but we would be
@@ -24,9 +23,10 @@ Each issue should have one of three outcomes:
     > Before starting work on it, we'd strongly encourage you to discuss your
     > plans here or on the SIG's [slack channel](https://join.spinnaker.io/).
 
-    Also add the tag `beginner friendly` if it applies. Add `no-lifecycle` if
-    the issue represents a bug that shouldn't be automatically closed just
-    because no one is available to fix it right now.
+    Add the `no-lifecycle` tag if the issue represents a bug that shouldn't be
+    automatically closed just because no one is available to fix it right now.
+    Add the tag `beginner friendly` if it applies, which will also prevent it
+    from being automatically closed.
 
 1.  **Closed.** There are a few reasons why you might close a bug.
 
