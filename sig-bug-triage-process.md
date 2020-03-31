@@ -3,14 +3,14 @@
 SIGs should be triaging the issues with their matching label during every SIG
 meeting. You can view
 [a list of recently filed issues](https://github.com/spinnaker/spinnaker/labels/sig%2Fplatform)
-on GitHub to and click through the ones filed since your last meeting. (That
+on GitHub to click through the ones filed since your last meeting. (That
 link shows issues for the Platform SIG, but you can easily edit the filter from
 there.)
 
 Each issue should have one of three outcomes:
 
 1.  **Assigned to a user or added to an actively-maintained GitHub project.** An
-    actively-maintained project has a team a people who are using it to plan
+    actively-maintained project has a team of people who are using it to plan
     future work. If you assign it to a project, you should also add the
     `no-lifecycle` tag so that Spinnakerbot doesn't automatically close it.
 
