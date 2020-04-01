@@ -24,11 +24,11 @@ At the end of the SIG meeting, each issue will have one of three outcomes:
     > channel](https://join.spinnaker.io/) before you start working on the
     > issue.
 
-By default, each issue is closed automatically after enough time passes with no
-one available to fix it. If the issue needs to remain open, add the
-`no-lifecycle` tag, which prevents it from being closed. Add the tag `beginner
-friendly` if it looks like an issue that a new contributor could help with,
-which will also prevent it from being automatically closed.
+    By default, each issue is closed automatically after enough time passes with
+    no one available to fix it. If the issue needs to remain open, add the
+    `no-lifecycle` tag, which prevents it from being closed. Add the tag
+    `beginner friendly` if it looks like an issue that a new contributor could
+    help with, which will also prevent it from being automatically closed.
 
 1.  **Closed.** There are a few reasons why you might close a bug.
 
