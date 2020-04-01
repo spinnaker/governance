@@ -25,6 +25,7 @@ To that end, these are the specific goals we are working toward:
 * Improve operator, end-user, and contributor experience by providing more navigable documentation as well as a search bar on the spinnaker.io landing page.
 * Improve content organization to facilitate easy contribution.
 * Improve local build time and adopt the new way GitHub pages uses themes
+* Update and improve our ability to track and analyze Spinnaker.io visitor behavior
 
 ### Non-Goals
 
@@ -35,7 +36,7 @@ To that end, these are the specific goals we are working toward:
 
 Spinnaker.io has operated with one basic design look/feel since March 22, 2017. Given the current momentum and size of the project, it is time for a refresh. The Docs SIG feels it’s time to evolve .io beyond a documentation site and into a project hub, providing a presence for Spinnaker that is clearly segmented for different user personas.
 
-We need to provide context to attract new companies and ICs as they encounter Spinnaker. This aligns with Travis Tomsu’s efforts to add more context and persuasive oomph to READMEs across the project. The window for Spinnaker inevitability is threatened by a crowded marketplace and will close; this project will boost Spinnaker’s profile and chances for inevitability.
+We need to provide context to attract new companies and ICs as they encounter Spinnaker. This aligns with Travis Tomsu’s efforts to add more context and persuasive oomph to READMEs across the project. The window for Spinnaker inevitability is threatened by a crowded marketplace and will close; this project will boost Spinnaker’s profile and chances for inevitability. It will also integrate Spinnaker.io metrics into the CDF monitoring strategy.
 
 From a technical standpoint, the way GitHub pages manages themes has changed to remote themes, and our implementation is outdated. Relying on the Minimal Mistakes theme-maintainer’s repository results in less theme-related maintenance for the Docs SIG and capture of theme feature improvements.
 
@@ -114,6 +115,11 @@ Check out [the mock-up draft](https://docs.google.com/drawings/d/1FCzzvnK0a-_dQ5
   - Docs PRs would not be pushed to a previous release branch unless a code patch was cherry picked to a previous branch. In that case, the Docs PR would be pushed to master and cherry picked to the previous branch.
 
 * Page-level table of contents that is always visible. This provides context and makes navigation within a page easier. See [Istio docs](https://istio.io/docs/concepts/what-is-istio/) for an example.
+
+### Analytics Improvements
+
+* Event tracking in Spinnaker.io analytics using Google Tag Manager. This allows maintainers to gather data on link click and form submission events, for user activity monitoring and analysis.
+* New Google Analytics property configuration to align with the CDF's strategy of consolidating metrics data collection across project web properties. 
 
 ## Drawbacks
 Will cost money, and cost needs to be negotiated amongst stakeholders.
