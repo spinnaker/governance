@@ -25,8 +25,9 @@ Each issue should have one of three outcomes:
 
     Add the `no-lifecycle` tag if the issue represents a bug that shouldn't be
     automatically closed just because no one is available to fix it right now.
-    Add the tag `beginner friendly` if it applies, which will also prevent it
-    from being automatically closed.
+    Add the tag `beginner friendly` if it looks like an issue that a new
+    contributor could help with, which will also prevent it from being
+    automatically closed.
 
 1.  **Closed.** There are a few reasons why you might close a bug.
 
