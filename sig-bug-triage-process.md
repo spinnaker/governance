@@ -16,15 +16,14 @@ Each issue should have one of three outcomes:
 1.  **Marked with the label "contributions welcome".** This is an indicator that
     we don't know anyone who will be working on the issue, but we would be
     interested in discussing it further if a contributor could be found. Please
-    also add a message to the bug describing the situation:
+    also add a message to the issue describing the situation:
 
     > Thanks for filing the issue. Unfortunately, no one is available to work on
     > this at the moment, but we welcome contributions from our community.
-    > Before starting work on it, we'd strongly encourage you to discuss your
-    > plans here or on the SIG's \[slack channel](https://join.spinnaker.io/).
+    > We strongly encourage you to discuss your 
+    > plans here or on the SIG's \[slack channel](https://join.spinnaker.io/) before you start workin on the issue.
 
-    Add the `no-lifecycle` tag if the issue represents a bug that shouldn't be
-    automatically closed just because no one is available to fix it right now.
+By default, each issue is closed automatically after enough time passes with no one available to fix it. If the issue needs to remain open, add the `no-lifecycle` tag, which prevents it from being closed.```
     Add the tag `beginner friendly` if it looks like an issue that a new
     contributor could help with, which will also prevent it from being
     automatically closed.
@@ -45,10 +44,10 @@ Each issue should have one of three outcomes:
     details to warrant a proper investigation. In that case, consider a response
     like the following:
 
-    > Thanks for filing the issue. We aren't able to determine what the cause of
-    > the issue is, and there aren't enough steps to reproduce for us to
+    > Thanks for filing the issue. We can't determine the cause of
+    > the issue without steps to reproduce or
     > recreate it ourselves. Unfortunately, this means we have to close the
-    > issue. Please reopen it with some steps to reproduce if you are able.
+    > issue. Please reopen it with some steps to reproduce if you can.
 
     There will undoubtedly be other reasons to close an issue, but please leave
     a message when you do. Closing a bug with a message is a much friendlier
