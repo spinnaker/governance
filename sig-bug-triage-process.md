@@ -1,7 +1,7 @@
 ## SIG Bug Triage Process
 
-SIGs will triage the issues with their matching label during every SIG
-meeting. You can view
+SIGs will triage the issues with their matching label during every SIG meeting.
+You can view
 [a list of recently filed issues](https://github.com/spinnaker/spinnaker/labels/sig%2Fplatform)
 on GitHub to click through the ones filed since your last meeting. (That link
 shows issues for the Platform SIG, but you can easily edit the filter from
@@ -19,14 +19,16 @@ At the end of the SIG meeting, each issue will have one of three outcomes:
     also add a message to the issue describing the situation:
 
     > Thanks for filing the issue. Unfortunately, no one is available to work on
-    > this at the moment, but we welcome contributions from our community.
-    > We strongly encourage you to discuss your 
-    > plans here or on the SIG's \[slack channel](https://join.spinnaker.io/) before you start working on the issue.
+    > this at the moment, but we welcome contributions from our community. We
+    > strongly encourage you to discuss your plans here or on the SIG's \[slack
+    > channel](https://join.spinnaker.io/) before you start working on the
+    > issue.
 
-By default, each issue is closed automatically after enough time passes with no one available to fix it. If the issue needs to remain open, add the `no-lifecycle` tag, which prevents it from being closed.
-    Add the tag `beginner friendly` if it looks like an issue that a new
-    contributor could help with, which will also prevent it from being
-    automatically closed.
+By default, each issue is closed automatically after enough time passes with no
+one available to fix it. If the issue needs to remain open, add the
+`no-lifecycle` tag, which prevents it from being closed. Add the tag `beginner
+friendly` if it looks like an issue that a new contributor could help with,
+which will also prevent it from being automatically closed.
 
 1.  **Closed.** There are a few reasons why you might close a bug.
 
@@ -44,10 +46,10 @@ By default, each issue is closed automatically after enough time passes with no 
     details to warrant a proper investigation. In that case, consider a response
     like the following:
 
-    > Thanks for filing the issue. We can't determine the cause of
-    > the issue without steps to reproduce, nor are we able to
-    > recreate it ourselves. Unfortunately, this means we have to close the
-    > issue. Please reopen it with some steps to reproduce if you can.
+    > Thanks for filing the issue. We can't determine the cause of the issue
+    > without steps to reproduce, nor are we able to recreate it ourselves.
+    > Unfortunately, this means we have to close the issue. Please reopen it
+    > with some steps to reproduce if you can.
 
     There will undoubtedly be other reasons to close an issue, but please leave
     a message when you do. Closing a bug with a message is a much friendlier
