@@ -33,6 +33,7 @@ organization:
       - jervi
       - jmelchio
       - kathrynlewis
+      - lorin
       - michaeljqzq
       - mybayern1974
       - ncknt
@@ -42,7 +43,6 @@ organization:
       - srekapalli
       - stuart-pollock
       - xavileon
-      - lorin
     oss-approvers:
       description: Approvers Role
       members:
