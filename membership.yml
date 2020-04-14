@@ -42,6 +42,7 @@ organization:
       - srekapalli
       - stuart-pollock
       - xavileon
+      - lorin
     oss-approvers:
       description: Approvers Role
       members:
