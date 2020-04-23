@@ -63,24 +63,23 @@ Each set of milestones should be complete by the time the corresponding Spinnake
   - [x] Remove the V1 provider codelab ([spinnaker.github.io/pull/1586](https://github.com/spinnaker/spinnaker.github.io/pull/1586)). Add a redirect from the V1 codelab to the V2 codelab ([spinnaker.github.io/pull/1649](https://github.com/spinnaker/spinnaker.github.io/pull/1649)).
   - [x] Remove inbound links to V1 provider setup ([spinnaker.github.io/pull/1649](https://github.com/spinnaker/spinnaker.github.io/pull/1649)).
   
-- [] Publish a blog post on the Spinnaker Community Blog. This post will answer the following questions:
-  - [] Why is Spinnaker removing the V1 provider?
-  - [] When is Spinnaker removing the V1 provider? What is the latest supported release I will be able to use with the V1 provider enabled?
-  - [] How can I successfully execute a zero-downtime migration from the V1 provider to the V2 provider? What are some first-hand lessons from teams who have done this?
+- [x] Publish a [blog post](https://blog.spinnaker.io/farewell-to-the-kubernetes-v1-provider-79d93861c6e4) on the Spinnaker Community Blog. This post will answer the following questions:
+  - [x] Why is Spinnaker removing the V1 provider?
+  - [x] When is Spinnaker removing the V1 provider? What is the latest supported release I will be able to use with the V1 provider enabled?
+  - [x] How can I successfully execute a zero-downtime migration from the V1 provider to the V2 provider? What are some first-hand lessons from teams who have done this?
 
-- [] Audit existing Spinnaker content to update.
+- [x] Audit existing Spinnaker content to update.
   - [x] Ensure all guides on spinnaker.io reference V2 only ([spinnaker.github.io/pull/1649](https://github.com/spinnaker/spinnaker.github.io/pull/1649)).
-  - [] Standardize how we refer to the V2 provider (currently, mix of “V2” and “Manifest Based”) and the V1 provider (currently, mix of “V1” and “Legacy”).
+  - [x] Standardize how we refer to the V2 provider (currently, mix of “V2” and “Manifest Based”) and the V1 provider (currently, mix of “V1” and “Legacy”) ([spinnaker.github.io/pull/1814](https://github.com/spinnaker/spinnaker.github.io/pull/1814)).
   - [x] Add documentation to spinnaker.io on why and when the V1 provider will be / was removed ([spinnaker.github.io/pull/1710](https://github.com/spinnaker/spinnaker.github.io/pull/1710)).
-  - [] Add an addendum to any blog posts on the Spinnaker Community Blog that reference the V1 provider highlighting that it is no longer supported ([spinnaker/spinnaker/5463](https://github.com/spinnaker/spinnaker/issues/5463)).
+  - [x] Add an addendum to any blog posts on the Spinnaker Community Blog that reference the V1 provider highlighting that it is no longer supported ([spinnaker/spinnaker/5463](https://github.com/spinnaker/spinnaker/issues/5463)).
   - [x] Compile a list of Armory documentation and blog posts for Armory to update ([spinnaker/spinnaker/5463](https://github.com/spinnaker/spinnaker/issues/5463)).
   
 - [] Ensure clear and consistent communication of the plan:
   - [] Highlight the upcoming removal in each release’s curated changelog leading up to the release in which V1 will be officially removed.
   - [] Post about the RFC in relevant Slack channels before each release: #dev, #kubernetes, #sig-kubernetes.
-  - [] Post about the RFC in any new V1-related issues that are opened on GitHub.
-  - [] Add helpful warnings to Clouddriver, Halyard, and Deck in the releases leading up to the removal.
-  - [] Consider requiring users to enable a disabled-by-default feature flag (Halyard, Clouddriver) in releases leading up to the removal of V1 in order to deploy with one or more enabled V1 accounts.
+  - [x] Post about the RFC in any new V1-related issues that are opened on GitHub.
+  - [x] Add helpful warnings to Clouddriver and Halyard in the releases leading up to the removal.
 
 - [] Remove V1-only code.
   - [] Audit each microservice to ensure no V2 code paths exercise V1 code.
