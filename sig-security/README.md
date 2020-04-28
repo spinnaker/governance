@@ -10,7 +10,7 @@ _TODO description_
 
 ## Leadership
 
-* Brandon Powell ([bpowell](https://github.com/bpowell))
+* Beth Fuller ([bcornils](https://github.com/bcornils))
 * Helene Lau ([helenelau](https://github.com/helenelau))
 
 ## Contact
