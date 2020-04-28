@@ -91,7 +91,7 @@ runtime, we will switch the containers back to Java 8 and shift the timeline
 back one release. Since we're providing the `java8` variants, we will not adjust
 the timeline for any other reason.
 
-### 1.19 (early March)
+### ✔️ 1.19 (early March)
 
 _All_ containers built by the build process will now use the Java 11 JRE. As
 before, the `java8` variants will offer a way to opt out of this change.
@@ -99,14 +99,15 @@ before, the `java8` variants will offer a way to opt out of this change.
 Other than that, everything from the previous section applies to this release as
 well.
 
-### 1.20 (early May)
+### ✔️ 1.20 (early May)
 
 For this release, we will do two things:
 
 1.  Remove the `java8` container variants.
 2.  Compile with JDK 11 using the `-source 8 -target 8` flags. This produces
-    builds that are still compatible with Java 8, and means the build will still
-    fail if anyone tries to use Java 11 APIs or language features.
+    bytecode that is compatible with Java 8. We will also add the
+    `-PenableCrossCompilerPlugin=true` flag to CI builds, which compiles against
+    a Java 8 JDK, preventing developers from using Java 11 APIs.
 
 These changes are separable and don't _need_ to be done together. Either can be
 delayed for a release if there are issues. The change in the next section
@@ -169,7 +170,7 @@ too many problems.
 
 ## Future Possibilities
 
-By the time this RFC is finished, Java 14 will have been released. This is the
-next LTS release of Java. This RFC should be updated with any changes to the
-plan so that it can be used as a template for the Java 14 upgrade, whenever we
-decide that should happen.
+In September 2021, about a year after this RFC is finished, Java 17 is scheduled
+to be released. This is the next LTS release of Java. This RFC should be updated
+with any changes to the plan so that it can be used as a template for the Java
+17 upgrade, whenever that takes place.
