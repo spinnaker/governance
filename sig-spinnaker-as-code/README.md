@@ -5,7 +5,7 @@ _TODO description_
 ## Meetings
 
 * Regular SIG Meeting
-  * Every other Tuesday, 1 PM US/Pacific ([See in your time zone](https://www.thetimezoneconverter.com/?t=1pm&tz=San%20Francisco))
+  * Every second Tuesday of the month, 1 PM US/Pacific ([See in your time zone](https://www.thetimezoneconverter.com/?t=1pm&tz=San%20Francisco))
   * [Agenda](https://docs.google.com/document/d/1qgtwod1WC9pGNLyq7j1pXDLCAhO3Norf3Afx1FP4Jag/edit#heading=h.h9ro0baz3lei)
 
 ## Leadership
