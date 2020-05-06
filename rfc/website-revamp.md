@@ -152,3 +152,52 @@ We could alienate the community with misaligned branding or documentation organi
 
 ## Future Possibilities
 If we demonstrate that this refresh significantly increases traffic to spinnaker.io and supports Spinnaker success (i.e. increased traffic correlated with increased contributions/contributing company growth), we may later propose a more significant refresh. In doing so we’d like to avoid the K8S problem of having several contractors work on the site piecemeal, creating tech debt and knowledge scarcity. Our goal is to take a more pre-planned phased approach to improving the site.
+
+## Statement of Work
+This work should be performed by contractors and/or Linux Foundation employees and supervised by the Documentation SIG.
+### Development
+* Site architecture updates 
+  * Document site architecture 
+  * Replatform spinnaker.io from Jekyll to Hugo
+  * Configure Netlify Build
+  * Implement Docsy theme, and documented customizations as needed
+  * Implement a widget to select documentation versions
+  * Implement table-of-contents for each documentation page that stays visible as the page scrolls
+* Home page updates 
+  * Implement homepage in alignment with design and [mockups](https://docs.google.com/drawings/d/1FCzzvnK0a-_dQ5Nn1T4jz4DrXfr4tMzc9BrObMdEw3k/edit).
+  * Enable card layout and update content block styling in theme
+  * Implement new “companies using Spinnaker” logo area with all logos in [community](https://www.spinnaker.io/community) and [success stories](https://www.spinnaker.io/success-stories/) 
+    * Make logos clickable, linking to case study, testimonial, or video content
+  * Implement youtube video carousel
+  * Implement updated CDF-standard footer and push to a repo in the CDF org
+  * Implement search bar on homepage using Algolia DocSearch for OSS projects
+* Site content page updates
+  * Convert raw HTML of Success Stories page so it can be updated using markdown and yaml
+  * Implement videos area in Success Stories with a slider or grid that allows presentation of ~20 videos and links to the Spinnaker Youtube channel
+    * Design should accommodate video categorization or incorporate Youtube playlists
+  * Implement community calendar page linked to Google Calendar
+  * Implement featured videos and featured tweets area in newsletter template
+ 
+### Web/CSS
+  * Create CSS theme(s) based on branding design
+  * Create CSS theme(s) (based on Spinnaker.io branding) for newsletter and success stories pages
+
+### Design
+  * Design updated sitewide branding elements that leverage existing logos and colors to provide a consistent brand image across content pages
+  * Design replacement for large projecting sail motif, which is difficult to style content around, with a more compact defined
+  * Design home page hero graphic
+  * Design new newsletter signup forms for homepage and news area
+  * Design editions list page and newsletter edition theme
+  * Design new Success Stories pages that break up content into case studies, testimonials, and videos
+  * Design attractive success stories index page that serves as a “features” area for featured case studies, videos, etc and links to subnav content
+  * Design community calendar page
+ ## Documentation SIG Scope of Work
+Some of the proposed changes are out-of-scope for this SOW. The Spinnaker Documentation SIG has committed to performing work on the Spinnaker.io refresh including but not limited to:
+* Creating site map
+* Creating basic site mockups to illustrate requests
+* Writing copy & content
+* Sourcing graphics for card icons
+* Implementing new site navigation 
+* Consulting with private contractors on design decisions and implementation details
+* Collaborating with and supervising contractors
+
