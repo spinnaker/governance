@@ -5,7 +5,7 @@ This SIG focuses on the current Cloud Foundry (CF) clouddriver provider for Spin
 ## Meetings
 
 * Regular SIG Meeting
-  * Last Thursday of each month, at 1 PM EST / 10AM PST
+  * Last Thursday of each month, at 10 AM US/Pacific ([See in your time zone](https://www.thetimezoneconverter.com/?t=10am&tz=San%20Francisco))
   
   [Agenda](https://docs.google.com/document/d/1TouFx5ykNCcZxNSD2JhUiRliZDXwxZ6sx239rigYdxw/edit?usp=sharing)
 
