@@ -16,7 +16,7 @@ This SIG focuses on the current Cloud Foundry (CF) clouddriver provider for Spin
 
 ## Contact
 
-* [Slack](https://spinnakerteam.slack.com/archives/C4ENF2E1W)
+* [Slack](https://spinnakerteam.slack.com/archives/C012PGYN771)
 
 ## Scope
 
