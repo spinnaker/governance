@@ -2,7 +2,7 @@
 
 | | |
 |-|-|
-| **Status**     | _Proposed, **Accepted**, Implemented, Obsolete_ |
+| **Status**     | _Proposed, Accepted, **Implemented**, Obsolete_ |
 | **RFC #**      | [88](https://github.com/spinnaker/governance/pull/88) |
 | **Author(s)**  | Maggie Neterval (`@maggieneterval`) |
 | **SIG / WG**   | Kubernetes SIG |
@@ -75,16 +75,24 @@ Each set of milestones should be complete by the time the corresponding Spinnake
   - [x] Add an addendum to any blog posts on the Spinnaker Community Blog that reference the V1 provider highlighting that it is no longer supported ([spinnaker/spinnaker/5463](https://github.com/spinnaker/spinnaker/issues/5463)).
   - [x] Compile a list of Armory documentation and blog posts for Armory to update ([spinnaker/spinnaker/5463](https://github.com/spinnaker/spinnaker/issues/5463)).
   
-- [] Ensure clear and consistent communication of the plan:
-  - [] Highlight the upcoming removal in each release’s curated changelog leading up to the release in which V1 will be officially removed.
-  - [] Post about the RFC in relevant Slack channels before each release: #dev, #kubernetes, #sig-kubernetes.
+- [x] Ensure clear and consistent communication of the plan:
+  - [x] Highlight the upcoming removal in each release’s curated changelog leading up to the release in which V1 will be officially removed.
+  - [x] Post about the RFC in relevant Slack channels before each release: #dev, #kubernetes, #sig-kubernetes.
   - [x] Post about the RFC in any new V1-related issues that are opened on GitHub.
   - [x] Add helpful warnings to Clouddriver and Halyard in the releases leading up to the removal.
 
-- [] Remove V1-only code.
-  - [] Audit each microservice to ensure no V2 code paths exercise V1 code.
+- [x] Remove V1-only code.
+  - [x] Audit each microservice to ensure no V2 code paths exercise V1 code.
     Note: ezimanyi@ and I have already ensured isolation between V1-only and V2-only code in Clouddriver ([clouddriver/pull/4024](https://github.com/spinnaker/clouddriver/pull/4024), [clouddriver/pull/4028](https://github.com/spinnaker/clouddriver/pull/4028)) and Deck ([deck/pull/7451](https://github.com/spinnaker/deck/pull/7451)).
- 
+  - [x] Remove V1 integration tests ([buildtool/pull/112](https://github.com/spinnaker/buildtool/pull/112)).
+  - [x] Remove V1-only code from Deck ([deck/pull/8226](https://github.com/spinnaker/deck/pull/8226)).
+  - [x] Remove V1-only code from Orca ([orca/pull/3654](https://github.com/spinnaker/orca/pull/3654)).
+  - [x] Remove V1-only code from Clouddriver ([clouddriver/pull/4569](https://github.com/spinnaker/clouddriver/pull/4569), [clouddriver/pull/4572](https://github.com/spinnaker/clouddriver/pull/4572)).
+  - [x] Since no providers now support multiple versions, and no community members (to the best of our knowledge) ever implemented their own UI "skins," remove "skins" from Deck ([deck/pull/8263](https://github.com/spinnaker/deck/pull/8263)), Gate ([gate/pull/1186](https://github.com/spinnaker/gate/pull/1186)), Clouddriver ([clouddriver/pull/4576](https://github.com/spinnaker/clouddriver/pull/4576)), and the docs ([spinnaker.github.io/pull/1838](https://github.com/spinnaker/spinnaker.github.io/pull/1838)).
+  - [x] When Spinnaker 1.23 is released, no supported release will include the V1 provider.
+    Since Kubernetes was the only provider to expose multiple versions, it will then be safe to remove `providerVersion` logic from Halyard and Clouddriver.
+    Create a self-assigned issue for this final cleanup ([spinnaker/spinnaker/5749](https://github.com/spinnaker/spinnaker/issues/5749)).
+
 ## Drawbacks
 
 - We will be taking away a feature set that some community members currently rely on for critical delivery workflows.
