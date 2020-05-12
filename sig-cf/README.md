@@ -21,7 +21,7 @@ This SIG focuses on the current Cloud Foundry (CF) clouddriver provider for Spin
 ## Scope
 
 *Status and Alignment*
-  * [CF Clouddriver](https://github.com/spinnaker/clouddriver/tree/master/clouddriver-cloudfoundry)
+  * Review issues and PRs in [CF Clouddriver](https://github.com/spinnaker/clouddriver/tree/master/clouddriver-cloudfoundry) and other Spinnaker services which affect deployments to Cloud Foundry
     * Review issues and PRs
   
   * Review any topics related to upkeep of CF Clouddriver functionality
