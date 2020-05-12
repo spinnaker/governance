@@ -2,7 +2,7 @@
 
 | | |
 |-|-|
-| **Status**     | _**Proposed**, Accepted, Implemented, Obsolete_ |
+| **Status**     | _Proposed, **Accepted**, Implemented, Obsolete_ |
 | **RFC #**      | [111](https://github.com/spinnaker/governance/pull/111) |
 | **Author(s)**  | Maggie Neterval (`@maggieneterval`) |
 | **SIG / WG**   | UI/UX SIG |
@@ -80,25 +80,35 @@ Each set of milestones should be complete by the time the corresponding Spinnake
 [GitHub project](https://github.com/spinnaker/spinnaker/projects/17)
 to organize existing user-reported issues related to the new UI.
 
-- [] Manually test the new UI. For each type of artifact and artifact-driven
+- [x] Manually test the new UI. For each type of artifact and artifact-driven
 workflow, test that pipelines configured with the legacy UI still work with the
 new UI, and that pipelines configured with the new UI work as expected. This
 includes artifacts configured in the pipeline configuration's Expected Artifacts
 section, artifacts configured as expected artifacts inline in stages, and
-artifacts configured in Produces Artifacts sections of stages.
+artifacts configured in Produces Artifacts sections of stages. (Huge thank you
+to ezimanyi@ for helping with this.)
 
-- [] Document and resolve all bugs discovered while manually testing the new UI.
+- [x] Document and resolve all bugs discovered while manually testing the new UI
+([deck/pull/8179](https://github.com/spinnaker/deck/pull/8179),
+[deck/pull/8160](https://github.com/spinnaker/deck/pull/8160),
+[deck/pull/8165](https://github.com/spinnaker/deck/pull/8165),
+[deck/pull/8121](https://github.com/spinnaker/deck/pull/8121),
+[deck/pull/8111](https://github.com/spinnaker/deck/pull/8111),
+[deck/pull/8096](https://github.com/spinnaker/deck/pull/8096),
+[deck/pull/8071](https://github.com/spinnaker/deck/pull/8071),
+[orca/pull/3562](https://github.com/spinnaker/orca/pull/3562)).
 
-- [] For release 1.20, remove the `artifacts` and `artifactsRewrite` feature
-flags from Deck. The default UI will be the new UI,
-previously gated by the `artifactsRewrite` flag. Users can revert to the legacy
-UI by enabling a new temporary feature flag, `legacyArtifactsEnabled`. We will
-not expose this flag in Halyard and require it be added manually to
-`settings-local.js`. Communicate this change by adding the
+- [x] For release 1.20, remove the `artifacts` and `artifactsRewrite` feature
+flags from Deck ([deck/pull/8184](https://github.com/spinnaker/deck/pull/8184)).
+The default UI will be the new UI, previously gated by the `artifactsRewrite` flag.
+Users can revert to the legacy UI by enabling a new temporary feature flag,
+`legacyArtifactsEnabled`. We will not expose this flag in Halyard and require it
+be added manually to `settings-local.js`. Communicate this change by adding the
 `@ValidForSpinnakerVersion` annotation to the `artifacts` and `artifactsRewrite`
 feature flags in Halyard with an appropriate `upperBound` and `tooHighMessage`,
 updating the artifacts documentation, and adding a section to the 1.20 release
-notes.
+notes ([halyard/pull/1620](https://github.com/spinnaker/halyard/pull/1620),
+[spinnaker.github.io/pull/1806](https://github.com/spinnaker/spinnaker.github.io/pull/1806)).
 
 - [] For release 1.21, remove the `legacyArtifactsEnabled` flag and all legacy
 UI code. Communicate this change by updating the artifacts documentation and
