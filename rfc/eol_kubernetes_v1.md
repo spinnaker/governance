@@ -42,7 +42,7 @@ The Spinnaker Kubernetes SIG and Slack channels operate best with a common found
 
 ## Timeline
 
-Each set of milestones should be complete by the time the corresponding Spinnaker version is released.
+Each set of milestones should be complete by the time the corresponding Spinnaker or Halyard version is released.
 
 | Spinnaker Version | Release Window Opens | Milestones |
 |-------------------|----------------------|------------|
@@ -50,6 +50,12 @@ Each set of milestones should be complete by the time the corresponding Spinnake
 | 1.19              | 2020-03-02           | Publish a post to the Spinnaker Community Blog explaining why we are removing V1 and how to migrate to V2. Add a feature flag that must be enabled before deploying to V1 accounts. Add appropriate warnings to Halyard, Clouddriver, and Deck. Highlight in 1.19 curated changelog that V1 will be removed in 1.21.
 | 1.20              | 2020-04-27           | Complete audit of community docs and blog posts for V1-related content to update. Highlight in 1.20 curated changelog that V1 will be removed in 1.21.
 | 1.21              | 2020-06-22           | Remove V1-only code from all Spinnaker microservices.
+
+| Halyard Version | Supported Spinnaker Versions | Milestones |
+|-----------------|------------------------------|------------|
+| 1.32            | 1.17, 1.18, 1.19             | Add warning for any configured legacy Kubernetes accounts. Default new and unspecified accounts to standard (V2) provider.
+| 1.36            | 1.18, 1.19. 1.20             | Remove legacy Kubernetes distributed installation path. Spinnaker itself must be deployed using a standard (V2) account.
+| TBD             | 1.21, 1.22, 1.23             | Stop exposing `--provider-version` command, as no supported release will include support for the legacy (V1) provider.
 
 ## Design
 
@@ -89,6 +95,7 @@ Each set of milestones should be complete by the time the corresponding Spinnake
   - [x] Remove V1-only code from Orca ([orca/pull/3654](https://github.com/spinnaker/orca/pull/3654)).
   - [x] Remove V1-only code from Clouddriver ([clouddriver/pull/4569](https://github.com/spinnaker/clouddriver/pull/4569), [clouddriver/pull/4572](https://github.com/spinnaker/clouddriver/pull/4572)).
   - [x] Since no providers now support multiple versions, and no community members (to the best of our knowledge) ever implemented their own UI "skins," remove "skins" from Deck ([deck/pull/8263](https://github.com/spinnaker/deck/pull/8263)), Gate ([gate/pull/1186](https://github.com/spinnaker/gate/pull/1186)), Clouddriver ([clouddriver/pull/4576](https://github.com/spinnaker/clouddriver/pull/4576)), and the docs ([spinnaker.github.io/pull/1838](https://github.com/spinnaker/spinnaker.github.io/pull/1838)).
+  - [x] Remove V1 distributed installation path from Halyard ([halyard/pull/1672](https://github.com/spinnaker/halyard/pull/1672)).
   - [x] When Spinnaker 1.23 is released, no supported release will include the V1 provider.
     Since Kubernetes was the only provider to expose multiple versions, it will then be safe to remove `providerVersion` logic from Halyard and Clouddriver.
     Create a self-assigned issue for this final cleanup ([spinnaker/spinnaker/5749](https://github.com/spinnaker/spinnaker/issues/5749)).
