@@ -79,31 +79,31 @@ _Who have you identified as early customers of this change?_
 
 _What exactly are you doing?_
 
-## Orca
-A DroneStage component will be added to orca-igor with the separate tasks out of scope of this doc??**
+#### Drone Orca Build Lifecycle
+A Drone CI Build stage will need to support common CI stage task lifecycles including;
 
+ - Start Build
+ - Monitor Build
+ - Stop Build
+ 
+We propose adding a `DroneStage` component that implements `StageDefinitionBuilder` to `orca-igor` with a `taskGraph` built from the task lifecycles above:
 ```java
-package com.netflix.spinnaker.orca.igor.pipeline;  
 ...
-public class DroneStage implements StageDefinitionBuilder {  
-  ...
+public class DroneStage implements StageDefinitionBuilder {
+
   public void taskGraph(...) {  
-    ....
-        stage.mapTo(CIStageDefinition.class);  
-  builder  
-        .withTask("startDroneTask", StartDroneTask.class)  
+		builder.withTask("startDroneTask", StartDroneTask.class)  
         .withTask("monitorDroneTask", MonitorDroneTask.class)  
-        .withTask("getDroneArtifactsTask", GetDroneArtifactsTask.class)  
-        .withTask("bindProducedArtifacts", BindProducedArtifactsTask.class);  
-  }  
+        .withTask("stopDroneTask", StopDroneTask.class);
+  }
+  
 }
 ```
+The default `CIStageDefinition` implementation should be good enough for this RFC.
 
-## Igor
-
- - `com.netflix.spinnaker.igor.drone.client`
- 
- will be generated from [API Reference](https://docs.drone.io/api/) for the following;
+#### Igor Drone Client
+Drone-Igor will need an API client to communicate with a Drone CI Server installation;
+`com.netflix.spinnaker.igor.drone.client` and we propose generating an API client and corresponding `models` from the [official Drone CI API reference](https://docs.drone.io/api/) for the following actions:
   * Queries 
 	  * [# User List](https://docs.drone.io/api/users/users_list/) 
 	  * [# Repo List](https://docs.drone.io/api/repos/repo_list/)
@@ -115,66 +115,50 @@ public class DroneStage implements StageDefinitionBuilder {
 	  * [# Build Stop](https://docs.drone.io/api/builds/build_stop/)
 	  * [# Build Create](https://docs.drone.io/api/builds/build_create/)
 
-`DroneBuildMonitor` will be generated according to the `PollAccess` and `PollingMonitor` interfaces and extend `CommonPollingMonitor` 
-```java
-...
-package com.netflix.spinnaker.igor.polling;  
-...  
-public interface PollAccess {  
- void poll(boolean sendEvents);  
- void pollSingle(PollContext ctx);  
-}
-```
-```java
-package com.netflix.spinnaker.igor.polling;  
-...
-public interface PollingMonitor ... {
- void onApplicationEvent(RemoteStatusChangedEvent event);  
- String getName();  
- boolean isInService();
- Long getLastPoll();
- int getPollInterval();
- boolean isPollingEnabled();  
-}
-```
-
-Also the conditional redis caching service generated to cache fairly static Drone CI metadata
-```java
-package com.netflix.spinnaker.igor.drone;  
-...
-public class DroneCache {
-...
-}
-```
-Then the build service `DroneService` will be generated to implement `BuildProperties` and 	`BuildOperations`
-```java
-...
-package com.netflix.spinnaker.igor.service;  
-...
-public interface BuildProperties {
-  Map<String, ?> getBuildProperties(String job, GenericBuild build, @Nullable String fileName);  
-}
-```
-```java
-...
-package com.netflix.spinnaker.igor.service;
-...
-public interface BuildOperations extends BuildService {
-  List<GenericGitRevision> getGenericGitRevisions(String job, GenericBuild build);
-  GenericBuild getGenericBuild(String job, int buildNumber);  
-  int triggerBuildWithParameters(String job, Map<String, String> queryParameters);
-  List<?> getBuilds(String job);  
-  JobConfiguration getJobConfig(String jobName);  
-}
-```
-
-A `DroneController` to expose Drone APIs from igor
+#### Igor Drone Build Monitor
+Drone CI Builds can be monitored from Igor with a pollable `DroneBuildMonitor` that implements `PollAccess` and `PollingMonitor` and extend `CommonPollingMonitor` behaviour.
 ```java 
-package com.netflix.spinnaker.igor.drone;  
-...
-... 
-public class DroneController {
-...
+public interface DroneBuildMonitorInterface extends PollAccess,PollingMonitor { 
+ 
+ void poll(...);  
+ 
+ void pollSingle(....);  
+ 
+ void onApplicationEvent(...);  
+ 
+ String getName();  
+ 
+ boolean isInService();
+ 
+ Long getLastPoll();
+ 
+ int getPollInterval();
+ 
+ boolean isPollingEnabled(); 
+  
+}
+```
+
+This means optionally caching static Drone CI metadata, like `UserList`, `RepoList` and so forth, using the exiting redis cache.
+```java
+public class DroneCache {}
+```
+#### Igor Drone REST APIs
+A `DroneController` exposes consumable REST Drone CI APIs on igor for orca. Raising a need to organize Drone operations on igor into a service component easily consumable in the `DroneController`, the service implements `BuildProperties` and `BuildOperations`.
+```java
+public interface DroneServiceInterface extends BuildProperties,BuildOperations {
+
+	Map<String, ?> getBuildProperties(String job, GenericBuild build, @Nullable String fileName);
+	
+	List<GenericGitRevision> getGenericGitRevisions(String job, GenericBuild build);
+	
+	GenericBuild getGenericBuild(String job, int buildNumber);  
+	
+	int triggerBuildWithParameters(String job, Map<String, String> queryParameters);
+	
+	List<?> getBuilds(String job);  
+	
+	JobConfiguration getJobConfig(String jobName); 
 }
 ```
 
