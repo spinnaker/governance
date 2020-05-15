@@ -53,7 +53,7 @@ But Current Drone CI users may have issues integrating with Spinnaker and may ha
 The [REST interface Drone CI](https://docs.drone.io/api/overview/) provides is far too simple and consistent to have to make such choice. 
 
 _Why is this change being proposed?_
-Drone CI users like in [#1476]([https://github.com/spinnaker/spinnaker/issues/1476](https://github.com/spinnaker/spinnaker/issues/1476)) do not have any support for Drone by Spinnaker.
+Drone CI users like in [#1476](https://github.com/spinnaker/spinnaker/issues/1476) do not have any support for Drone by Spinnaker.
 
 
 _What are the benefits for users (end-users, engineers, operators, etc.)?_
