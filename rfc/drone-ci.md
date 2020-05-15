@@ -18,15 +18,13 @@ This proposal seeks to enable Drone CI Support for Spinnaker. This proposal take
 	* Support Drone CI Type  `hal` configurability.
 	* Support Drone CI Stage Configuration.
 	* Support passing pipeline context to Drone CI Build as environment.
-	* Support for Drone CI artifacts.
 	* Support for Drone CI Triggers and Hooks.
 	* Support Autodiscovering Drone CI Users.
 	* Support retrieving Drone Projects for autodiscovered users.
 	* Support Drone CI Stage Start, Stop, Pending, etc lifecycles.
 	* Support retrieving Drone execution metadata in Spinnaker execution permalinks.
-	* Support caching Drone Projects retrieval in Spin- redis????
-	* Drone CI Build Approvals/Decline (scope may have to be evaluated)
-	* Drone CI Build Promotion
+	* Support caching Drone Projects retrieval in Spin- redis
+	* Drone CI Build Approvals/Decline/Promotion (scope may have to be evaluated)
 * Non-Goals
 	* Drone CI Cron Support.
 	* Drone CI Management Lifecyle outside Actions directly related to CI.
