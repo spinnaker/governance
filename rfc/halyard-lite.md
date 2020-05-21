@@ -184,17 +184,16 @@ that is currently very far from the case.
 
 ## Timeline
 
-- Spinnaker 1.19 (March 2020)
+- Spinnaker 1.21 (June 2020)
   - An alpha version of kleat is released along with documentation, and is able
     to generate service configurations from the Halyard config.
   - A simple Kustomize kustomization is released that can deploy Spinnaker to
     Kubernetes in simple cases.
-- Spinnaker 1.20 (May 2020)
+- Spinnaker 1.22 (August 2020)
   - Feedback from early users of kleat and the kustomization are addressed, and
-    the kustomization now supports more advanced use cases (ex: high
-    availability, custom BOM, etc.)
+    the kustomization now supports more advanced use cases
   - The Armory operator is moved to depend on kleat
-- Spinnaker 1.21 (July 2020)
+- Spinnaker 1.23 (October 2020)
   - Kleat, as well as the kustomize install path are GA and the recommended
     install path for new users of Spinnaker.
   - Documentation (such as install documentation) referencing old Halyard
@@ -337,40 +336,85 @@ This command will roughly map onto the current `hal config generate` command.
 #### Input
 
 The input to kleat will be a Halyard config file, expressed as YAML. In order to
-promote backwards compatibility, the format of this config file will not change.
-There will be some fields that are no longer relevant in kleat; these fields
-will be documented as being ignored by kleat and it will emit a non-fatal
-warning if these fields are set. (An example of such a field is
-`deploymentEnvironment.tolerations`, which does not affect the generation of
-service configurations but only adds fields to the output deployment YAML.)
+promote backwards compatibility, the format of this config file will change only
+minimally from the Halyard config.
+
+Notably, the changes that will be made are:
+
+- A Halyard-generated halconfig contains two top-level fields:
+  deploymentConfigurations (a list of HalConfigs) and currentDeployment, (the
+  name of the deploymentConfiguration to manage). Kleat will accept a file with
+  a single config as input, so any halconfigs with multiple
+  deploymentConfigurations need to be separated into different files. Feedback
+  from users is that having multiple configs in a single file was rarely, if
+  ever, used.
+- Fields where minor changes would greatly simplify `kleat` and reduce its
+  dependence on microservice-specific details will be changed along with clear
+  upgrade documentation on the changes required. A list of fields found to date
+  can be found [here](https://github.com/spinnaker/kleat#required-changes). Note
+  that most users will only have configured a small subset of these fields, so
+  the burden on upgrade should be small.
+
+In addition, there will be some fields that are no longer relevant in kleat;
+these fields will be documented as being ignored by kleat. Depending on feedback
+from initial adopters, kleat may emit a non-fatal warning if these fields are
+set. (An example of such a field is `deploymentEnvironment.tolerations`, which
+does not affect the generation of service configurations but only adds fields to
+the output deployment YAML.)
 
 As the Halyard config is not currently well-documented (with the documentation
 instead living on the hal command reference), we will add extensive
 documentation on this config file. In order to ensure the documentation stays up
 to date, the technical implementation will keep the documentation alongside the
-code and auto-generate user-facing documentation from this documented code.
+code and auto-generate
+[user-facing documentation](https://github.com/spinnaker/kleat/blob/master/docs/docs.md#hal)
+from this documented code.
+
+#### Referenced files
+
+In many cases, the Halyard config directly references files that are on disk on
+the machine running Halyard. For example, the hal config might point to a file
+containing a service account key that needs to be present in the container
+running clouddriver.
+
+Halyard has allowed the hal config to reference files anywhere on disk on the
+machine running Halyard; as part of its config generation, it:
+
+- copies these files to a staging directory
+- updates all the config files to point to this staging directory
+- mounts all these files in the deployed containers using the path of the
+  staging directory
+
+In order to make the handling of external files (which are generally sensitive)
+more flexible, `kleat` will handle cases where the config points to files as
+follows:
+
+- The hal config should reference the location of the file _as it will be
+  mounted in the container_.
+- The default `kustomize` install pathway will mount a Kubernetes secret into
+  `/var/secrets` in each container. Users can add any files to this secret in
+  their overlay, and the files will then be mounted under `/var/secrets` in the
+  pods for each service.
+  - Users using this workflow would, for example, reference
+    `/var/secrets/my-token.json` in their hal config. Then in their overlay,
+    they would add `my-token.json` to the secret in the base kustomization,
+    which would cause it to be mounted at that path in every container.
+- Users who wish to handle secret deployment out-of-band can do so; they would
+  reference the mounted path of the secret file in their hal config and would be
+  responsible for mounting that secret in all containers (such as with JSON
+  patches in their overlay).
+
+It is worth noting that this approach to handling files referenced in the config
+is one area where we are most interested in feedback from early adopters, and
+are definitely open to improvements in this workflow if users find it
+cumbersome.
 
 #### Output
 
-The output to kleat will be a directory containing the service YAML of each
-microservice, as well as files that depend on it. As a baseline,
-`hal config generate` currently outputs this data to a staging directory and we
-will use the same format for the output from kleat.
-
-There are a few open questions around whether we might want to deviate from this
-format:
-
-- Currently the service config files contain absolute references to files in
-  their location on the local filesystem. This means that the ConfigMap
-  containing these files needs to be mounted to the same directory in each of
-  the service pods, leaking a detail of the machine that ran Halyard to the
-  eventual deployment. We may want to standardize the path where dependencies
-  will live (ex: /opt/spinnaker/dependencies) and write the config files to
-  point to dependencies there.
-- We will also need to write out the BOM used by Spinnaker as part of the
-  output, so that users using downstream tools (Operator, Helm, Kustomize) can
-  easily get the container that should be deployed for each microservice without
-  needing to resolve the BOM themselves.
+The output of kleat will be a directory containing the service YAML of each
+microservice. As a baseline, `hal config generate` currently outputs this data
+to a staging directory and we will use the same format for the output from
+kleat.
 
 ### Install Pathways
 
@@ -384,11 +428,43 @@ that are being removed, this change should be transparent to the end user.
 
 #### Kustomize
 
-We’ll provide a Kustomize repo that contains canonical examples of the
-Kubernetes YAML for deploying Spinnaker. In order to generate a full deployment,
-users will first run kleat to generate their config files, then will point
-Kustomize at the output directory containing these files so that it can generate
-the required ConfigMaps as well as overrides for the docker container versions.
+We’ll provide a [Kustomization](https://github.com/spinnaker/kustomization-base)
+that contains the necessary Kubernetes YAML for deploying Spinnaker. In order to
+simplify the configuration in users' overlays, this base kustomization will
+create empty `Secret`s for the config and referenced files and will mount them
+in the appropriate places in the containers. Users will then just need to add
+files to these `Secret`s in their overlay.
+
+As a way to quickly get started, we'll provide a
+[skeleton repo](https://github.com/spinnaker/spinnaker-config) that users can
+clone and add their config to.
+
+An overview of how to deploy one service this way is provided
+[here](https://github.com/spinnaker/kustomization-base#installing-spinnaker),
+but the quick overview is that users will need to:
+
+- Run `kleat` on their hal config, to generate their service configs.
+- Add those service configs to the relevant config maps in their
+  `kustomization.yaml`. (This is already done in the skeleton repo.)
+- Add any referenced files to the `spinnaker-secrets` secret in their
+  `kustomization.yaml`
+- For some users, this will be all and they run `kustomize build` and deploy the
+  result.
+- Other users may want to:
+  - Add some `-local.yml` config files
+  - Configure a custom redis endpoint
+  - Add custom patches to the deployed services
+
+In terms of customizing the deployment, some users may want to apply JSON
+patches to the base config in their overlay, and others may want to fork the
+base config and directly modify the YAML. At this point we don't have a strong
+opinion about which path users should take and intend to support both.
+
+Users can select a version of Spinnaker to deploy by supplying container tag
+overrides in their `kustomization.yaml` file. The release process will be
+updated so that published container images will be tagged with their top-level
+version (ex: `spinnaker-1.20.1`). This avoids the need to fetch a BOM and parse
+it to find the the specific tag for each microservice.
 
 #### Helm
 
@@ -398,6 +474,9 @@ reproduce the entire Halyard config in the values file, and re-implement kleat
 in Helm’s templating language. A better solution would be to have Helm install
 the operator, which is similar to how the chart currently just installs Halyard
 but should provide a more Kubernetes-native experience.
+
+The initial implementation is focusing on the Kustomize install path, and there
+are no immediate plans to add a Helm install pathway.
 
 #### Manual
 
