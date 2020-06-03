@@ -2,7 +2,7 @@
 
 | | |
 |-|-|
-| **Status**     | Proposed|
+| **Status**     | In Progress |
 | **RFC #**      | [#110](https://github.com/spinnaker/governance/pull/110) |
 | **Author(s)**  | Aimee Ukasick ([@aimeeu](https://github.com/aimeeu)), Brian Le ([@brian-armory](https://github.com/brian-armory)), Rosalind Benoit ([@dnilasor](https://github.com/dnilasor)) |
 | **SIG / WG**   | Documentation SIG |
@@ -30,7 +30,6 @@ To that end, these are the specific goals we are working toward:
 ### Non-Goals
 
 * Not a complete reorganization of the documentation set. What will happen is the current documentation related tabs will be condensed under a single “Docs” tab in the top navigation.
-* Not replatforming or rethemeing .io. The cost/benefit is not there to do this at this time.
 
 ## Motivation and Rationale
 
