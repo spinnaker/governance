@@ -115,6 +115,7 @@ Check out [the mock-up draft](https://docs.google.com/drawings/d/1FCzzvnK0a-_dQ5
   - Docs PRs would not be pushed to a previous release branch unless a code patch was cherry picked to a previous branch. In that case, the Docs PR would be pushed to master and cherry picked to the previous branch.
 
 * Page-level table of contents that is always visible. This provides context and makes navigation within a page easier. See [Istio docs](https://istio.io/docs/concepts/what-is-istio/) for an example.
+* Ability for reader to copy a code block with a click of a button
 
 ### Analytics Improvements
 
@@ -177,6 +178,7 @@ This work should be performed by contractors and/or Linux Foundation employees a
     * Design should accommodate video categorization or incorporate Youtube playlists
   * Implement community calendar page linked to Google Calendar
   * Implement featured videos and featured tweets area in newsletter template
+* Implement new functionality to enable readers to copy a code block with the click of a button
  
 ### Web/CSS
   * Create CSS theme(s) based on branding design
