@@ -2,7 +2,7 @@
 
 | | |
 |-|-|
-| **Status**     | Proposed|
+| **Status**     | In Progress |
 | **RFC #**      | [#110](https://github.com/spinnaker/governance/pull/110) |
 | **Author(s)**  | Aimee Ukasick ([@aimeeu](https://github.com/aimeeu)), Brian Le ([@brian-armory](https://github.com/brian-armory)), Rosalind Benoit ([@dnilasor](https://github.com/dnilasor)) |
 | **SIG / WG**   | Documentation SIG |
@@ -30,7 +30,6 @@ To that end, these are the specific goals we are working toward:
 ### Non-Goals
 
 * Not a complete reorganization of the documentation set. What will happen is the current documentation related tabs will be condensed under a single “Docs” tab in the top navigation.
-* Not replatforming or rethemeing .io. The cost/benefit is not there to do this at this time.
 
 ## Motivation and Rationale
 
@@ -115,6 +114,7 @@ Check out [the mock-up draft](https://docs.google.com/drawings/d/1FCzzvnK0a-_dQ5
   - Docs PRs would not be pushed to a previous release branch unless a code patch was cherry picked to a previous branch. In that case, the Docs PR would be pushed to master and cherry picked to the previous branch.
 
 * Page-level table of contents that is always visible. This provides context and makes navigation within a page easier. See [Istio docs](https://istio.io/docs/concepts/what-is-istio/) for an example.
+* Ability for reader to copy a code block with a click of a button
 
 ### Analytics Improvements
 
@@ -177,6 +177,7 @@ This work should be performed by contractors and/or Linux Foundation employees a
     * Design should accommodate video categorization or incorporate Youtube playlists
   * Implement community calendar page linked to Google Calendar
   * Implement featured videos and featured tweets area in newsletter template
+* Implement new functionality to enable readers to copy a code block with the click of a button
  
 ### Web/CSS
   * Create CSS theme(s) based on branding design
