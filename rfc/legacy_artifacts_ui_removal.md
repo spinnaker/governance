@@ -2,7 +2,7 @@
 
 | | |
 |-|-|
-| **Status**     | _Proposed, **Accepted**, Implemented, Obsolete_ |
+| **Status**     | _Proposed, Accepted, **Implemented**, Obsolete_ |
 | **RFC #**      | [111](https://github.com/spinnaker/governance/pull/111) |
 | **Author(s)**  | Maggie Neterval (`@maggieneterval`) |
 | **SIG / WG**   | UI/UX SIG |
@@ -66,13 +66,18 @@ the new UI, but no comprehensive audit of the new UI by Spinnaker maintainers.
 
 ## Timeline
 
-Each set of milestones should be complete by the time the corresponding Spinnaker version is released.
+Each set of milestones should be complete by the time the corresponding Spinnaker or Halyard version is released.
 
 | Spinnaker Version | Release Window Opens | Milestones |
 |-------------------|----------------------|------------|
 | 1.20              | 2020-04-27           | New UI is enabled by default. Legacy UI is behind a feature flag.
 | 1.21              | 2020-06-22           | Legacy UI is removed.
 | 1.23              | TBD                  | Legacy UI documentation is removed.
+
+| Halyard Version | Supported Spinnaker Versions | Milestones |
+|-----------------|------------------------------|------------|
+| 1.35            | 1.17, 1.18. 1.19             | Log warning that `--artifacts` and `--artifacts-rewrite` feature flags are no longer used in Spinnaker >= 1.20.
+| TBD             | 1.20, 1.21, 1.22             | Remove `--artifacts` and `--artifacts-rewrite` feature flags, as no supported release consumes them.
 
 ## Design
 
@@ -110,13 +115,18 @@ updating the artifacts documentation, and adding a section to the 1.20 release
 notes ([halyard/pull/1620](https://github.com/spinnaker/halyard/pull/1620),
 [spinnaker.github.io/pull/1806](https://github.com/spinnaker/spinnaker.github.io/pull/1806)).
 
-- [] For release 1.21, remove the `legacyArtifactsEnabled` flag and all legacy
-UI code. Communicate this change by updating the artifacts documentation and
-adding a section to the 1.21 release notes.
+- [x] For release 1.21, remove the `legacyArtifactsEnabled` flag and all legacy
+UI code ([deck/pull/8273](https://github.com/spinnaker/deck/pull/8273)).
+Communicate this change by adding a section to the 1.21 release notes.
 
-- [] After release 1.23, we can remove the legacy UI documentation and Halyard
-feature flags because no supported release (1.21, 1.22, 1.23) will include
-legacy UI support.
+- [x] After release 1.23, we can remove the legacy UI documentation, as no
+supported release (1.21, 1.22, 1.23) will include the legacy UI. Create a
+self-assigned issue to track this ([spinnaker/spinnaker/5756](https://github.com/spinnaker/spinnaker/issues/5756)).
+ 
+- [x] After release 1.22, we can remove Halyard's `--artifacts` and
+`--artifacts-rewrite` feature flags because no supported release (1.20, 1.21,
+1.22) will read from these flags. Create a self-assigned issue to track this
+([spinnaker/spinnaker/5757](https://github.com/spinnaker/spinnaker/issues/5756)).
 
 ## Prior Art and Alternatives
 
