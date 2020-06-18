@@ -14,7 +14,8 @@ standard settings.
 
 In particular, it will ensure that:
 * Both groups are owned by sig@spinnaker.io and have no other owners
-* The sig-foo@ group has sig-foo-leads@ as a manager (existing memberships remain)
+* The sig-foo@ group has sig-foo-leads@ as a member and the SIG leads as managers (other existing
+  memberships remain)
 * The sig-foo-leads@ group has the SIG leads as managers and no other memberships
 * The sig-foo@ group has the settings listed below in `sigGroupSettings` and sig-foo-leads@ has the
   settings listed in `sigLeadsGroupSettings`
@@ -34,7 +35,6 @@ import com.github.ajalt.clikt.parameters.options.convert
 import com.github.ajalt.clikt.parameters.options.flag
 import com.github.ajalt.clikt.parameters.options.option
 import com.github.ajalt.clikt.parameters.options.required
-import com.github.ajalt.clikt.parameters.options.validate
 import com.google.api.client.extensions.java6.auth.oauth2.AuthorizationCodeInstalledApp
 import com.google.api.client.extensions.jetty.auth.oauth2.LocalServerReceiver
 import com.google.api.client.googleapis.auth.oauth2.GoogleAuthorizationCodeFlow
@@ -46,7 +46,6 @@ import com.google.api.services.directory.Directory
 import com.google.api.services.directory.DirectoryScopes
 import com.google.api.services.directory.model.Group
 import com.google.api.services.directory.model.Member
-import com.google.api.services.directory.model.Members
 import com.google.api.services.groupssettings.Groupssettings
 import com.google.api.services.groupssettings.GroupssettingsScopes
 import com.google.api.services.groupssettings.model.Groups
@@ -102,7 +101,8 @@ val sigLeadsGroupMembership = MembershipBuilder()
   .build()
 val sigGroupMembership = MembershipBuilder()
   .put("sig@spinnaker.io", Role.OWNER)
-  .put(sigLeadsGroupAddress, Role.MANAGER)
+  .putAll(options.sigLeads.map { it to Role.MANAGER }.toMap())
+  .put(sigLeadsGroupAddress, Role.MEMBER)
   .build()
 
 configureGroup(sigLeadsGroupAddress, sigLeadsGroupSettings, sigLeadsGroupMembership, allowAdditionalMembers = false)
@@ -115,7 +115,6 @@ class Args : NoOpCliktCommand(name = "create-sig-groups.main.kts") {
   val sigLeads by option(help = "comma separated list of SIG lead email addresses")
     .convert { it.split(',').toSet() }
     .required()
-    .validate { if (it.size < 2) fail("You must specify at least 2 SIG leads, separated by commas") }
 
   val dryRun by option("--dry-run", help = "don't make any changes").flag("--nodry-run", default = false)
 }
@@ -170,7 +169,7 @@ fun createGroupIfMissing(groupAddress: String): GroupData {
   if (group == null) {
     println("Creating group $groupAddress")
     if (!options.dryRun) {
-      directoryService.groups().insert(Group().setEmail(groupAddress))
+      directoryService.groups().insert(Group().setEmail(groupAddress)).execute()
     } else {
       // Since we didn't create the group, we can't query its data. Just return fake empty data.
       return GroupData(MembershipBuilder().build(), Groups())
@@ -184,10 +183,9 @@ fun getMembers(groupAddress: String): Membership {
   val members = MembershipBuilder()
   var pageToken: String? = null
   do {
-    val response: Members
-    response = directoryService.members().list(groupAddress).setPageToken(pageToken).execute()
+    val response = directoryService.members().list(groupAddress).setPageToken(pageToken).execute()
     pageToken = response.nextPageToken
-    response.members.forEach { member -> members.put(member.email, Role.valueOf(member.role)) }
+    response.members?.forEach { member -> members.put(member.email, Role.valueOf(member.role)) }
   } while (pageToken != null)
   return members.build()
 }
@@ -212,7 +210,7 @@ fun patchSettings(groupAddress: String, existingSettings: Groups, newSettings: G
     }
   }
   if (!options.dryRun) {
-    groupsSettingsService.groups().patch(groupAddress, newSettings)
+    groupsSettingsService.groups().patch(groupAddress, newSettings).execute()
   }
 }
 
@@ -227,7 +225,7 @@ fun updateMembership(
     val role = expectedMembers[member]!!
     println("Adding $member to group $groupAddress with role $role")
     if (!options.dryRun) {
-      directoryService.members().insert(groupAddress, Member().setEmail(member).setRole(role.name))
+      directoryService.members().insert(groupAddress, Member().setEmail(member).setRole(role.name)).execute()
     }
   }
 
@@ -237,12 +235,12 @@ fun updateMembership(
     if (!allowAdditionalMembers) {
       println("Removing $member from group $groupAddress")
       if (!options.dryRun) {
-        directoryService.members().delete(groupAddress, member)
+        directoryService.members().delete(groupAddress, member).execute()
       }
     } else if (role != Role.MEMBER) {
       println("Changing $member to role MEMBER in group $groupAddress (from $role)")
       if (!options.dryRun) {
-        directoryService.members().patch(groupAddress, member, Member().setRole(Role.MEMBER.name))
+        directoryService.members().patch(groupAddress, member, Member().setRole(Role.MEMBER.name)).execute()
       }
     }
   }
@@ -254,7 +252,7 @@ fun updateMembership(
     if (existingRole != expectedRole) {
       println("Setting $member to role $expectedRole in group $groupAddress (was $existingRole)")
       if (!options.dryRun) {
-        directoryService.members().patch(groupAddress, member, Member().setRole(expectedRole.name))
+        directoryService.members().patch(groupAddress, member, Member().setRole(expectedRole.name)).execute()
       }
     }
   }
