@@ -43,6 +43,7 @@ organization:
       - srekapalli
       - stuart-pollock
       - xavileon
+      - zachsmith1
     oss-approvers:
       description: Approvers Role
       members:
@@ -90,6 +91,7 @@ organization:
       - stewchen
       - ttomsu
       - wjoel
+      - vigneshm
     oss-kayenta-approvers:
       description: Approvers limited in scope to kayenta and kayenta-deck only
       members:
