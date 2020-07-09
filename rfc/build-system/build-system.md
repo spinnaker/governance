@@ -94,8 +94,8 @@ to avoid major US holidays.) The time between releases will now be either 13 or
 
 - 2020.4: branches cut 2020-10-14, release on 2020-10-21
 - 2021.1: branches cut 2021-01-13, release on 2021-01-20
-- 2020.2: branches cut 2021-04-14, release on 2021-04-21
-- 2020.3: branches cut 2021-07-14, release on 2021-07-21
+- 2021.2: branches cut 2021-04-14, release on 2021-04-21
+- 2021.3: branches cut 2021-07-14, release on 2021-07-21
 
 Slowing the release cadence reduces the release manager overhead somewhat,
 although release manager shifts are now longer and may have to be shared by
