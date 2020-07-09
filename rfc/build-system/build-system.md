@@ -463,6 +463,16 @@ cd ..
 git add intellij
 
 git commit -a -m "add a master intellij project"
+
+./clouddriver/gradlew wrapper
+rm -rf */gradlew */gradlew.bat */gradle/wrapper
+for repo in $repositories intellij
+  ln -s ../gradlew $repo/gradlew
+  ln -s ../../gradle/wrapper $repo/gradle/wrapper
+end
+git add .
+
+git commit -a -m "symlink gradle wrapper files to the root dir"
 ```
 
 ## Appendix: An Alternative Multi-Repo Workflow
