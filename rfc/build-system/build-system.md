@@ -254,7 +254,10 @@ All published artifacts from the testing release will be updated with the new
 version:
 
 - BOM (for Halyard deployments): The existing BOM will be copied, with the
-  included `version` field updated to reflect the new version number
+  included `version` field updated to reflect the new version number.
+  (Deployments that aren't using Halyard will just fetch the containers
+  directly, but the BOM will continue to be written until Halyard is no longer a
+  supported tool.)
 - Debian: a build will be triggered in each microservice repository at the
   appropriate commit and with the new version number
 - Docker: the existing containers for each microservice will be tagged with the
