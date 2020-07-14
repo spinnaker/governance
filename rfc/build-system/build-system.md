@@ -115,6 +115,22 @@ longer to get new features into their hands, however.
   interval.
 - Release more often. Release less often. Release every day?
 
+### New Artifact Repositories
+
+Currently we store our Docker images in Google Artifact Registry and our Maven
+and Debian packages in Bintray. There has been a desire for a while to move off
+of Bintray. We would like to move to a different artifact repository, ideally
+one that supports all the various Spinnaker artifacts: Debian, Docker, Maven,
+and npm. (This document doesn't describe any changes to npm artifacts, which are
+used by deck, but choosing a repository that can manage them seems wise.)
+
+Since Google Artifact Registry supports all these package formats, already has a
+Spinnaker/CDF project with billing and appropriate GSuite ACLs, and is staffed
+in the same organization as Google's Spinnaker team, we'll use that.
+
+**_Alternatives_**: GitHub Packages would be another reasonable choice since
+we're building in GitHub Actions, but it doesn't support Debian packages.
+
 ### Affected Repositories
 
 This new versioning scheme affects all repositories in the Spinnaker
