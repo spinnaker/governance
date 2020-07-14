@@ -15,7 +15,7 @@ _TODO_
 * Andy Glover (Netflix)
 * Matt Duftler (Google)
 * Peter Stout (Netflix)
-* Ruslan Meshenberg (Netflix)
+* Isaac Mosquera (Armory)
 * Andrew Phillips (Google)
 
 ## Contact
