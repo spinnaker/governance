@@ -7,7 +7,7 @@ The Platform SIG is tasked with the oversight of internal processes and tooling 
 * Regular SIG Sync
   * Every other Thursday, 11 AM US/Pacific ([See in your time zone](https://www.thetimezoneconverter.com/?t=11am&tz=San%20Francisco))
   * [Agenda](https://docs.google.com/document/d/1zGIgEwO9lZfYaI0N6necuH-x0SjmL3hmbbeMWZgqnEw/edit#heading=h.ilrqo6qoiejr)
-  * [Videoconference Link](https://meet.google.com/qtz-ykko-ddp)
+  * [Videoconference Link](https://zoom.us/j/99316637949)
 
 ## Leadership
 
