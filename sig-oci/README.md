@@ -13,6 +13,10 @@ The Spinnaker OCI SIG is responsible for the development and maintenance of comp
 Consulting Member of Technical Staff \
 _Oracle_
 
+**[Rajendra Inamdar](https://github.com/raj-inamdar)** \
+Senior Manager of Software Development \
+_Oracle_
+
 ### Responsibilities
 
 * Collaborate with contributors and continually improve the features available for Spinnaker OCI integration.
