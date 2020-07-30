@@ -57,7 +57,7 @@ We have other providers in mind and are ready to contribute for these as well.
 
 ## Design
 
-Here's a simple implementation of the interfaces (interfaces should be in kork): https://github.com/ncknt/clouddriver/compare/master...ncknt:feat/kork-accounts?expand=1
+Here's a simple implementation of the interfaces (interfaces should be in kork): [https://github.com/ncknt/clouddriver/compare/master...ncknt:feat/kork-accounts?expand=1](https://github.com/ncknt/clouddriver/compare/master...ncknt:feat/kork-accounts?expand=1)
 
 An `Account` contains the information necessary to access an account. It can be parsed and enriched into a `Credentials`. Spinnaker already has a lot of these: e.g. `com.netflix.spinnaker.clouddriver.security.AccountCredentials`, `com.netflix.spinnaker.clouddriver.artifacts.config.ArtifactCredentials`, `com.netflix.spinnaker.igor.service.BuildService`, etc.
 
