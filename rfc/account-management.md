@@ -3,7 +3,7 @@
 | | |
 |-|-|
 | **Status**    | _**Proposed**, Accepted, Implemented, Obsolete_       |
-| **RFC #**      | _Update after PR has been made_ |
+| **RFC #**      | https://github.com/spinnaker/governance/pull/159 |
 | **Author(s)**  | Nicolas Cohen (@ncknt), Nima Kaviani (@nimakaviani) |
 | **SIG / WG**   | Platform |
 
