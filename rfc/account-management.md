@@ -37,7 +37,7 @@ We're proposing to define interfaces to let each Spinnaker service support a var
 With this proposal implemented, operators of Spinnaker could easily:
 - reload accounts dynamically across all types of accounts
 - add a new account source from a specific provider
-- extend the behavior of the `AccountRepository` across all types of accounts.
+- extend the behavior of the `CredentialsRepository` across all types of accounts.
 - add a new account source and get the account information from its source of truth.
 
 We have evidence from our customers that some form of dynamic account management is needed.
@@ -80,7 +80,7 @@ For each provider, the migration looks like:
 - Create the default `CredentialsRepository` bean
 - Create the default `CredentialsProvider` bean
 
-`clouddriver-elasticsearch` uses credentials across credentials and can be changed to use a `CompositeCredentialsRepository` that federates `CredentialsRepository` with non migrated provider accounts.
+`clouddriver-elasticsearch` uses credentials across providers and can be changed to use a `CompositeCredentialsRepository` that federates `CredentialsRepository` with non migrated provider accounts.
 
 When all providers are migrated, we can delete `AccountCredentialsProvider`.
 
