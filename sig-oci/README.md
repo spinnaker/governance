@@ -21,6 +21,11 @@ _Oracle_
 Senior Member of Technical Staff \
 _Oracle_
 
+**[Raj Dale](https://github.com/rajkdale)** \
+Senior Software Engineer
+_Oracle_
+
+
 ### Responsibilities
 
 * Collaborate with contributors and continually improve the features available for Spinnaker OCI integration.
