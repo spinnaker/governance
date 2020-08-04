@@ -17,6 +17,10 @@ _Oracle_
 Senior Manager of Software Development \
 _Oracle_
 
+**[Anup Patil](https://github.com/anupmpatil)** \
+Senior Member of Technical Staff \
+_Oracle_
+
 ### Responsibilities
 
 * Collaborate with contributors and continually improve the features available for Spinnaker OCI integration.
