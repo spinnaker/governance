@@ -22,7 +22,7 @@ Senior Member of Technical Staff \
 _Oracle_
 
 **[Raj Dale](https://github.com/rajkdale)** \
-Senior Software Engineer
+Senior Software Engineer \
 _Oracle_
 
 
