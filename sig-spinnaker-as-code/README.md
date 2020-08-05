@@ -10,7 +10,7 @@ _TODO description_
 
 ## Leadership
 
-* Emily Burns ([emjburns](https://github.com/emjburns))
+* Luis Pollo ([luispollo](https://github.com/luispollo)
 * Rob Fletcher ([robfletcher](https://github.com/robfletcher))
 
 ## Contact
