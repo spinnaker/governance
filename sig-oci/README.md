@@ -17,6 +17,10 @@ _Oracle_
 Senior Manager of Software Development \
 _Oracle_
 
+**[Jonathan Schreiber]** \
+Principal Product Manager \
+_Oracle_
+
 **[Anup Patil](https://github.com/anupmpatil)** \
 Senior Member of Technical Staff \
 _Oracle_
