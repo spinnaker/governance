@@ -17,7 +17,7 @@ _Oracle_
 Senior Manager of Software Development \
 _Oracle_
 
-**[Jonathan Schreiber]**(https://github.com/jonschreiber) \
+**[Jonathan Schreiber](https://github.com/jonschreiber)** \
 Principal Product Manager \
 _Oracle_
 
