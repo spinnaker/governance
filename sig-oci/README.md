@@ -41,3 +41,6 @@ _Oracle_
 ## Proposed meeting cadence
 
 Monthly on 4th Thursday at 2 PM Pacific.
+
+## Slack Channel
+\#sig-oci(https://spinnakerteam.slack.com/archives/C018FSXNB0A)
