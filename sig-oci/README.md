@@ -40,7 +40,9 @@ _Oracle_
 
 ## Proposed meeting cadence
 
-Monthly on 4th Thursday at 2 PM Pacific.
+Monthly on 4th Thursday at 2 PM Pacific on [Google Meet](https://meet.google.com/igw-qtup-ctj)
+
+[OCI SIG Meeting Notes](https://docs.google.com/document/d/1g2w8eHxEhRALtvNS968MzRb_-N8tBxYakDXCGF-3jFY/edit?usp=sharing)
 
 ## Slack Channel
 [\#sig-oci](https://spinnakerteam.slack.com/archives/C018FSXNB0A)
