@@ -1,11 +1,11 @@
 # Amazon ECS End to End Test Proposal
 
-|               |                                                 |
-|---------------|-------------------------------------------------|
-| **Status**    | _**Proposed**, Accepted, Implemented, Obsolete_ |
-| **RFC #**     | _Update after PR has been made_                 |
-| **Author(s)** | Allison Stanko (@allisaurus)                    |
-| **SIG / WG**  | AWS SIG, Platform SIG                           |
+|               |                                                  |
+|---------------|--------------------------------------------------|
+| **Status**    | **Proposed**                                     |
+| **RFC #**     | https://github.com/spinnaker/governance/pull/169 |
+| **Author(s)** | Allison Stanko (@allisaurus)                     |
+| **SIG / WG**  | AWS SIG, Platform SIG                            |
 
 
 ## Overview
