@@ -364,9 +364,8 @@ any end to end testing added today. Examples may include:
 * Elimination of all end to end testing prior to Spinnaker releases 
   (assume then there would be an alternative that could be leveraged)
 * Core providers whittled down to excluded ECS or all cloud providers 
-  extracted to live as pluggins (would then leverage new system/guidance; 
+  extracted to live as plugins (would then leverage new system/guidance; 
   any existing tests could potentially be extracted and exercised by customers)
 * Abandonment of the ECS provider by customers makes these tests 
   unnecessary (given current use and the availability of the AWS 
   SIG as a support channel, seems unlikely near term).
-
