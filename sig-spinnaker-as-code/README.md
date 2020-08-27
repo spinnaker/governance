@@ -1,6 +1,6 @@
 # SIG: Spinnaker-as-Code
 
-_TODO description_
+This SIG is focused on enabling usage of Spinnaker via declarative formats that can be stored as source code, such as manifests or templates.
 
 ## Meetings
 
@@ -10,8 +10,8 @@ _TODO description_
 
 ## Leadership
 
-* Luis Pollo ([luispollo](https://github.com/luispollo)
-* Rob Fletcher ([robfletcher](https://github.com/robfletcher))
+* Luis Pollo ([@luispollo](https://github.com/luispollo))
+* Rob Fletcher ([@robfletcher](https://github.com/robfletcher))
 
 ## Contact
 
@@ -21,4 +21,8 @@ _TODO description_
 
 ## Subprojects
 
-_TODO_
+### Active
+- [Managed Delivery](https://github.com/spinnaker/keel)
+
+### Inactive
+- Managed Pipeline Templates V1 and V2
