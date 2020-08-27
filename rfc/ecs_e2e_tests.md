@@ -280,7 +280,7 @@ e2e ECS test running to ensure the contracts between services are intact prior t
 release, but with most permutations of the available atomic operations and 
 controllers run as integration tests on PR submission. 
 
-While we're actively iterating on the integration tests ot make them more meaningful, 
+While we're actively iterating on the integration tests to make them more meaningful, 
 they still have major limitations (e.g., they require an actual AWS account) which 
 will take time to sort out. Community guidance re: what integration tests should 
 look like is also still missing, though conversations have started w/r/t requirements.
@@ -352,7 +352,7 @@ needed to debug failures.
     * Mitigation: Hopefully rare, but can be clearly identified by API responses/error msgs
 * Lack of ECS expertise on build cops team to triage
     * Mitigation: GitHub team for “ecs-triage” and/or “ecs-triage” team in slack to engage for problems. 
-      Also: copious documentation contriubted with test code.
+      Also: copious documentation contributed with test code.
 
 
 ## Future Possibilities
