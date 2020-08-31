@@ -118,7 +118,7 @@ Approver status is scoped to a part of the codebase.
 
 #### Expedited Approvership
 
-In rare circumstances, Members can directly climb to Approver without going through Reviewer. In these cases, unanimous approval must be reached by the TOC. Examples of scenarios that have caused an expited Approver role have been:
+In rare circumstances, Members can directly climb to Approver without going through Reviewer. In these cases, unanimous approval must be reached by the TOC. Examples of scenarios that have caused an expedited Approver role have been:
 
 * Subproject ownership transfers.
 
