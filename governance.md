@@ -205,7 +205,7 @@ Election to the SC requires a majority of the SC. If a person is up for reelecti
 
 ## Documentation Contributors
 
-The role definitions above were written optimized for code contributors. Documentation contributors will not be held to the same technical requirements. Instead, we look for writers who can express concepts clearly and simply. Documnetation contributors still follow the same Member, Reviewer, Approver progression ladder.
+The role definitions above were written optimized for code contributors. Documentation contributors will not be held to the same technical requirements. Instead, we look for writers who can express concepts clearly and simply. Documentation contributors still follow the same Member, Reviewer, Approver progression ladder.
 
 ## Special Interest Groups
 
