@@ -40,7 +40,7 @@ _Oracle_
 
 ## Proposed meeting cadence
 
-Monthly on 4th Thursday at 2 PM Pacific on [8x8 Meet](https://8x8.vc/tzy1dx/oci.clouddriver) \
+Monthly on 4th Thursday at 2 PM Pacific on [8x8 Meet](https://8x8.vc/tzy1dx/oci.clouddriver)
 Meetings may be recorded.
 
 [OCI SIG Meeting Notes](https://docs.google.com/document/d/1g2w8eHxEhRALtvNS968MzRb_-N8tBxYakDXCGF-3jFY/edit?usp=sharing)

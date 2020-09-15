@@ -47,6 +47,7 @@ organization:
     oss-approvers:
       description: Approvers Role
       members:
+      - allisaurus
       - aglover
       - ajordens
       - alanmquach
