@@ -97,8 +97,8 @@ _This process could be made easier by investing in more strongly typed APIs and 
 - **Beneficiary**: Amazon ECS users
 - **Area of Investment**: Cloud Providers
 - **Deliverables**:
+  - Add fuctional UI tests and `clouddriver` integration tests for ECS provider
   - Add support for configuring capacity provider strategies
-  - UI fixes & enhancements for load balancers, tasks, metrics
 
 ### Spinnaker-as-Code
 
