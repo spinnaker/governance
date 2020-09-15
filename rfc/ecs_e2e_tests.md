@@ -2,7 +2,7 @@
 
 |               |                                                  |
 |---------------|--------------------------------------------------|
-| **Status**    | **Proposed**                                     |
+| **Status**    | **Accepted**                                     |
 | **RFC #**     | https://github.com/spinnaker/governance/pull/169 |
 | **Author(s)** | Allison Stanko (@allisaurus)                     |
 | **SIG / WG**  | AWS SIG, Platform SIG                            |
