@@ -181,6 +181,10 @@ This monorepo requires you to change all affected Java code in a single PR; no
 longer will you commit code to `kork` only to find out later it broke
 compilation of a handful of microservices.
 
+**_Alternatives:_** I also wrote a description of a build system that doesn't
+use a monorepo. It's significantly more complicated, but I
+[included it in an appendix](#appendix-an-alternative-multi-repo-workflow).
+
 ### CI Builds
 
 For continuous integration, we will use GitHub Actions. A separate job will be
@@ -486,3 +490,238 @@ git add .
 
 git commit -a -m "symlink gradle wrapper files to the root dir"
 ```
+
+## Appendix: An Alternative Multi-Repo Workflow
+
+### Commit
+
+For simplicity, every commit to a Java repository will build and publish
+artifacts to the associated Maven repository. The versions will be exactly the
+same [as described in the monorepo section](#maven-artifact-publishing).
+
+These artifacts are intended to be consumed in two ways:
+
+- cross-repository dependencies
+- developing plugins targeting future Spinnaker releases
+
+We will _not_ publish Debian and Docker artifacts at every commit.
+
+### Cross-Repository Dependencies on `master`
+
+A workflow for bumping dependencies across the Java repositories will run every
+Sunday, Tuesday, and Thursday night on the `master` branch. This workflow will
+also have a webhook trigger. A script will be provided allowing anyone with
+write permission to trigger the workflow.
+
+The goal of this dependency bump is to leave the repositories in a
+_version-consistent_ state. To be version-consistent, the full Java dependency
+graph should contain only a single version of each repository. As a
+counter-example, this graph is _not_ version-consistent since it contains two
+different versions of `kork`:
+
+```
+clouddriver 1.2→fiat 2.3→kork 9.9
+      └────────→kork 9.8
+```
+
+Unlike the rest of the workflows described in this document, this workflow will
+also touch the `halyard` repository (and maybe `keel` and `swabbie`?).
+
+### Releases
+
+[As described in the monorepo section](#releases), release workflows are
+triggered by actions on the `release-operations` repository.
+
+#### Post-Commit Builds
+
+On a release branch, unlike `master`, the Java repositories will constantly keep
+their dependencies pointing to the latest code on the branch.
+
+A post-commit build will consult the dependency graph and create PRs to bump the
+versions on its downstream dependencies. For example, when `clouddriver`
+finishes building, it will create a PR to put the newly-created artifact's
+version into `front50/gradle.properties`.
+
+As usual, these dependency bump PRs will be set to auto-merge if the tests pass,
+which potentially triggers more version bump PRs until all the release branches
+are referencing the latest commits on the branch.
+
+#### Create Release Branches
+
+Release branches are created
+[just as they are in the monorepo section](#create-release-branches). After
+creating each branch, however, this will also start
+[a dependency bump workflow](#the-start_deps_update-action), to make sure all
+the dependencies are referencing the latest commits. We also start
+[the same dependency bump workflow](#the-start_deps_update-action) on master to
+build artifacts with the new version number (i.e. if we just cut 2020.4, it will
+start building artifacts for 2021.1).
+
+#### Create a Testing Release
+
+Testing releases are [the same as in the monorepo](#create-a-testing-release),
+but with one additional check. On release branches, but _not on master_, this
+will verify that all the dependencies in the Java repositories are pointing at
+the latest commits. If not, the workflow will immediately fail.
+
+#### Publishing a Release
+
+This is entirely the same as
+[the workflow described in the monorepo section](#publishing-a-release).
+
+### Implementation
+
+#### spinnaker-gradle-project
+
+A method will be provided to determine a project's version from the git
+repository. (Probably this will be a property which we set on the command-line,
+like `-PcalulateVersionFromGit`.) It will consider the checked-out branch and
+latest commit in the log to come up with the
+[commit version](#maven-artifact-publishing) and apply it to the project.
+
+It will also need to add a dependency on
+[Gradle's built-in Maven Publish Plugin](https://docs.gradle.org/current/userguide/publishing_maven.html),
+for publishing to Google Artifact Registry.
+
+#### Java Dependency Graph Generation
+
+The Java dependency graph will be generated at runtime by retrieving the
+`gradle.properties` files of every configured repository. A hardcoded list of
+property names will be used to add edges into the graph (`fiatVersion`,
+`korkVersion`, etc.).
+
+**_Alternatives_**: we could hardcode this, similar to what I did for `bumpdeps`
+(where each repository contains a list of its dependents). In my tests, however,
+I was able to generate this graph across all 18 repositories in under a second
+(using 18 parallel HTTP requests). This does make it dependent on remote calls
+to GitHub, but we already have a dependency on GitHub.
+
+#### build.yml/release.yml
+
+The standard `.github/workflows/build.yml` file we use in all repositories needs
+to be tweaked to add various publishing flags and call the Maven artifact
+publishing tasks. The `release.yml` file can be deleted.
+
+#### Custom Actions
+
+The custom actions described [in the monorepo section](#custom-actions) will all
+be used here, along with some additional actions and changed behaviors.
+
+##### The `bump_dependents` Action
+
+This is triggered post-merge if the CI passes.
+
+For builds on `master`, if the triggering commit does not include a change to
+`gradle.properties` that changes a dependency (e.g. a change to the
+`korkVersion` property), the action will simply exit. On a release branch, it
+always runs.
+
+It will be essentially the same as (and will make obsolete) the current
+[`bumpdeps`](https://github.com/spinnaker/bumpdeps) action. In particular this
+means:
+
+- the `gradle.properties` file in the dependent repository is updated to
+  reference the just-built artifact version
+- if an open dependency bump PR exists, it will be reused, otherwise a new PR
+  will be created
+- the PR will automatically merge if the tests pass (via Mergify)
+- if the tests fail, a review will be requested from `oss-approvers` on master
+  or `release-managers` on a release branch
+
+##### The `start_deps_update` Action
+
+This action starts a waterfall of dependency bumps across the Java repositories.
+It is triggered on `master` on a schedule. The workflow for this lives in the
+`release-operations` repository. It is also run on a release branch after all
+the branches are successfully created.
+
+An explicit design goal of this workflow is that if a dependency bump fails,
+once it is fixed the down-graph dependency bumps will continue. This makes it
+resilient to compile-time errors introduced by API changes. This happens because
+any change to dependency version in a `gradle.properties` file (whether it's
+from an autobump PR or a manual bump) triggers the `bump_dependents` action.
+
+When discussing "the base of the dependency graph", this is the set of
+repositories that don't depend on any other repositories. In practice, this is
+only `moniker`, so I will sometimes refer to it that way, but the code won't be
+so specific.
+
+Starting at the base of the dependency graph, we check to see if a Maven
+artifact exists in the repository for the expected version number. If not, we
+trigger a build. This catches the case where we have just created a new release
+branch (e.g. for 2021.1) so we want to create artifacts with the new `master`
+version (2021.2). We monitor the build and wait for it to succeed before
+continuing. (If a correctly-versioned artifact does exist for `moniker`, we can
+assume such artifacts exist for the rest of the repositories.)
+
+Next we look at every edge in the dependency graph and mark any edges that are
+stale (i.e. the target of the edge is an old version) as _to-be-updated_,
+leaving the others as _will-not-update_. We then walk up the graph starting from
+the base (`moniker`). As soon as we encounter a _to-be-updated_ edge, all edges
+after that are marked _will-not-update_.
+
+Consider the following graph, where red edges are stale and green are not:
+
+![](graph.svg)
+
+In this case, we start at `kork`, since that's the base. After walking the graph
+up from `kork`, the `clouddriver`→`fiat` and `clouddriver`→`kork` edges will be
+marked _to-be-updated_. The `front50`→`clouddriver` edge, despite being red,
+will be marked _will-not-update_ because it is a predecessor of two
+_to-be-updated_ edges.
+
+After deciding on the _to-be-updated_ edges, it will send PRs (exactly as
+described in [the bump_dependents action](#the-bump_dependents-action)) to
+update these edges. These PRs, upon merging, will generate more PRs to update
+the predecessor edges. (On `master` this happens because any change to a version
+in `gradle.properties` sends PRs to bump dependents. On release branches this
+happens because _all_ merges trigger dependency bump PRs.)
+
+In the previous example, once the PR that updates `clouddriver`'s dependency
+versions is merged, a PR will be created for the `front50`→`clouddriver` edge.
+That's why we don't update it initially.
+
+**_Alternatives:_** I tried to walk a line between simplicity and correctness
+here. But in the common case where `kork` is changed, this will result in 24 PRs
+to the 10 dependent repositories. The `front50` and `orca` repositories get it
+worst, with three separate commits.
+
+One way to work around this is by doing our own orchestration inside the action.
+We could trigger builds of things that _only_ depend on `kork` (`fiat`, `keiko`,
+and `rosco`), wait for them to finish, then move on to things that only depend
+on `kork`, `fiat`, `keiko`, and `rosco`, and continue working our way up the
+graph. We would then have only 10 dependency bump merges. The biggest downside
+is that if one of the dependency bump PRs fail, the action has to exit and wait
+for someone to fix the build. We then have to start over from scratch, rather
+than continuing where we left off. It's also a much more complicated chunk of
+code.
+
+Another option I came up with is a decentralized system that coordinates its
+status through git tags and commit messages. It would be able to pick up where
+it left off if a problem was encountered, but is even more complicated and
+leaves a trail of tags in its wake.
+
+Yet another option is working to flatten our dependency graph. If we only had
+two levels of hierarchy, we could probably devise a simpler system. But if we
+ever needed a deeper dependency graph later, we'd have to reimplement something
+like the proposed solution. Flattening the graph helps the proposed solution
+just as much, so it's still probably something we should try to do.
+
+##### The create_release_branch Action
+
+The workflow that runs this will also run
+[the start_deps_update action](#the-start_deps_update-action) on the branch.
+
+##### The publish_release Action
+
+For Maven builds, we will _not_ commit changes to `gradle.properties`, instead
+passing those properties on the command-line. So, for example, when building
+`clouddriver` 2020.4.3, we will pass the following arguments to gradle:
+
+```
+-Pversion=2020.4.3 -PfiatVersion=2020.4.3 -PkorkVersion=2020.4.3
+```
+
+For Java repositories, this will have to happen in dependency-graph order, since
+we can't build `clouddriver` with those flags until `fiat` and `kork` versions
+have been published to the artifact repository.
