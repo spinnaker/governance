@@ -3,7 +3,7 @@
 | | |
 |-|-|
 | **Status**     | **Proposed** |
-| **RFC #**      | _Update after PR has been made_ |
+| **RFC #**      | https://github.com/spinnaker/governance/pull/179 |
 | **Author(s)**  | Nima Kaviani (@nimakaviani), Gaurav Dhamija (@dhamijag), Manabu McCloskey (@nabuskey) |
 | **SIG / WG**   | Plugins |
 
