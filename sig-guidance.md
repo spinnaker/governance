@@ -4,7 +4,7 @@ A collection of guidance for Special Interest Groups.
 
 ## Meeting Notes
 
-Notes must be taken during SIG meetings and made available to the public, which are linked from the SIG's README.md file in the governance repository.
+Notes must be taken during SIG meetings and made available to the public, linked from the SIG's README.md file in the governance repository.
 
 To maintain good cadence, it is generally recommended to have a scribe taking notes who is not the person facilitating the meeting or presenting.
 
