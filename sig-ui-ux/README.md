@@ -11,7 +11,7 @@ _TODO description_
 
 ## Leadership
 
-* Maggie Neterval ([maggieneterval](https://github.com/maggieneterval))
+* Noah Iliinsky ([noahi](https://github.com/noahi))
 * Chris Thielen ([christopherthielen](https://github.com/christopherthielen))
 
 ## Contact
