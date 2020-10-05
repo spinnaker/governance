@@ -14,6 +14,7 @@ Don't see a SIG here that fits what you're looking for? [Submit a Proposal](sig-
 * [Spinnaker-as-Code](sig-spinnaker-as-code/README.md)
 * [Summit](sig-summit/README.md)
 * [UI / UX](sig-ui-ux/README.md)
+* [Azure](sig-azure/README.md)
 
 # SIG Meeting Calendar
 
