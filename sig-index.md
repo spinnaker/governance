@@ -4,6 +4,7 @@ This is an index of all minted SIGs within the Spinnaker Community.
 Don't see a SIG here that fits what you're looking for? [Submit a Proposal](sig-lifecycle.md)
 
 * [AWS](sig-aws/README.md)
+* [Azure](sig-azure/README.md)
 * [CI](sig-ci/README.md)
 * [Documentation](sig-documentation/README.md)
 * [Kubernetes](sig-kubernetes/README.md)
@@ -14,7 +15,6 @@ Don't see a SIG here that fits what you're looking for? [Submit a Proposal](sig-
 * [Spinnaker-as-Code](sig-spinnaker-as-code/README.md)
 * [Summit](sig-summit/README.md)
 * [UI / UX](sig-ui-ux/README.md)
-* [Azure](sig-azure/README.md)
 
 # SIG Meeting Calendar
 
