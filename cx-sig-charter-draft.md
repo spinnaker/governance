@@ -18,7 +18,6 @@ We do this by listening - whether it’s through our roadshows to SIG meetings, 
   - [Slack]
   - [/spinnaker] YouTube channel
   - [Zoom]
-  - Teams must be staffed by trusted contributors spanning time zones, see [moderation] for more detail
   - They are authorized to take immediate action when dealing with code of conduct issues, see [moderators] for the full list
   - They are expected to escalate to the project's code of conduct committee when issues rise above the level of simple moderation
 - Work with other SIGs and interested parties in the project to execute GitHub tasks where required, see [GitHub Management] for more detail
