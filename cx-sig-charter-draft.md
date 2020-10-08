@@ -13,7 +13,6 @@ We do this by listening - whether it’s through our roadshows to SIG meetings, 
 #### Code, Binaries and Services
 
 - Establish policies, standards, and procedures for the use, [moderation], and management of all public platforms officially used by the project, including but not limited to:
-  - [discuss.spinnaker.io]
   - [GitHub Management]
   - [Mailing lists] / Google groups for the project as a whole (eg: <need community mailing list>@googlegroups.com) and for individual sigs and working groups where the Chairs have provided us ownership
   - [Slack]
@@ -107,4 +106,3 @@ Six months after this charter is first ratified, it MUST be reviewed and re-appr
 Chairs and Technical Leads
 
 [sig-governance]: 
-
