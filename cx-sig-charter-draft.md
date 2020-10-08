@@ -91,7 +91,7 @@ Chairs SHOULD plan at least Contributor Experience meeting per year, and should 
 
 ### Additional responsibilities of Tech Leads
 
-Ensuring that technical changes from subprojects follow the process change communication guidelines listed above.
+Ensuring that technical changes from subprojects follow the process change communication guidelines we establish.
 
 ### Deviations from sig-governance
 Six months after this charter is first ratified, it MUST be reviewed and re-approved by the SIG in order to evaluate the assumptions made in its initial drafting.
