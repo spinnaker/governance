@@ -87,7 +87,7 @@ This sig adheres to the Roles and Organization Management outlined in Spinnaker'
 
 ### Additional responsibilities of Chairs
 
-Chairs SHOULD plan at least one face to face Contributor Experience meeting per year
+Chairs SHOULD plan at least Contributor Experience meeting per year, and should strive to enable annual face to face interaction as conditions allow.
 
 ### Additional responsibilities of Tech Leads
 
