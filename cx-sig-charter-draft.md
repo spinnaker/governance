@@ -83,7 +83,6 @@ CDF in many of the noted cases above contributes funding to our platforms, proce
 ## Roles and Organization Management
 
 This sig adheres to the Roles and Organization Management outlined in Spinnaker's governance policy and will actively suggest updates to those policies as part of our work.
-and opts-in to updates and modifications to [sig-governance].
 
 
 ### Additional responsibilities of Chairs
