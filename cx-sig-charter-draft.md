@@ -80,7 +80,6 @@ CDF in many of the noted cases above contributes funding to our platforms, proce
 - Communication platforms that are out of our scope for maintenance and support but we may still have some influence:
     - [r/spinnaker]
     - [@spinnaker] twitter account
-    - [spinnaker blog]
 
 ## Roles and Organization Management
 
