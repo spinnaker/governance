@@ -26,7 +26,7 @@ _Salesforce_
 ### Meeting Cadence
  - 1 hour, monthly, on **[Google Hangouts](https://meet.google.com/qwd-sdvd-euu)**
  - Second Tuesday of every month at 8:00 AM US/Pacific ([See in your time zone](https://www.thetimezoneconverter.com/?t=8:00am&tz=San%20Francisco))
- - [Azure SIG Notes](https://docs.google.com/document/d/1NNG-tbckMoiIjxETMdoPikxBjS8AU1oRNbA7piSogpY/edit?usp=sharing)
+ - [Azure SIG Notes](https://docs.google.com/document/d/1T9BPCLfJg8XW_AWifMEGfxpjoh6jVoWtK6hos1xq9Bo/edit?usp=sharing)
 
 # Responsibilities
 
