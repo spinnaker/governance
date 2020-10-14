@@ -4,7 +4,7 @@ This charter adheres to the conventions described in the [Spinnaker Charter READ
 
 ## Scope
 
-The [Contributor Experience Special Interest Group] (SIG) is responsible for improving the experience of those who upstream contribute to the Spinnaker project. We do this by creating, and maintaining programs and processes that promote community health and reduce project friction while retiring those programs and processes that don't. Being conscientious of our contributor base is critical to scaling the project, growing the ecosystem, and helping the project succeed.
+The [Contributor Experience Special Interest Group] (SIG) is responsible for improving the experience of those who contribute upstream to the Spinnaker project. We do this by creating, and maintaining programs and processes that promote community health and reduce project friction while retiring those programs and processes that don't. Being conscientious of our contributor base is critical to scaling the project, growing the ecosystem, and helping the project succeed.
 
 We do this by listening - whether it’s through our roadshows to SIG meetings, surveys, data, or [GitHub issues], we take in the feedback and turn it into our [project list]. We build a welcoming and inclusive community of contributors by giving them places to be heard and productive.
 
