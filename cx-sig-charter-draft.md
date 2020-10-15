@@ -40,6 +40,13 @@ We do this by listening - whether it’s through our roadshows to SIG meetings, 
   - engagement on project platforms
 - Research other OSS projects and consult with their leaders about contributor experience topics to make sure we are always delivering value to our contributors
 
+---
+[Nikema's comments (10/15/2020): After reading through what is here, I think the bullet points cover the ways I would want co-lead. I don't have a whole lot to add.]
+
+- Create and maintain subprojects that incentivize community outreach, individual content creation, and welcoming/onboarding of new contributors
+
+---
+
 #### Cross-cutting and Externally Facing Processes
 
 We cross-cut all SIGs and working groups to deliver the following processes:
