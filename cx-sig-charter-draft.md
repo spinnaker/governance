@@ -36,7 +36,7 @@ We do this by listening - whether it’s through our roadshows to SIG meetings, 
 - Distribute contributor related news on various Spinnaker channels, including Continous Delivery Foundation ([CDF](https://cd.foundation)) for posting blogs, social media, and other platforms as needed.
 - Establish and share metrics to measure project health, community health, and general trends, including:
   - [DevStats](https://spinnaker.devstats.cd.foundation/)
-  - the CDF contribution gamification app [WIP](https://github.com/ExitoLab/spinnaker_gamification_app)
+  - the CDF contribution gamification app [[WIP](https://github.com/ExitoLab/spinnaker_gamification_app)]
   - contributor experience survey(s)
   - engagement on project platforms
   - pull request and issue engagement and closure times
