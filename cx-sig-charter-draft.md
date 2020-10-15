@@ -10,14 +10,14 @@ We do this by listening - whether it’s through our roadshows to SIG meetings, 
 
 ### In scope
 
-#### Code, Binaries and Services
+#### Projects & Services
 
 -  In accordance with the code of conduct, establish policies, standards, and procedures for the use, [moderation], and management of all public platforms officially used by the project, including but not limited to:
   - [GitHub Management]
-  - [Mailing lists] / Google groups for the project as a whole (eg: <need community mailing list>@googlegroups.com) and for individual sigs and working groups where the Chairs have provided us ownership
   - [Slack]
   - [/spinnaker] YouTube channel
   - [Zoom]
+- Set up alerting automation for GitHub events, including new contributors, new issues, and new pull requests.
 - Work with other SIGs and interested parties in the project to execute GitHub tasks where required, see [GitHub Management] for more detail
 - Own and execute events that are targeted to the Spinnaker contributor community, including:
   - [Contributor Summit(s)]
@@ -38,16 +38,12 @@ We do this by listening - whether it’s through our roadshows to SIG meetings, 
   - the CDF contribution gamification app [WIP]
   - contributor experience survey(s)
   - engagement on project platforms
+  - pull request and issue engagement and closure times
+- Set community health goals such as improved PR and issue engagement and closure times, and track progress towards their achievement using established metrics.
 - Research other OSS projects and consult with their leaders about contributor experience topics to make sure we are always delivering value to our contributors
-
----
-[Nikema's comments (10/15/2020): After reading through what is here, I think the bullet points cover the ways I would want co-lead. I don't have a whole lot to add.]
-
 - Create and maintain subprojects that incentivize community outreach, individual content creation, and welcoming/onboarding of new contributors
 
----
-
-#### Cross-cutting and Externally Facing Processes
+#### Cross-project and Externally Facing Processes
 
 We cross-cut all SIGs and working groups to deliver the following processes:
 
@@ -82,16 +78,7 @@ This sig adheres to the Roles and Organization Management outlined in Spinnaker'
 
 ### Additional responsibilities of Chairs
 
-Chairs SHOULD plan at least Contributor Experience meeting per year, and should strive to enable annual face to face interaction as conditions allow.
-
-### Additional responsibilities of Tech Leads
-
-Ensuring that technical changes from subprojects follow the process change communication guidelines we establish.
+Chairs SHOULD plan Contributor Experience meetings monthly at the least, and should strive to enable annual face to face interaction as conditions allow. Chairs will also ensure that technical changes from subprojects follow the process change communication guidelines we establish.
 
 ### Deviations from sig-governance
 Six months after this charter is first ratified, it MUST be reviewed and re-approved by the SIG in order to evaluate the assumptions made in its initial drafting.
-
-### Subproject Creation
-Chairs and Technical Leads
-
-[sig-governance]: 
