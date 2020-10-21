@@ -9,9 +9,9 @@ assignees: ajordens, ethanfrogers, ezimanyi, plumpy, robzienert
 
 ### Plugin Information
 
-Name of the plugin.
+_Name of the plugin._
 
-Description of what the plugin is.
+_Description of what the plugin is._
 
 ### Acknowledgements
 
