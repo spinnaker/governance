@@ -10,7 +10,7 @@ To maintain good cadence, it is generally recommended to have a scribe taking no
 
 ## Meeting Recordings
 
-All SIG meetings should be recorded. 
+We encourage SIGs to record their meetings so they are available to people in other timezones. At the same time, we understand that recording meetings may hinder participation in the meetings, so SIGs may choose not to record meetings in general or specific instances. If a SIG chooses to not record a meeting, please inform the SC and TOC so that we have awareness of how often this is happening. It is particularly important that notes are taken and published for any meeting that is not recorded.
 
 At the beginning of the meeting, a disclaimer must be presented to the attendees that the session will be recorded, and that consent is required: Those unwilling to give consent must kindly leave the meeting and are welcome to watch the recording after the meeting has concluded.
 
