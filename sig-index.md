@@ -5,6 +5,7 @@ Don't see a SIG here that fits what you're looking for? [Submit a Proposal](sig-
 
 * [AWS](sig-aws/README.md)
 * [Azure](sig-azure/README.md)
+* [CF](sig-cf/README.md)
 * [CI](sig-ci/README.md)
 * [Documentation](sig-documentation/README.md)
 * [Kubernetes](sig-kubernetes/README.md)
