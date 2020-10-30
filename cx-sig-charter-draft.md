@@ -24,11 +24,11 @@ We do this by listening - whether it’s through our roadshows to SIG meetings, 
   - Contributor Summit(s) 
   - [Gardening Days and hackathons](https://github.com/spinnaker-hackathon/gardening)
   - Retrospective moderation for other SIGs upon request
-  - Other events, like other SIG face to face events, upon request and consideration
+  - Other events, like other SIG face-to-face events, upon request and consideration
 - Strategize, build, and execute on scalable mentoring programs for all contributor levels. These may include:
   - [Google Summer of Code](https://summerofcode.withgoogle.com/archive/)
   - [Outreachy](https://www.outreachy.org/)
-- New mentoring programs: office hours, meet the contributors, 1:1 pairing, group mentoring, etc.
+- Mentoring programs, such as: office hours, meet the contributors, 1:1 pairing, group mentoring, etc.
 - Help onboard new and current contributors into the culture, workflow, and CI of our contributor experience through the [contributor guide](https://spinnaker.io/community/contributing/), other related documentation, contributor summits, and programs tailored to onboarding.
 - Perform issue triage on and maintain the spinnaker/contributor-experience repository.  
 - Help SIGs with being as transparent and open as possible through creating best practices, guidelines, and general administration of YouTube, Zoom, and our mailing lists where applicable
@@ -70,12 +70,12 @@ CDF may contribute funding to our platforms, processes, and/or programs. They do
 
 ## Roles and Organization Management
 
-This sig adheres to the Roles and Organization Management outlined in Spinnaker's governance policy and will actively suggest updates to those policies as part of our work.
+This SIG adheres to the Roles and Organization Management outlined in Spinnaker's governance policy and will actively suggest updates to those policies as part of our work.
 
 
 ### Additional responsibilities of Chairs
 
-Chairs SHOULD plan Contributor Experience meetings monthly at the least, and should strive to enable annual face to face interaction as conditions allow. Chairs will also ensure that technical changes from subprojects follow the process change communication guidelines we establish.
+Chairs SHOULD plan Contributor Experience meetings monthly, at the least, and should strive to enable annual face-to-face interaction as conditions allow. Chairs will also ensure that technical changes from subprojects follow the process change communication guidelines we establish.
 
 ### Deviations from sig-governance
 Six months after this charter is first ratified, it MUST be reviewed and re-approved by the SIG in order to evaluate the assumptions made in its initial drafting.
