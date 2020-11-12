@@ -59,6 +59,8 @@ We offer resources, tools, processes, and strategies to all SIGs and working gro
 
 As the SIG establishes resources and processes we will offer them to SIG leads and SIGs. We will communicate proposed processes through community channels such as SIG meetings and Slack channels as well as through general community updates. We will help onboard SIGs that are interested to enable adoption.
 
+In the case that this SIG identifies a critical issue that makes sense to address project-wide, we will present a proposal or RFC to the TOC and SC for approval.
+
 If we need funding for any reason, we approach [CDF](https://cd.foundation).
 CDF may contribute funding to our platforms, processes, and/or programs. They do not play a day-to-day operations role and have bestowed that to our community to run as we see fit. Since they do fund some of our initiatives, this means that they hold owner account privileges on certain platforms like Zoom and Slack. The CX SIG will work to ensure that project maintainers are included as admins.
 
