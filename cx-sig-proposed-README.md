@@ -17,7 +17,7 @@ Associate Community Marketing Manager at Armory
 
 ### SIG Lead Responsibility
 
-* Coordinate communication.
+* Coordinate communication with SIG participants and the larger community.
 * Set meeting dates and objectives for the coming year.
 * Curate agenda for each meeting.
 * Raise awareness of needs of current and potential contributors and invite appropriate participants.
