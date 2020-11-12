@@ -12,14 +12,19 @@ We do this by listening - whether it’s through our roadshows to SIG meetings, 
 
 #### Projects & Services
 
--  In accordance with the code of conduct, establish policies, standards, and procedures for the use, moderation, and management of all public platforms officially used by the project, including but not limited to:
-  - [GitHub Management](https://github.com/spinnaker)
+- In accordance with the code of conduct, this SIG will establish policies, standards, and procedures for the use, moderation, and management of public platforms officially used by the project. Policies might include:
+  - Issue triage process
+  - New public platform user welcoming strategies
+  - GitHub issue template updates
+  - SIG meeting recording publication process  
+- The Continuous Delivery Foundation (CDF) owns and manages access to Spinnaker platforms. This SIG will work with the CDF to facilitate automation around and equitable community access to platforms including but not limited to:  
+  - [GitHub](https://github.com/spinnaker)
   - [Slack](https://join.spinnaker.io/)
   - [Spinnaker](https://www.youtube.com/channel/UCcxQbw8kT1-FRhFhO2QCetg) YouTube channel
   - Zoom
   - Google Meet
 - Set up alerting automation for GitHub events, including new contributors, new issues, and new pull requests.
-- Work with other SIGs and interested parties in the project to execute GitHub tasks where required, see [GitHub Management](https://github.com/spinnaker) for more detail
+- Work with other SIGs and interested parties in the project to execute GitHub tasks where required.
 - Own and execute events that are targeted to the Spinnaker contributor community, including:
   - Contributor Summit(s) 
   - [Gardening Days and hackathons](https://github.com/spinnaker-hackathon/gardening)
@@ -43,19 +48,16 @@ We do this by listening - whether it’s through our roadshows to SIG meetings, 
 - Set community health goals such as improved PR and issue engagement and closure times, and track progress towards their achievement using established metrics.
 - Research other OSS projects and consult with their leaders about contributor experience topics to make sure we are always delivering value to our contributors
 - Create and maintain subprojects that incentivize community outreach, individual content creation, and welcoming/onboarding of new contributors
+- Own and maintain or retire any automation built by the SIG.
+- Own and maintain scripts around [SIG mailing list group creation](https://github.com/spinnaker/governance/blob/master/scripts/create-sig-groups.main.kts).
 
 #### Cross-project and Externally Facing Processes
 
-We cross-cut all SIGs and working groups to deliver the following processes:
+We offer resources, tools, processes, and strategies to all SIGs and working groups with the following goals:
 
-- Deploying Changes:
- This SIG will create change-deployment policies that balance quick response to the needs of the community and a limit on disruptions for project contributors. We will create policies to socialize and elicit feedback on changes via community channels such as Slack, spinnaker.io, Twitter, mailing lists, SIG meetings, delegating to SIG leads, etc. The amount of notice we provide and the amount of consensus we seek is driven by our estimation of risk. We can estimate risk based on these parameters:
-
-- Low-risk changes impact a small number (<3) of SIGs, working groups, or repositories, do not break existing contributor workflows, and are easy to roll back.
-- High-risk changes impact a large number (>3) of SIGs, working groups, or repositories, break existing contributor workflows and are not easy to roll back.
-- Depending on how wide of an ecosystem change this is, we may also slack, blog, tweet, and use other channels to get the word out.
-- Our standard time box is 72 business hours; however, there may be situations where we need to act quickly but the time period will always be clear and upfront.
 - Encourage automation to improve productivity for contributors where it makes sense, and consult with SIG leads on automation workflows.
+
+As the SIG establishes resources and processes we will offer them to SIG leads and SIGs. We will communicate proposed processes through community channels such as SIG meetings and Slack channels as well as through general community updates. We will help onboard SIGs that are interested to enable adoption.
 
 If we need funding for any reason, we approach [CDF](https://cd.foundation).
 CDF may contribute funding to our platforms, processes, and/or programs. They do not play a day-to-day operations role and have bestowed that to our community to run as we see fit. Since they do fund some of our initiatives, this means that they hold owner account privileges on certain platforms like Zoom and Slack. The CX SIG will work to ensure that project maintainers are included as admins.
@@ -63,15 +65,14 @@ CDF may contribute funding to our platforms, processes, and/or programs. They do
 ### Out of scope
 
 - Code for the testing and CI infrastructure
-- User community management.
+- User community management. Our focus is on contributors.
 - The contributor experience for repositories not included in the Spinnaker organization
-- We do not create SIGs/working group but can assist in the various community management needs of their micro-communities that would kick off their formation and keep them going.
+- We do not create SIGs/working groups but can assist them with forming and managing their micro-communities.
 - We are not a code of conduct committee and therefore do not control incident management reporting or decisions; however, our mission includes acting swiftly if there is a clear violation of either our code of conduct or one of the terms of our supported platform of service.
 
 ## Roles and Organization Management
 
 This SIG adheres to the Roles and Organization Management outlined in Spinnaker's governance policy and will actively suggest updates to those policies as part of our work.
-
 
 ### Additional responsibilities of Chairs
 
