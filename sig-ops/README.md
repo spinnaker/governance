@@ -17,7 +17,6 @@ The Operations (Ops) Special Interest Group (SIG) provides a forum for groups th
 ## Leadership
 
 * Edgar Magana [emagana](https://github.com/emagana)
-* Cameron Fieber [cfieber](https://github.com/cfieber)
 * Chris Gruel [devorbitus](https://github.com/devorbitus)
 
 ## Contact
