@@ -8,6 +8,7 @@ organization:
       - clareliguori
       - edwinavalos
       - pauljrob
+      - piradeepk
     docs-approvers:
       description: Approvers for documentation repos
       members:
@@ -87,7 +88,7 @@ organization:
       - luispollo
       - maggieneterval
       - marchello2000
-      - pkandasamy91
+      - piradeepk
       - plumpy
       - robfletcher
       - robzienert
