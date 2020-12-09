@@ -2,7 +2,7 @@
 
 | | |
 |-|-|
-| **Status**     | In-Process |
+| **Status**     | Implemented |
 | **RFC #**      | [62](https://github.com/spinnaker/governance/pull/62) |
 | **Author(s)**  | Michael Plump ([`@plumpy`](https://github.com/plumpy)) |
 | **SIG / WG**   | Platform SIG |
@@ -63,9 +63,9 @@ convert to a Java 11 JRE too.
 
 ## Timeline
 
-Completed sections are marked with a ✔️
+The timeline in which this was implemented is detailed below.
 
-### ✔️ 1.18 (early January)
+### 1.18 (early January)
 
 For our container builds, we'll first move just two (of approximately ten)
 services to the new JRE. The two services will be `igor` and `front50`. By
@@ -91,7 +91,7 @@ runtime, we will switch the containers back to Java 8 and shift the timeline
 back one release. Since we're providing the `java8` variants, we will not adjust
 the timeline for any other reason.
 
-### ✔️ 1.19 (early March)
+### 1.19 (early March)
 
 _All_ containers built by the build process will now use the Java 11 JRE. As
 before, the `java8` variants will offer a way to opt out of this change.
@@ -99,7 +99,7 @@ before, the `java8` variants will offer a way to opt out of this change.
 Other than that, everything from the previous section applies to this release as
 well.
 
-### ✔️ 1.20 (early May)
+### 1.20 (early May)
 
 For this release, we will do two things:
 
@@ -124,7 +124,7 @@ and delay this part (but keep the compiler change) until the next release.
 Similarly, if the compiler change causes issues, we can revert that change and
 push that out to the next release.
 
-### 1.21 (early July)
+### 1.23 (mid-October)
 
 The compiler flags will change from `-source 8 -target 8` to `-source 11 -target
 11`. At this point, developers are able to commit Java 11 code to the

@@ -3,15 +3,15 @@ name: Plugin Ownership Transfer
 about: Propose a plugin ownership transfer to the `spinnaker-plugins` organization. For more information, please see the documentation for community donated plugins in the governance repository.
 title: 'Plugin Transfer: <plugin name>'
 labels: committee/technical-oversight
-assignees: spinnaker/toc
+assignees: ajordens, ethanfrogers, ezimanyi, plumpy, robzienert
 
 ---
 
 ### Plugin Information
 
-Name of the plugin.
+_Name of the plugin._
 
-Description of what the plugin is.
+_Description of what the plugin is._
 
 ### Acknowledgements
 

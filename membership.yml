@@ -8,6 +8,7 @@ organization:
       - clareliguori
       - edwinavalos
       - pauljrob
+      - piradeepk
     docs-approvers:
       description: Approvers for documentation repos
       members:
@@ -26,6 +27,7 @@ organization:
       members:
       - amanya
       - andrewbackes
+      - dogonthehorizon
       - dotdotdotpaul
       - flyinprogrammer
       - german-muzquiz
@@ -33,8 +35,10 @@ organization:
       - jervi
       - jmelchio
       - kathrynlewis
+      - keisukeyamashita
       - lorin
       - michaeljqzq
+      - micnncim 
       - mybayern1974
       - ncknt
       - pdelagrave
@@ -84,7 +88,7 @@ organization:
       - luispollo
       - maggieneterval
       - marchello2000
-      - pkandasamy91
+      - piradeepk
       - plumpy
       - robfletcher
       - robzienert
