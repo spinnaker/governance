@@ -16,7 +16,6 @@
 
 * @ajordens (Netflix)
 * @ethanfrogers (Armory)
-* @ezimanyi (Google)
 * @plumpy (Google)
 * @robzienert (Netflix) (Chair)
 
