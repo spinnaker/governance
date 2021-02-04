@@ -112,7 +112,7 @@ Qualifications:
   * Terms should be staggered, which should result in approximately half of the committee up for election each year
   * Terms run from February 1st to January 31st two years later
 
-^ - SC members whose terms where extended by one month when the terms where shifted from starting January 1st to starting February 1st may serve 4 years and one month consecutively.
+^ - SC members whose terms were extended by one month when the terms were shifted from starting January 1st to starting February 1st may serve 4 years and one month consecutively.
 
 Logistics
 
