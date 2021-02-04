@@ -121,14 +121,6 @@ Logistics
 
 Current SC members:
 
-* Andy Glover (Netflix) - Chair - Term expires 2022.01.31
-* Matt Duftler (Google) - Term expires 2022.01.31
-* Peter Stout (Netflix) - Term expires 2021.01.31
-* Isaac Mosquera (Armory) - Term expires 2022.01.31
-* Andrew Philips (Google) - Term expires 2021.01.31
-
-SC members as of 2021.02.01:
-
 * Edgar Magana (Salesforce) - Term expires 2023.01.31
 * Isaac Mosquera (Armory) - Term expires 2022.01.31
 * Matt Duftler (Google) - Term expires 2022.01.31
