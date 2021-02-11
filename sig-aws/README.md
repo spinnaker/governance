@@ -4,10 +4,6 @@
 
 ### SIG Lead(s):
 
-**[Clare Liguori](https://github.com/clareliguori)** \
-Principal Software Engineer \
-_AWS_
-
 **[Jeyrs Chabu](https://github.com/jeyrschabu)** \
 Senior Software Engineer \
 _Netflix_
