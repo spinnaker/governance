@@ -97,8 +97,9 @@ _This process could be made easier by investing in more strongly typed APIs and 
 - **Beneficiary**: Amazon ECS users
 - **Area of Investment**: Cloud Providers
 - **Deliverables**:
-  - Add support for configuring capacity provider strategies
   - Contribute end to end testing resources (per [RFC](https://github.com/spinnaker/governance/blob/master/rfc/ecs_e2e_tests.md))
+  - Application search improvements 
+  - Cache and UI performance improvements 
 
 ### Spinnaker-as-Code
 
