@@ -8,10 +8,6 @@
 Senior Software Engineer \
 _Netflix_
 
-**[Akshay Dayal](https://github.com/akshayabd)** \
-Technical Product Manager \
-_Armory_
-
 
 ### SIG Lead Responsibility
 
