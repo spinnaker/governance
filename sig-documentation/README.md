@@ -13,8 +13,8 @@
 **[Brian Le](https://github.com/brian-armory)**  
 Technical Writer at Armory
 
-**[David Dorbin](https://github.com/dorbin)**  
-Technical Writer at Google
+**[Aimee Ukasick](https://github.com/aimeeu)**  
+Technical Writer at Armory
 
 ### SIG Lead Responsibility
 

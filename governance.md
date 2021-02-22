@@ -108,9 +108,11 @@ Duties:
 Qualifications:
 
 * Nominated and Appointed by Steering Committee
-  * 2 year terms, term limit of consecutive 4 years (after, individual must take off at least 1 year)
+  * 2 year terms, term limit of 4 years consecutively^ (after which, an individual must take off at least 1 year)
   * Terms should be staggered, which should result in approximately half of the committee up for election each year
-  * Term starts w/calendar year (i.e. January 1st)
+  * Terms run from February 1st to January 31st two years later
+
+^ - SC members whose terms were extended by one month when the terms were shifted from starting January 1st to starting February 1st may serve 4 years and one month consecutively.
 
 Logistics
 
@@ -119,11 +121,11 @@ Logistics
 
 Current SC members:
 
-* Andy Glover (Netflix)
-* Matt Duftler (Google)
-* Peter Stout (Netflix)
-* Erin Kidwell (Netflix)
-* Andrew Philips (Google)
+* Edgar Magana (Salesforce) - Term expires 2023.01.31
+* Isaac Mosquera (Armory) - Term expires 2022.01.31
+* Matt Duftler (Google) - Term expires 2022.01.31
+* Paul Roberts (AWS) - Term expires 2023.01.31
+* Peter Stout (Netflix) - Chair - Term expires 2022.01.31
 
 Election to the SC requires a majority of the SC. If a person is up for reelection they are not allowed to vote for their reelection. 
 

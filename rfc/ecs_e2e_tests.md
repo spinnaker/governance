@@ -18,7 +18,7 @@ Since longer-term plans to retire the Jenkins-run end-to-end (e2e) tests
 [are known](https://github.com/spinnaker/governance/pull/154/files#diff-856398ec244cbaddc659e4189e904a87R23-R26) 
 but not yet scoped/scheduled, this RFC presents a design for tests 
 built for the existing e2e setup, as well ideas about how these tests 
-could be mostly supplanted by integration tests or future monorepo CI workflows.
+could be mostly supplanted by integration tests or future CI workflows.
 
 
 ### Goals and Non-Goals
@@ -33,7 +33,7 @@ Non-Goals:
 
 * Modifying the existing AWS e2e tests or porting them over to some future test process
 * Exhaustively testing every possible ECS server group configuration
-* Address Deck UI testing for the ECS provider (to be addressed separately)
+* Address Deck UI testing for the ECS provider (covered by [`Deck` functional tests](https://github.com/spinnaker/deck/tree/master/test/functional/cypress/integration/ecs))
 
 
 ### Terms as used in this doc
@@ -78,17 +78,21 @@ Adding nightly build e2e tests for the ECS provider would alleviate this by:
 
 ## Timeline
 
-The goal is to have one ECS e2e test in place prior to the 1.23.x/October release. 
+The current goal is to have one ECS e2e test in place prior to the 1.25.x/February release.
 Subsequent test cases would be added in the e2e test suite or as integration 
 tests depending on the progress of the community integration test effort 
 (more info below in [_Prior art and alternatives_](#prior-art-and-alternatives)).
 
-* pre-1.23.x: confirm account & env requirements, submit PR
-* 1.23.x  : first ECS e2e test case added to nightly builds.
-* 1.24.x  : additional e2e test(s) added, unless present in GitHub CI workflows
+More granular dates and milestones will be added as implementation proceeds. 
 
-More granular dates for between-release milestones can be added as implementation proceeds. 
+**Milestones**
 
+* [x] Write [`ecs_server_group_test`](https://github.com/allisaurus/buildtool/blob/rfc-artifacts/testing/citest/tests/ecs_server_group_test.py), run successfully on local dev stack.
+* [ ] Write S3 file upload agent & configuration code *(in progress)*
+* [ ] Draft infrastructure-as-code (AWS CloudFormation) templates for test resource/account setup *(in progress)*
+* [ ] Publish e2e test PR for community review
+* [ ] Validate, finalize community resource/account configuration
+* [ ] Merge PR
 
 ## Design
 
@@ -179,12 +183,11 @@ High-level test workflow:
 1. Create a Spinnaker application with the AWS and ECS providers enabled.
 2. Create a server group (step also uploads JSON file to S3).
 3. Resize the server group.
-4. Destroy the server group (and the uploaded artifact).
-5. Delete the application.
+4. Disable the server group.
+5. Destroy the server group.
+6. Delete the application.
 
-* Test psuedo code w/ annotations re: implementation questions is 
-available [here](https://github.com/allisaurus/buildtool/blob/ecs-test/testing/citest/tests/ecs_server_group_test.py), 
-for context.
+* Locally functional e2e test code available [here](https://github.com/allisaurus/buildtool/blob/rfc-artifacts/testing/citest/tests/ecs_server_group_test.py).
 
 
 #### Test environment : AWS Account changes
@@ -267,31 +270,26 @@ on `/loadBalncers`, `/credentials`, etc.
 
 These kinds of tests also align with where the community wants to shift 
 the bulk of future testing, and it's more conducive to automation on PRs, 
-which would help detect problems before they even make it to `master`. 
-In an effort to make this a reality we've built a 
-[very early proof of concept integration test](https://github.com/allisaurus/clouddriver/tree/ecs-integ/clouddriver-ecs/src/integration) 
-for ECS which is triggered by a GitHub action and are working to get 
-it into a state that can run on developer forks.
+which would help detect problems before they even make it to `master`.
+So far a number of `CreateServerGroup` operations and Amazon ECS
+resource controller tests have been built, with tests for other atomic operations
+anticipated. 
+
+See existing `clouddriver-ecs` integration tests [here](https://github.com/spinnaker/clouddriver/tree/master/clouddriver-ecs/src/integration).
+
 
 ### Why not just integration tests?
 
 My ideal scenario would be to have one (or very few, strategically chosen) 
 e2e ECS test running to ensure the contracts between services are intact prior to 
 release, but with most permutations of the available atomic operations and 
-controllers run as integration tests on PR submission. 
+controllers run as integration tests on PR submission. This way, individual service
+code (e.g., `clouddriver`) is more thoroughly vetted prior to e2e test runs, but essential 
+operations are still fully validated in a "prod"-like way before being published as a release.
 
-While we're actively iterating on the integration tests to make them more meaningful, 
-they still have major limitations (e.g., they require an actual AWS account) which 
-will take time to sort out. Community guidance re: what integration tests should 
-look like is also still missing, though conversations have started w/r/t requirements.
-
-So given the early days of integration tests and the existance of the 
-current e2e stack, our best option for contributing automated ECS tests 
-before the end of 2020 (only one release remains) seems to be by 
-adding to the existing e2e stack as described above. After that, 
-the state of available integration test code & infrastructure 
-will inform where additional test cases should reside. (Or, even later, if/when
-we can remove the e2e tests entirely)
+After the initial test case is added and the integration test suite is 
+more mature, we can evaluate the need for additional e2e test cases (or even porting 
+of the tests to a new, Java-based e2e test setup, which is desired but not yet designed/scoped).
 
 
 ## Known Unknowns
@@ -322,7 +320,7 @@ we can follow to mitigate this risk:
 
 * The ECR repository can be scoped to pull-only access by the IAM Role used for testing.
 * VPC subnets can be configured with security group(s) to prohibit 
-  ingress to only the specified load balancer.
+  ingress except to the specified load balancer.
 * (Optional) If we want to prevent ALL ingress/egress from the internet, ECS and ECR 
   can also be accessed from within a completely private VPC (w/ additional 
   configuration and cost considerations)
