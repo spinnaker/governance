@@ -117,16 +117,15 @@ organization:
     sc:
       description: Spinnaker Steering Committee
       members:
-      - aglover
-      - demobox
       - duftler
+      - emagana
+      - imosquera
+      - pauljrob
       - pstout
-      - rmeshenberg
     toc:
       description: Spinnaker Technical Oversight Committee
       members:
       - ajordens
       - ethanfrogers
-      - ezimanyi
       - plumpy
       - robzienert
