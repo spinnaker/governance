@@ -17,11 +17,7 @@ organization:
       - gcomstock
     netflix-new-hires:
       description: A no-permissions group for new Netflix hires such that they can be assigned as reviewers of PRs.
-      members:
-      - gal-yardeni
-      - luispollo
-      - srekapalli
-      - anotherchrisberry
+      members: []
     oss-reviewers:
       description: Reviewers Role
       members:
@@ -42,6 +38,7 @@ organization:
       - mybayern1974
       - ncknt
       - neil-yechenwei
+      - nimakaviani
       - pdelagrave
       - PerGon
       - scottfrederick
