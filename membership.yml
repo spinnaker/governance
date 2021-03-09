@@ -18,15 +18,13 @@ organization:
     netflix-new-hires:
       description: A no-permissions group for new Netflix hires such that they can be assigned as reviewers of PRs.
       members:
-      - gal-yardeni
-      - luispollo
-      - srekapalli
-      - anotherchrisberry
+      - bijnagte
     oss-reviewers:
       description: Reviewers Role
       members:
       - amanya
       - andrewbackes
+      - anotherchrisberry
       - dogonthehorizon
       - dotdotdotpaul
       - flyinprogrammer
