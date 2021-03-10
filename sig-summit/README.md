@@ -5,7 +5,7 @@ This SIG is focused on planning and alignment for the annual Spinnaker Summit co
 ## Meetings
 
 * Regular SIG Meeting
-  * Every other Tuesday, 10 AM US/Pacific ([See in your time zone](https://www.thetimezoneconverter.com/?t=10am&tz=San%20Francisco))
+  * Every other Tuesday, 10 AM US/Pacific ([See in your time zone](https://www.thetimezoneconverter.com/?t=11am&tz=San%20Francisco))
 
   [Agenda](https://docs.google.com/document/d/1Z65IHImNlJbYq3XvVgnWtijhWj3iUlMGG5uQudjhTe4/edit)
 
