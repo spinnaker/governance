@@ -18,15 +18,13 @@ organization:
     netflix-new-hires:
       description: A no-permissions group for new Netflix hires such that they can be assigned as reviewers of PRs.
       members:
-      - gal-yardeni
-      - luispollo
-      - srekapalli
-      - anotherchrisberry
+      - bijnagte
     oss-reviewers:
       description: Reviewers Role
       members:
       - amanya
       - andrewbackes
+      - anotherchrisberry
       - dogonthehorizon
       - dotdotdotpaul
       - flyinprogrammer
@@ -42,6 +40,7 @@ organization:
       - mybayern1974
       - ncknt
       - neil-yechenwei
+      - nimakaviani
       - pdelagrave
       - PerGon
       - scottfrederick
@@ -89,6 +88,7 @@ organization:
       - luispollo
       - maggieneterval
       - marchello2000
+      - pdk27 
       - piradeepk
       - plumpy
       - robfletcher
@@ -116,16 +116,15 @@ organization:
     sc:
       description: Spinnaker Steering Committee
       members:
-      - aglover
-      - demobox
       - duftler
+      - emagana
+      - imosquera
+      - pauljrob
       - pstout
-      - rmeshenberg
     toc:
       description: Spinnaker Technical Oversight Committee
       members:
       - ajordens
       - ethanfrogers
-      - ezimanyi
       - plumpy
       - robzienert
