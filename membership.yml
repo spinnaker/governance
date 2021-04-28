@@ -91,6 +91,7 @@ organization:
       - pdk27 
       - piradeepk
       - plumpy
+      - ranihorev
       - robfletcher
       - robzienert
       - sbwsg
@@ -99,6 +100,7 @@ organization:
       - ttomsu
       - wjoel
       - vigneshm
+      - zachsmith1
     oss-kayenta-approvers:
       description: Approvers limited in scope to kayenta and kayenta-deck only
       members:
