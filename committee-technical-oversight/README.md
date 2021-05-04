@@ -15,7 +15,6 @@
 ## Members
 
 * @ajordens (Netflix)
-* @ethanfrogers (Armory)
 * @plumpy (Google)
 * @robzienert (Netflix) (Chair)
 
