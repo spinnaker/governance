@@ -10,7 +10,6 @@ _TODO description_
 
 ## Leadership
 
-* Beth Fuller ([bcornils](https://github.com/bcornils))
 * Helene Lau ([helenelau](https://github.com/helenelau))
 * Jason McIntosh ([jasonmcintosh](https://github.com/jasonmcintosh/))
 
