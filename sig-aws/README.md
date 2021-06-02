@@ -8,6 +8,9 @@
 Senior Software Engineer \
 _Netflix_
 
+**[Dan Everton](https://github.com/deverton)** \
+Principal Engineer \
+_Expedia Group_
 
 ### SIG Lead Responsibility
 
