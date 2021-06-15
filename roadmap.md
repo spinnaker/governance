@@ -99,7 +99,7 @@ _This process could be made easier by investing in more strongly typed APIs and 
 - **Deliverables**:
   - Contribute end to end testing resources (per [RFC](https://github.com/spinnaker/governance/blob/master/rfc/ecs_e2e_tests.md))
   - Application search improvements 
-  - Cache and UI performance improvements 
+  - Pipeline expressions (SpEL) support for task definition artifacts 
 
 ### Spinnaker-as-Code
 
