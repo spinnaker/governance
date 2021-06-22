@@ -16,7 +16,6 @@
 
 * @ajordens (Netflix)
 * @plumpy (Google)
-* @robzienert (Netflix) (Chair)
 
 ## Contact
 
