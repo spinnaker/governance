@@ -30,9 +30,9 @@ _OpsMx_
 6. Facilitate the identification and development of resources (people or funding) for support of Google Cloud within Spinnaker.
 
 ### Meeting Cadence
- - 1 hour, monthly, on **Link TBD**
- - **Date/Time TBD**
- - **Notes Doc TBD**
+ - 1 hour, monthly on [Zoom](https://zoom.us/j/95516575322?pwd=TlFibGhGMk9pZ2ZtSC9aOGxiYnhaZz09)
+ - Last Wednesday of the month at 9 am Pacific Time
+ - [SIG Meeting Notes](https://docs.google.com/document/d/1egd2QZtWwznN8LIvHolmd31_z5DbOmbqzgQonCW5fL8)
 
 # Responsibilities
 
