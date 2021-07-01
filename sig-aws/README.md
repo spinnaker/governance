@@ -12,6 +12,10 @@ _Netflix_
 Principal Engineer \
 _Expedia Group_
 
+**[Ben Powell](https://github.com/xibz)** \
+Software Engineer \
+_Apple_
+
 ### SIG Lead Responsibility
 
 1. Coordinate communication.
