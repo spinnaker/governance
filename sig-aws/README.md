@@ -4,10 +4,6 @@
 
 ### SIG Lead(s):
 
-**[Jeyrs Chabu](https://github.com/jeyrschabu)** \
-Senior Software Engineer \
-_Netflix_
-
 **[Dan Everton](https://github.com/deverton)** \
 Principal Engineer \
 _Expedia Group_
