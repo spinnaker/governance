@@ -12,6 +12,7 @@ _TODO description_
 
 * Helene Lau ([helenelau](https://github.com/helenelau))
 * Jason McIntosh ([jasonmcintosh](https://github.com/jasonmcintosh/))
+* Shaun Phillips ([shaun-phillips](https://github.com/shaun-phillips))
 
 ## Contact
 
