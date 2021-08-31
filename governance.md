@@ -91,7 +91,7 @@ Qualifications
   
 Election to the TOC requires a majority of the SC. 
 
-[Technical Oversight Committee](committee-technical-oversight/README.md)
+[Technical Oversight Committee membership and meeting information](committee-technical-oversight/README.md)
 
 The TOC will have three, five, or seven members, as deemed appropriate by the Steering Committee. In the event that someone from the TOC leaves during their term, the Steering Committee shall appoint someone to fill the remainder of the term. Each year, the TOC will nominate a member to serve as the Chairperson for that year. The Chair's duties will include calling and runnings meetings, calling votes, and ensuring that meeting notes are recorded. 
 
@@ -114,18 +114,7 @@ Qualifications:
 
 ^ - SC members whose terms were extended by one month when the terms were shifted from starting January 1st to starting February 1st may serve 4 years and one month consecutively.
 
-Logistics
-
-* [Agenda doc](https://docs.google.com/document/d/1HMdwvBPM4uRFqoeAd7eEkVWIC8dQP40zFavOE5Kq-Eg/edit)
-* Email: [sc@spinnaker.io](mailto:sc@spinnaker.io)
-
-Current SC members:
-
-* Edgar Magana (Salesforce) - Term expires 2023.01.31
-* Isaac Mosquera (Armory) - Term expires 2022.01.31
-* Matt Duftler (Google) - Term expires 2022.01.31
-* Paul Roberts (AWS) - Term expires 2023.01.31
-* Peter Stout (Netflix) - Chair - Term expires 2022.01.31
+[Steering Committee membership and meeting information](committee-steering/README.md)
 
 Election to the SC requires a majority of the SC. If a person is up for reelection they are not allowed to vote for their reelection. 
 

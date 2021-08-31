@@ -14,9 +14,11 @@
 
 ## Members
 
-* @ajordens (Netflix)
-* @plumpy (Google)
+<!-- When updating this list, make sure to also update CODEOWNERS -->
+
+* [Adam Jordens](https://github.com/ajordens) (Netflix)
+* [Michael Plump](https://github.com/plumpy) (Google)
 
 ## Contact
 
-* Private Email: [mailoto:toc@spinnaker.io](toc@spinnaker.io)
+* Private Email: [toc@spinnaker.io](mailto:toc@spinnaker.io)
