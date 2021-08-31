@@ -12,10 +12,10 @@ The Platform SIG is tasked with the oversight of internal processes and tooling 
 ## Leadership
 
 * Cameron Motevasselani ([@link108](https://github.com/link108))
+* David Byron ([@dbyron-sf](https://github.com/dbyron-sf))
 
 ## Contact
 
 * [Slack](http://spinnakerteam.slack.com/messages/sig-platform)
 * [Mailing List](https://groups.google.com/a/spinnaker.io/forum/#!forum/sig-platform)
 * [Community Issues/PRs](https://github.com/spinnaker/spinnaker/labels/sig%2Fplatform)
-
