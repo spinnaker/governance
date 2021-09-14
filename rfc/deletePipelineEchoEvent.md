@@ -47,9 +47,9 @@ Implementation is done.
 *==**ORCA service changes:***==
 
 - A new task type "deletePipeline" is created and registered in ORCA.
-- ORCA service already have the support to process , monitor the task and generate events.
+- ORCA service already have the support to process , monitor the task and generate events by routing it to Echo service.
 - Only changes needed was to register the new task "deletePipeline"
-- Once the task is registered , ORCA service takes up the responsibility of generating events.
+- Once the task is registered , ORCA service takes up the responsibility of generating events by routing it to Echo service.
 - The request will also be routed to Front50 service to actually delete the pipeline.
 
 
@@ -100,7 +100,7 @@ sample request payload:
 							"imageId": "sha256:390cc7609d3bd3ab1fe8620fbf28d3e9c912c69a901f99e93af7d3b081ff6de2,sha25,sha256:ddbd686f8b5e3d3744443ebbdb0d91284da61f30f78604eabf193e065870f0726:6fed5fb61064c25e91e8afad7e199f20fd1422893bac05fdd2cae274790319fb"
 						}]
 					}],
-					"gateUrl": "https://gate.gitops-test.dev.opsmx.net/visibilityservice/v5/approvalGates/203/trigger",
+					"gateUrl": "https://example.com/visibilityservice/v5/approvalGates/203/trigger",
 					"imageIds": "nginx:1.14.2"
 				},
 				"refId": "2",
