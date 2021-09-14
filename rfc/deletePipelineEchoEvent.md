@@ -57,7 +57,7 @@ Implementation is done.
 
 ==***GATE service:***==
 
-- enpoint : /pipelines/{application}/{pipelineName:.+} - DELETE API
+- endpoint : /pipelines/{application}/{pipelineName:.+} - DELETE API
 
 ==***ORCA service:***==
 
