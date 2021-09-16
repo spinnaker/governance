@@ -18,15 +18,16 @@ organization:
     netflix-new-hires:
       description: A no-permissions group for new Netflix hires such that they can be assigned as reviewers of PRs.
       members:
-      - gal-yardeni
-      - luispollo
-      - srekapalli
-      - anotherchrisberry
+      - bijnagte
     oss-reviewers:
       description: Reviewers Role
       members:
       - amanya
       - andrewbackes
+      - anotherchrisberry
+      - bijnagte
+      - clanesf
+      - cristhian-castaneda
       - dogonthehorizon
       - dotdotdotpaul
       - flyinprogrammer
@@ -34,13 +35,18 @@ organization:
       - imosquera
       - jervi
       - jmelchio
+      - j-sandy
       - kathrynlewis
       - keisukeyamashita
       - lorin
+      - mattgogerly
       - michaeljqzq
-      - micnncim 
+      - micnncim
       - mybayern1974
       - ncknt
+      - neil-yechenwei
+      - nimakaviani
+      - paragbhingre
       - pdelagrave
       - PerGon
       - scottfrederick
@@ -65,8 +71,10 @@ organization:
       - claymccoy
       - csanden
       - danielpeach
+      - dbyron-sf
       - demobox
       - dibyom
+      - dogonthehorizon
       - dorbin
       - dreynaud
       - duftler
@@ -88,8 +96,11 @@ organization:
       - luispollo
       - maggieneterval
       - marchello2000
+      - nimakaviani
+      - pdk27
       - piradeepk
       - plumpy
+      - ranihorev
       - robfletcher
       - robzienert
       - sbwsg
@@ -98,6 +109,7 @@ organization:
       - ttomsu
       - wjoel
       - vigneshm
+      - zachsmith1
     oss-kayenta-approvers:
       description: Approvers limited in scope to kayenta and kayenta-deck only
       members:
@@ -115,16 +127,13 @@ organization:
     sc:
       description: Spinnaker Steering Committee
       members:
-      - aglover
-      - demobox
       - duftler
+      - emagana
+      - imosquera
+      - pauljrob
       - pstout
-      - rmeshenberg
     toc:
       description: Spinnaker Technical Oversight Committee
       members:
       - ajordens
-      - ethanfrogers
-      - ezimanyi
       - plumpy
-      - robzienert

@@ -10,9 +10,9 @@ _TODO description_
 
 ## Leadership
 
-* Beth Fuller ([bcornils](https://github.com/bcornils))
 * Helene Lau ([helenelau](https://github.com/helenelau))
 * Jason McIntosh ([jasonmcintosh](https://github.com/jasonmcintosh/))
+* Shaun Phillips ([shaun-phillips](https://github.com/shaun-phillips))
 
 ## Contact
 

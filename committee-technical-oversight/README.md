@@ -14,12 +14,13 @@
 
 ## Members
 
-* @ajordens (Netflix)
-* @ethanfrogers (Armory)
-* @ezimanyi (Google)
-* @plumpy (Google)
-* @robzienert (Netflix) (Chair)
+<!-- When updating this list, make sure to also update CODEOWNERS -->
+
+* [Adam Jordens](https://github.com/ajordens) (Netflix)
+* [Cameron Motevasselani](https://github.com/link108) (Armory)
+* [David Byron](https://github.com/dbyron-sf) (Salesforce)
+* [Michael Plump](https://github.com/plumpy) (Google)
 
 ## Contact
 
-* Private Email: [mailoto:toc@spinnaker.io](toc@spinnaker.io)
+* Private Email: [toc@spinnaker.io](mailto:toc@spinnaker.io)
