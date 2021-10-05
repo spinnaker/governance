@@ -18,12 +18,12 @@ The [charter](charter.md) defines the scope and governance of the Contributor Ex
 DevOps and Site Reliability Engineer at Emirates Group
 
 **[Nikema Prophet](https://github.com/prophen)**  
-Associate Community Marketing Manager at Armory
+Associate Community Marketing Manager 
 
 ### SIG Advisor:
 
-**[Rosalind Benoit ](https://github.com/dnilasor)**  
-Director of OSS Community at Armory
+**[Rosalind Benoit](https://github.com/dnilasor)**  
+Director of OSS Community 
 
 ### SIG Lead Responsibility
 
