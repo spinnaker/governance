@@ -16,7 +16,7 @@ _OpsMx_
 Senior Software Engineer \
 _Google_
 
-**[Nirmalya Sen](https://github.com/Nirmalyasen)** \
+**[Vishal Patel](https://github.com/vish-ptl)** \
 Software Engineering Leader \
 _OpsMx_
 
