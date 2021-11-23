@@ -4,9 +4,9 @@
 
 ### SIG Lead(s):
 
-**[Edgar Magana](https://github.com/emagana)** \
-Architect Software Engineer \
-_Salesforce_
+**[Vishal Patel](https://github.com/vish-ptl)** \
+Director of Engineering \
+_OpsMx Inc._
 
 **[Harikumar Kumar Sulochana](https://github.com/harikumarks)** \
 Principal Software Engineer \
