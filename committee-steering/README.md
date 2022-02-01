@@ -13,11 +13,11 @@ _TODO_
 
 <!-- When updating this list, make sure to also update CODEOWNERS -->
 
+* [Amy Smidutz](https://github.com/asmidutz) (Netflix) - Chair - Term expires 2024.01.31
 * [Edgar Magana](https://github.com/emagana) (Splunk) - Term expires 2023.01.31
-* [Isaac Mosquera](https://github.com/imosquera) (Armory) - Term expires 2022.01.31
-* [Matt Duftler](https://github.com/duftler) (Netflix) - Term expires 2022.01.31
+* [Isaac Mosquera](https://github.com/imosquera) (Armory) - Term expires 2024.01.31
 * [Paul Roberts](https://github.com/pauljrob) (AWS) - Term expires 2023.01.31
-* [Peter Stout](https://github.com/pstout) (Netflix) - Chair - Term expires 2022.01.31
+* Open seat - Term expires 2024.01.31
 
 ## Contact
 
