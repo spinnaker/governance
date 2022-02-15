@@ -50,9 +50,11 @@ Further integrations may be developed beyond Q2 before a beta version is release
 
 ## Design
 
-A new `UserSecret` class is added to `kork-secrets` similar to the existing `EncryptedSecret` class.
-This class supports two new URI schemes: `secret://` and `secretFile://`.
+User secrets implement `UserSecret` which provides some common operations around extracting secret data and checking permissions.
+Implementations provide a `type` property which determines the structure of the secret data.
+These secrets can be referenced through a `secret://` (or `secretFile://`) URI using the `UserSecretReference` class to parse.
 Each URI is structured as `secret://secret-engine-id?param1=value1&param2=value2&param3=value3` where _secret-engine-id_ is the `SecretEngine` identifier and the parameter key/value pairs are specific to each engine.
+`SecretEngine` is updated with additional `decrypt()` and `validate()` methods for `UserSecretReference` values.
 Each engine is configured to make requests for secrets using a single Spinnaker identity, typically the workload identity of Spinnaker itself for ease of integration with cloud-specific APIs.
 To demonstrate, suppose we have a secret named `my-spinnaker-secret` in AWS Secrets Manager in the `us-west-2` region under the AWS account id `222211110000` while Spinnaker is running in EKS in the `us-east-1` region under the account id `111122223333`.
 This secret would have an [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of `arn:aws:secretsmanager:us-west-2:222211110000:secret:my-spinnaker-secret`.
@@ -69,28 +71,26 @@ Then this secret can be made available to Spinnaker by attaching an IAM policy t
 }
 ```
 
-Then the URI `secret://secrets-manager?r=us-east-1&s=arn:aws:secretsmanager:us-west-2:222211110000:secret:my-spinnaker-secret` will form the basis for user secret references to this secret.
-Additional query parameters may also be specified with `k` being the key to look up data for in the secret (the semantics of which are defined below) and `e` being the encoding format of the user secret (`json`, `yaml`, or `cbor`).
+Then the URI `secret://secrets-manager?r=us-east-1&s=arn:aws:secretsmanager:us-west-2:222211110000:secret:my-spinnaker-secret&k=secret-key` will form the basis for user secret references to this secret.
 Granting access in this direction allows Spinnaker to read the secret, but this is insufficient for providing access controls within Spinnaker around who is allowed to use this secret.
-Thus, additional authorization data is specified by the user directly in the secret using the following data format specification.
-A `UserSecret` structure contains three fields:
+These access controls must instead be provided via the secret engine, typically by embedding the Spinnaker roles that are allowed to use the secret.
+The `UserSecretMapper` class provides serialization and deserialization functionality for different types of user secrets.
+At minimum, a `UserSecret` is a tree-like structure where the root object has a `type` field for indicating the type of secret.
+This type corresponds to different structures for user secrets along with some way to check that a collection of roles are all allowed to use its data.
 
-* `type`: specifies the type of secret and determines how the value of the `data` key below is interpreted.
-Initial supported types include `base64` and `utf8` which indicate that `data` will contain a map of secret keys to values encoded in their respective string encodings.
-Additional types may be added such as `tls` which works similarly to the `kubernetes.io/tls` secret type in Kubernetes where two keys are expected in `data` named `tls.key` and `tls.crt` which contain the PEM encoded private key and certificate without the first and last lines.
-These types may be further extended for defining common secret use cases with groups of related data.
-* `permissions`: a list of Fiat roles that are allowed to use the data in this secret.
-Unlike the `permissions` field in other Spinnaker resource types, user secrets only define a single authorization type, so no types are specified here.
-* `data`: specifies the secret data and is interpreted based on the type.
-The proposed types `base64` and `utf8` both expect `data` to contain a map of string-&gt;string pairs.
-Other types may use a scalar value in `data` for simple secrets or may use more complex structure.
+The initial type introduced is the `opaque` type which has the following fields to define.
+
+* `roles`: a list of Fiat roles that are allowed to use the data in this secret.
+Permission checks involving this list of roles must check that the set of target resource roles are all contained in this list.
+* `data`: a map of keys to base64-encoded (basic variant) binary data.
+* `stringData`: a map of keys to utf8-encoded string data.
 
 For example, the following is a snippet of a secret named `eks-sa` in `us-east-1` in the AWS account id `123455432100` encoded as JSON:
 
 ```json
 {
-  "type": "base64",
-  "permissions": ["admin", "sre"],
+  "type": "opaque",
+  "roles": ["admin", "sre"],
   "data": {
     "kubeconfig": "YXBpVmVyc2lvbjogdjEKY2x1c3RlcnM6..."
   }
@@ -155,7 +155,7 @@ While Vault could become another `SecretEngine` provider in Kork, requiring Vaul
 It may be possible to store the Spinnaker authorization data for secrets in secrets metadata APIs, though the implementation details on how each secrets manager exposes metadata varies quite a bit.
 Since these access controls are not particularly sensitive, they don't _need_ to be encrypted with the secret, though this is the most direct way to deliver said access controls such that Fiat can understand them.
 
-This `UserSecret` API would replace the tentative use of `EncryptedSecret` in the Clouddriver Account Management API.
+This `UserSecretManager` API would replace the tentative use of `SecretManager` in the Clouddriver Account Management API.
 This API extends from the existing `SecretEngine` API, so it will integrate with existing engines fairly easily.
 
 Some other approaches considered here explored the possibility for using more sophisticated identity and access management integration in Spinnaker using a framework such as [SPIFFE](https://spiffe.io) which could potentially be used to identify subjects inside Spinnaker and for generating appropriate certificates and tokens.
