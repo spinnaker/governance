@@ -1,6 +1,10 @@
 # SIG: Security
 
-_TODO description_
+Core responsibilities include:
+* responding to spinnaker security group emails
+* Handling advisories & security incidents for spinnaker [Advisories link](https://github.com/spinnaker/spinnaker/security/advisories)
+* Labeling issues for security sig and helping lead discussions around improvements on these
+
 
 ## Meetings
 
@@ -10,8 +14,8 @@ _TODO description_
 
 ## Leadership
 
-* Helene Lau ([helenelau](https://github.com/helenelau))
 * Jason McIntosh ([jasonmcintosh](https://github.com/jasonmcintosh/))
+* Brian Newton ([bnewtonius](https://github.com/bnewtonius/))
 * Shaun Phillips ([shaun-phillips](https://github.com/shaun-phillips))
 
 ## Contact
@@ -22,4 +26,4 @@ _TODO description_
 
 ## Subprojects
 
-_TODO_
+[Security scans using CodeQL](https://github.com/spinnaker/governance/blob/master/rfc/security-scans.md)
