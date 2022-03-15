@@ -101,7 +101,7 @@ Then using this secret in a new Clouddriver account:
 
 ```json
 {
-  "@type": "kubernetes",
+  "type": "kubernetes",
   "name": "eks",
   "permissions": {
     "READ": ["admin", "sre", "dev"],
@@ -109,7 +109,7 @@ Then using this secret in a new Clouddriver account:
   },
   "context": "eks",
   "namespaces": ["default", "sandbox"],
-  "kubeconfigFile": "secretFile://secrets-manager?r=us-east-1&s=arn:aws:secretsmanager:us-east-1:123455432100:secret:eks-sa&e=json&k=kubeconfig"
+  "kubeconfigContents": "secret://secrets-manager?r=us-east-1&s=arn:aws:secretsmanager:us-east-1:123455432100:secret:eks-sa&e=json&k=kubeconfig"
 }
 ```
 
