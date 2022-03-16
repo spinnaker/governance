@@ -52,7 +52,7 @@ Further integrations may be developed beyond Q2 before a beta version is release
 
 User secrets implement `UserSecret` which provides some common operations around extracting secret data and checking permissions.
 Implementations provide a `type` property which determines the structure of the secret data.
-These secrets can be referenced through a `secret://` (or `secretFile://`) URI using the `UserSecretReference` class to parse.
+These secrets can be referenced through a `secret://` URI using the `UserSecretReference` class to parse.
 Each URI is structured as `secret://secret-engine-id?param1=value1&param2=value2&param3=value3` where _secret-engine-id_ is the `SecretEngine` identifier and the parameter key/value pairs are specific to each engine.
 `SecretEngine` is updated with additional `decrypt()` and `validate()` methods for `UserSecretReference` values.
 Each engine is configured to make requests for secrets using a single Spinnaker identity, typically the workload identity of Spinnaker itself for ease of integration with cloud-specific APIs.
