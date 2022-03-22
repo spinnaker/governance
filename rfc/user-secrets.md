@@ -19,8 +19,7 @@ These secrets provide authorization metadata for integration with Fiat so that m
   - Enable Spinnaker to use external secrets managers through a common Spinnaker identity which secrets owners can grant read access.
   - Enable Spinnaker to enforce access controls to these secrets based on authorization data delivered with the secret.
   - Enable Clouddriver account credentials to use authorized user secrets.
-  - Enable SpEL expressions to use user secrets.
-  - Enable other Spinnaker services to use user secrets.
+  - Enable other Spinnaker services to use user secrets via common Kork library.
 * Non-Goals
   - Direct storage of secrets (best done through external secrets managers).
   - Modification of user secrets contents.
@@ -44,9 +43,7 @@ Early stakeholders for this effort are:
 
 The alpha version of this feature is targeted for 2022Q2 and is being contributed by Apple.
 Development began in Q1 coinciding with the related Clouddriver Account Management API feature which initially integrated with the Kubernetes V2 provider.
-User secrets will be integrated into this API along with updates to existing Kork `SecretEngine` modules (AWS Secrets Manager, S3, and GCS).
-SpEL functions for using secrets in pipelines will be proposed.
-Further integrations may be developed beyond Q2 before a beta version is released for broader use.
+User secrets will be integrated into this API along with updates to existing Kork `SecretEngine` for AWS Secrets Manager for a reference implementation.
 
 ## Design
 
@@ -117,25 +114,9 @@ Note that secrets can be referred to by just the secret name and not the full AR
 However, it is expected that in a multi-tenant environment, different tenants may have different AWS accounts, thus the tenants are responsible for exporting their own secrets to Spinnaker through IAM policies.
 Similar authorization strategies should be used in other external secrets managers.
 
-For integration with SpEL, the following functions are introduced:
-
-* `#secret(args)`: takes a map literal of the parameters provided to a secret engine.
-A specific secret engine may be specified by the map key `engine` which may have a default value configured through a Spinnaker configuration property.
-The value returned is a proxy object that allows for reading the user secret data but attempts to prevent accidental serialization of the secret to an insecure storage space.
-* `#secretJson(args)`: equivalent to `#secret({e: 'json', ...args})`
-* `#secretYaml(args)`: equivalent to `#secret({e: 'yaml', ...args})`
-* `#secretCbor(args)`: equivalent to `#secret({e: 'cbor', ...args})`
-
-For example, the following SpEL expressions are equivalent (assuming `secrets-manager` is the default engine):
-
-* `#secretYaml({r: 'us-west-2', s: 'arn:aws:secretsmanager:us-west-2:333444455555:secret:spinnaker-deploy-bot'}).kubeconfig`
-* `#secret({r: 'us-west-2', s: 'arn:aws:secretsmanager:us-west-2:333444455555:secret:spinnaker-deploy-bot', e: 'yaml'}).kubeconfig`
-* `#secret({r: 'us-west-2', s: 'arn:aws:secretsmanager:us-west-2:333444455555:secret:spinnaker-deploy-bot', e: 'yaml', k: 'kubeconfig'})`
-* `#secret({r: 'us-west-2', s: 'arn:aws:secretsmanager:us-west-2:333444455555:secret:spinnaker-deploy-bot', e: 'yaml', k: 'kubeconfig', engine: 'secrets-manager'})`
-
 ### Dependencies
 
-This feature updates `kork-secrets`, `kork-secrets-aws`, and `kork-secrets-gcp`.
+This feature updates `kork-secrets` and `kork-secrets-aws`.
 Existing Jackson Databind dependencies are used for JSON, YAML, and CBOR support.
 
 ## Drawbacks
@@ -202,3 +183,4 @@ Most Spinnaker environments run as a single workload identity (or one per micros
 User secrets may be key to delegating more admin-controlled actions to regular Spinnaker users.
 This may be beneficial for supporting authenticated webhooks, authenticated artifact providers, and other authenticated APIs invoked by Spinnaker.
 The Clouddriver Account Management API may be extended for use in other Spinnaker services when combined with user secrets.
+Integration with pipelines for more general use of secrets may also be possible.
