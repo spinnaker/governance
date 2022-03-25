@@ -16,7 +16,6 @@
 
 <!-- When updating this list, make sure to also update CODEOWNERS -->
 
-* [Adam Jordens](https://github.com/ajordens) (Netflix)
 * [Cameron Motevasselani](https://github.com/link108) (Armory)
 * [David Byron](https://github.com/dbyron-sf) (Salesforce)
 * [Michael Plump](https://github.com/plumpy) (Google)
