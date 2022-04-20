@@ -4,10 +4,6 @@
 
 ### SIG Lead(s):
 
-**[Dan Everton](https://github.com/deverton)** \
-Principal Engineer \
-_Expedia Group_
-
 **[Ben Powell](https://github.com/xibz)** \
 Software Engineer \
 _Apple_
