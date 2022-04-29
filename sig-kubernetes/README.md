@@ -11,7 +11,6 @@ The Kubernetes SIG is responsible for the integration between Spinnaker and Kube
 
 ## Leadership
 
-* German Muzquiz ([german-muzquiz](https://github.com/german-muzquiz))
 * Chuck Lane ([clanesf](https://github.com/clanesf))
 
 ## Contact
