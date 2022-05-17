@@ -22,6 +22,7 @@ organization:
     oss-reviewers:
       description: Reviewers Role
       members:
+      - AdanUrbanReyesArmory
       - amanya
       - andrewbackes
       - anotherchrisberry
