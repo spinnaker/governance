@@ -14,6 +14,7 @@ Don't see a SIG here that fits what you're looking for? [Submit a Proposal](sig-
 * [Platform](sig-platform/README.md)
 * [Security](sig-security/README.md)
 * [Summit](sig-summit/README.md)
+* [GoogleCloud](sig-googlecloud/README.md)
 
 # SIG Meeting Calendar
 
