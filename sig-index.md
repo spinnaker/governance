@@ -8,13 +8,13 @@ Don't see a SIG here that fits what you're looking for? [Submit a Proposal](sig-
 * [CF](sig-cf/README.md)
 * [CI](sig-ci/README.md)
 * [Documentation](sig-documentation/README.md)
+* [Google Cloud](sig-googlecloud/README.md)
 * [Kubernetes](sig-kubernetes/README.md)
 * [Operational Validation](sig-operational-validation/README.md)
 * [Operations](sig-ops/README.md)
 * [Platform](sig-platform/README.md)
 * [Security](sig-security/README.md)
 * [Summit](sig-summit/README.md)
-* [GoogleCloud](sig-googlecloud/README.md)
 
 # SIG Meeting Calendar
 
