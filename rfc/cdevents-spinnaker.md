@@ -4,7 +4,7 @@
 | | |
 |-|-|
 | **Status**     | _**Proposed**, Accepted, Implemented, Obsolete_ |
-| **RFC #**      | _Update after PR has been made_ |
+| **RFC #**      | https://github.com/spinnaker/governance/pull/299 |
 | **Author(s)**  | _Jalander Ramagiri (`@rjalander`)_|
 | **SIG / WG**   | CDF-CDEvents, CDF-SIGEvents |
 
