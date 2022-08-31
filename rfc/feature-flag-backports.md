@@ -3,7 +3,7 @@
 | | |
 |-|-|
 | **Status**     | _**Proposed**, Accepted, Implemented, Obsolete_ |
-| **RFC #**      | _Update after PR has been made_ |
+| **RFC #**      | [#303](https://github.com/spinnaker/governance/pull/303) |
 | **Author(s)**  | @dogonthehorizon (Fernando Freire) |
 | **SIG / WG**   | Platform |
 
