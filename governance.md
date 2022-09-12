@@ -1,4 +1,4 @@
-The Spinnaker OSS project is run by a group of appointed members who hold specific roles, managed by the technical oversight committee. The steering committee manages the governance structure of the project, revisiting and refining it as needs evolve.
+The Spinnaker OSS project is run by a group of appointed members who hold specific roles, managed by the technical oversight committee. The Technical Oversight Committee manages the governance structure of the project, revisiting and refining it as needs evolve.
 
 The broader community is organized around a set of special interest groups (SIGs) focused on particular areas of interest.
 
@@ -6,7 +6,7 @@ The broader community is organized around a set of special interest groups (SIGs
 
 To make clearer to community members how they might progressively get more involved and take more ownership in the project, we define the following appointed roles with their respective duties and qualifications.
 
-Roles are appointed by the Technical Oversight Committee (TOC). Roles can be revoked for reasons such as falling out of qualification, inactivity, or for violations of community guidelines.
+Roles are appointed by the Technical Oversight Committee (TOC). Roles can be revoked for reasons such as falling out of qualification, inactivity, or violations of community guidelines.
 
 ### Active Community Members
 
@@ -59,7 +59,7 @@ If you’d like to nominate yourself as an Approver, please create an [Issue in 
 
 ### SIG Leads
 
-SIG Leads are responsible for management of a particular Special Interest Group within the project, managing day-to-day operations of their interest scope. If a particular SIG involves altering Spinnaker's codebase, then SIG leads must be active Approvers. 
+SIG Leads are responsible for the management of a particular Special Interest Group within the project, managing day-to-day operations of their interest scope. If a particular SIG involves altering Spinnaker's codebase, then SIG leads must be active Approvers.
 
 Duties
 
@@ -68,57 +68,35 @@ Duties
 * Triage inbound spinnaker/spinnaker issues related to the SIG
 * Review and merge or decline pull requests from the community
 
-
 ### Technical Oversight Committee
 
-The TOC is responsible for the overall technical management of the project, ultimately managing the day-to-day running of the project.
+The Technical Oversight Committee's responsibility includes the continual shaping of the governance structure to serve the project’s needs best and responsibility for the overall technical management of the project, ultimately managing the day-to-day running of the project.
 
 Duties
 
+* Set governance structure of the project
+* Address questions or concerns from the community about project culture, structure, and clarifications of roles, responsibilities, and duties
+* Ratify new SIGs
 * Set agenda for, facilitate, and drive consensus in the TOC meetings
 * Final escalation point for technical guidance
 * Review, approve and revoke appointments for Reviewers and Approvers
 * Drive technical management and any specific guidelines (e.g. code requirements/conventions, SLA on PR reviews)
 * Promote the best interests of the project
 
-Qualifications
+Term Requirements
 
-* Nominated and Appointed by Steering Committee
-  * 2-year terms, term limit of consecutive 4 years (after, individual must take at least 1 year off)
-  * Terms should be staggered within the TOC and off by 6 months from SC 
-  * Staggering should result in approximately half of the committee up for election each year
-  * Term starts mid-calendar year (i.e. July 1st) 
-  
-Election to the TOC requires a majority of the SC. 
+* Nominated and Appointed by Technical Oversight Committee
+* 2-year terms, term limit of consecutive 4 years (after, the individual must take at least 1 year off)
+* Terms should be staggered, which should result in approximately half of the committee up for election each year
 
 [Technical Oversight Committee membership and meeting information](committee-technical-oversight/README.md)
 
-The TOC will have three, five, or seven members, as deemed appropriate by the Steering Committee. In the event that someone from the TOC leaves during their term, the Steering Committee shall appoint someone to fill the remainder of the term. Each year, the TOC will nominate a member to serve as the Chairperson for that year. The Chair's duties will include calling and runnings meetings, calling votes, and ensuring that meeting notes are recorded. 
+The TOC will have five, seven members, or nine members as deemed appropriate by the  TOC. In the event that someone from the TOC leaves during their term, the TOC shall appoint someone to fill the remainder of the term. Each year, the TOC will choose a member to serve as the Chairperson for that year. The Chair's duties will include calling and running meetings, calling votes, and ensuring that meeting notes are recorded. 
 
-### Steering Committee
-
-The steering committee’s responsibility and function lies in the continual shaping of the governance structure to serve the project’s needs best.
-
-Duties:
-
-* Set governance structure of the project
-* Address questions or concerns from the community about project culture, structure, and clarifications of roles, responsibilities and duties
-* Ratify new SIGs
-
-Qualifications:
-
-* Nominated and Appointed by Steering Committee
-  * 2 year terms, term limit of 4 years consecutively^ (after which, an individual must take off at least 1 year)
-  * Terms should be staggered, which should result in approximately half of the committee up for election each year
-  * Terms run from February 1st to January 31st two years later
-
-^ - SC members whose terms were extended by one month when the terms were shifted from starting January 1st to starting February 1st may serve 4 years and one month consecutively.
-
-[Steering Committee membership and meeting information](committee-steering/README.md)
-
-Election to the SC requires a majority of the SC. If a person is up for reelection they are not allowed to vote for their reelection. 
+Inactive members of the committee will be removed from their seats at the discretion of the TOC chair with a majority vote from sitting TOC members unless the member in question would like to voluntarily resign. Inactivity would include but is not limited to the inability to attend multiple meetings and/or the inability to take action items or see them through. 
 
 ## Special Interest Groups
 
-Special Interest Groups (SIGs) are created as community interest and demand around particular topics become self evident, and continue on as their relevance and needs do. SIGs and their Leads are ratified and green-lit by the Steering Committee via a [SIG proposal process](sig-lifecycle.md). 
+Special Interest Groups (SIGs) are created as community interest and demand around particular topics become self evident, and continue on as their relevance and needs do. SIGs and their Leads are ratified and green-lit by the Technical Oversight Committee via a SIG proposal process.
+
 
