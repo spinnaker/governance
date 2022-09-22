@@ -21,7 +21,7 @@
 * [Cole Duclos](https://github.com/coleduclos) (Autodesk)
 * [Dadisi Sanyika](https://github.com/dsanyika) (Apple)
 * [David Byron](https://github.com/dbyron-sf) (Salesforce)
-* [Gopinath Rebala](https://github.com/rebala) (OpsMX)
+* [Gopinath Rebala](https://github.com/rebalag) (OpsMX)
 * [James Guido](https://github.com/guido9j) (The Home Depot)
 * [Matt Gogerly](https://github.com/mattgogerly) (JPMC)
 * [Praseeda Sathaye](https://github.com/praseedasathaye) (AWS)
