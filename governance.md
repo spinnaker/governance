@@ -6,7 +6,7 @@ The broader community is organized around a set of special interest groups (SIGs
 
 To make clearer to community members how they might progressively get more involved and take more ownership in the project, we define the following appointed roles with their respective duties and qualifications.
 
-Roles are appointed by the Technical Oversight Committee (TOC). Roles can be revoked for reasons such as falling out of qualification, inactivity, or violations of community guidelines.
+Roles are appointed by the TOC. Roles can be revoked for reasons such as falling out of qualification, inactivity, or violations of community guidelines.
 
 ### Active Community Members
 
