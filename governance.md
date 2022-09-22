@@ -1,4 +1,4 @@
-The Spinnaker OSS project is run by a group of appointed members who hold specific roles, managed by the technical oversight committee. The Technical Oversight Committee manages the governance structure of the project, revisiting and refining it as needs evolve.
+The Spinnaker OSS project is run by a group of appointed members who hold specific roles, managed by the Technical Oversight Committee (TOC). The TOC manages the governance structure of the project, revisiting and refining it as needs evolve.
 
 The broader community is organized around a set of special interest groups (SIGs) focused on particular areas of interest.
 
