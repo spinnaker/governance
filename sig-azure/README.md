@@ -27,9 +27,9 @@ _Microsoft_
 
 
 ### Meeting Cadence
- - 1 hour, monthly, on **[Google Hangouts](https://meet.google.com/qwd-sdvd-euu)**
+ - 1 hour, monthly, on **[Google Meet](meet.google.com/kjc-vpua-kqk)**
  - Second Tuesday of every month at 10:00 AM US/Pacific ([See in your time zone](https://www.thetimezoneconverter.com/?t=10:00am&tz=San%20Francisco))
- - [Azure SIG Notes](https://docs.google.com/document/d/1T9BPCLfJg8XW_AWifMEGfxpjoh6jVoWtK6hos1xq9Bo/edit?usp=sharing)
+ - [Azure SIG Notes](https://docs.google.com/document/d/1cQSQDNCmofli9Hn2k9EgUaULX2MGLgEh_PMJTi4EgQ8/edit?usp=sharing)
 
 # Responsibilities
 
