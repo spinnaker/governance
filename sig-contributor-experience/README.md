@@ -17,13 +17,8 @@ The [charter](charter.md) defines the scope and governance of the Contributor Ex
 **[Ige Adetokunbo Temitayo](https://github.com/ExitoLabs)**  
 DevOps and Site Reliability Engineer at Emirates Group
 
-**[Nikema Prophet](https://github.com/prophen)**  
-Associate Community Marketing Manager 
-
-### SIG Advisor:
-
-**[Rosalind Benoit](https://github.com/dnilasor)**  
-Director of OSS Community 
+**[Maria Ashby](https://github.com/mashby2022)**  
+Developer Advocate 
 
 ### SIG Lead Responsibility
 
