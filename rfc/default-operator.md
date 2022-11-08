@@ -32,7 +32,7 @@ From the Kubernetes Operator pattern docs: “Operators are software extensions 
 
 We propose migrating to the Spinnaker Operator as the default installation method for the community for the following reasons:
 Leveraging existing Kubernetes tooling and patterns to install Spinnaker
-Simplifying day 0 operations for new users in the community by encapsulating best practices and defaults in th operator
+Simplifying day 0 operations for new users in the community by encapsulating best practices and defaults in the operator
 
 Kleat doesn’t go away in our proposed architecture, but we instead integrate with it. For users that require more control or sophistication in their deployment methodology, they will still be able to leverage Kleat for their needs.
 
@@ -55,7 +55,7 @@ Kleat doesn’t go away in our proposed architecture, but we instead integrate w
 
 - Commands to edit the Halyard config
 
-Refer to previous Halyard lite RFC 
+Refer to previous [Halyard lite RFC](https://github.com/spinnaker/governance/pull/89)
 
 ### Input validation
 
@@ -120,15 +120,15 @@ The operator being built by Armory will replace its dependency on the existing H
 
 #### Kustomize / Kleat
 
-Refer to the Halyard Lite RFC
+Refer to the [Halyard lite RFC](https://github.com/spinnaker/governance/pull/89)
 
 #### Helm
 
-Refer to the Halyard Lite RFC
+Refer to the [Halyard lite RFC](https://github.com/spinnaker/governance/pull/89)
 
 #### Manual
 
-Refer to the Halyard Lite RFC
+Refer to the [Halyard lite RFC](https://github.com/spinnaker/governance/pull/89)
 
 ### Dependencies
 
@@ -140,7 +140,7 @@ This change will require manual intervention to migrate users over to Operator. 
 
 ## Prior Art and Alternatives
 
-Refer to Halyard Lite RFC
+Refer to [Halyard lite RFC](https://github.com/spinnaker/governance/pull/89)
 
 ## Known Unknowns
 
