@@ -69,7 +69,7 @@ The Fiat API will be updated to support permission checks on these new resources
 
 Account permissions are most applicable to metric store accounts where only the `READ` and `WRITE` permissions apply.
 Granting read permission to a metric store account allows a user to fetch metrics by querying its `MetricsService` bean.
-Granting write permission to a metric store account allows a sid to manage permissions of the account, update the account configuration, and delete the account.
+Granting write permission to a metric store account allows a security identity (e.g. group/user) to manage permissions of the account, update the account configuration, and delete the account.
 Note that write permissions in this context are unrelated to writing metrics to a metrics store; metrics should be written to stores from the deployed applications being measured.
 Access controls will be defined in terms of role policies which are intended to replace direct use of permissions maps.
 
