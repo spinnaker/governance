@@ -3,7 +3,7 @@ name: New Cloud Provider
 about: Propose the addition of a new Cloud Provider
 title: 'PROPOSAL: New Cloud Provider for <cloud provider name>'
 labels: committee/technical-oversight
-assignees: ajordens, plumpy, dbyron-sf, link108
+assignees: asmidutz link108 coleduclos dsanyika dbyron-sf rebalag guido9j mattgogerly praseedasathaye
 
 ---
 

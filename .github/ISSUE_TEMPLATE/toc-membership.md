@@ -3,7 +3,7 @@ name: TOC Membership Request
 about: Request nomination for Technical Oversight Committee
 title: 'REQUEST: New TOC member for <your-GH-username>'
 labels: committee/steering
-assignees: emagana, imosquera, duftler, pstout, pauljrob
+assignees: asmidutz link108 coleduclos dsanyika dbyron-sf rebalag guido9j mattgogerly praseedasathaye
 
 ---
 
