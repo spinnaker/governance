@@ -4,7 +4,7 @@
 | | |
 |-|-|
 | **Status**     | _**Proposed**, Accepted, Implemented, Obsolete_ |
-| **RFC #**      | https://github.com/spinnaker/governance/pull/299 |
+| **RFC #**      | _#299_ |
 | **Author(s)**  | _Jalander Ramagiri (`@rjalander`)_|
 | **SIG / WG**   | CDF-CDEvents, CDF-SIGEvents |
 
@@ -15,12 +15,14 @@ Many organisations use more than one CI/CD tools as part of their pipelines and 
 Implementing [CDEvents](https://cdevents.dev/) to Spinnaker enables Spinnaker to communicate with other CI/CD tools with in the ecosystem. [CDEvents](https://cdevents.dev/) is a common specification for Continuous Delivery events based on CloudEvents.
 Spinnaker can produce and consume [CDEvents](https://cdevents.dev/) using [Java SDK](https://github.com/cdevents/sdk-java) which is developed and maintained by the [CDEvents community](https://cdevents.dev/community/).
 
-### Goals and Non-Goals
+## Goals and Non-Goals
 Goals:
 - Event-Driven Standardization with CI/CD tools like Keptn, Tekton, Jenkins, Spinnaker, etc..
-- Create an `events-broker` that is able to produce and consume `CDEvents`
+- Spinnaker can able to consume and produce CDEvents from/to `events-broker`
 - One needs to subscribe to `events-broker` with the type of event that needs to consume
-- API end points will be created to produce and consume `CDEvents`
+
+Non-Goals:
+- Creation of API end points to produce and consume CDEvents
 
 ## Motivation and Rationale
 
@@ -37,26 +39,29 @@ Goals:
 ## Timeline
 Proof of concept with Spinnaker, Keptn and Tekton CI/CD tools developed to communicate with each other about occurrences and running pipelines from building an artifact to deploy.
 
+The CDEvents integration process will be achieved in two Goals:
+Goal-1 : Introducing CDEvents to Spinnaker using Spinnaker-Webhooks
+Goal-2 : Integrating CDEvents to Spinnaker using Spinnaker Pub/Sub Automated triggers type(google,amazon) and Notifications
+
 The final implementation aligning with `CDEvents` vocabulary specification will take from 4-6 weeks.
 
 ## Design
-Proposing a design based on the PoC outcome.
 
-A `CDEventsController` will be created with the API endpoints to produce and consume `CDEvents` from `events-broker` with request mappings,
+CDEvents is build upon CloudEvent, the event received will be in CloudEvent format with additional CI/CD specific extensions added to it.
+CDEvent specifications can be found [here](https://cdevents.dev/)
 
-`@RequestMapping(value = "cdevents/consume", method = RequestMethod.POST)`
+The CDEvents integration process will be achieved in two Goals:
+### Goal-1 : 
+Introducing `CDEvents` to Spinnaker using Spinnaker-Webhook:
 
-`@RequestMapping(value = "cdevents/produce", method = RequestMethod.POST)`
+Using an existing Spinnaker Webhook `CDEvents` will be consumed/produced and Spinnaker can communicate with other CI/CD tools using CDEvents.
 
+### Consume CDEvents:
 
-An `events-broker` will be created to send and receive events by knative-eventing and the sample URL can be configured as below in the cluster.
+A Source `cdevent` will be configured for Webhook type Automated triggers from Spinnaker dashboard.
+The URL `http://<HOST>:8184//webhooks/webhook/cdevent` formed will be placed as subscriber uri to the `events-broker` with specific event type to receive.
 
-`events-broker : http://broker-ingress.knative-eventing.svc.cluster.local/default/events-broker`
-
-#### Consume CDEvents
-
-Spinnaker API endpoint `cdevents/consume` will be subscribed to `events-broker` to listen to the various types of events and Spinnaker Pipelines need to be configured with the `CDEvents` type on which Spinnaker is interested on.
-Example: A sample event `dev.cdevents.artifact.published` subscribed to `events-broker`
+Example: A sample event `dev.cdevents.artifact.published` subscribed to knative `events-broker`
 ``` 
 kubectl create -f - <<EOF
 apiVersion: eventing.knative.dev/v1
@@ -69,19 +74,49 @@ spec:
     attributes:
       type: dev.cdevents.artifact.published
   subscriber:
-    uri: http://<spin-service>:<port>/cdevents/consume
+    uri: http://<spin-gate-service>:<port>/webhooks/webhook/cdevent
 EOF 
 ```
-Once the event is received by Spinnaker API endpoint `cdevents/consume`, further can be handled to run pipelines based on the configured event data in Spinnaker.
+A pipeline will be triggered for which Webhook Automated trigger is configured as below:
+![cdevent-consume-webhook.png](cdevent-consume-webhook.png)
+ 
+ Note: An additional validation is required to be added to the above Webhook configuration to include Attribute Constraints for triggering the pipeline only when a specific event type is received.
+ Event type will be included as `ce-type` in the HTTP Header part of the event consumed
+ 
+
+### Produce CDEvents
+
+A new Webhook stage will be configured in a pipeline from which we need to send a CDEvent 
+![cdevent-produce-webhook.png](cdevent-produce-webhook.png)
+
+The CDEvent will be received by a `events-broker` configured as Webhook URL.
+
+With this existing Webhook configuration CDEvents will not be fulfilled as additional CI/CD specific extensions can not be added here. This will be achieved by creating a new Notification type `CDEvents` to produce CDEvents using [Java SDK](https://github.com/cdevents/sdk-java) as part of Goal-2 Implementation.
+
+### Goal-2 : 
+Integrating CDEvents to Spinnaker using Spinnaker Pub/Sub Automated triggers type(google/amazon) and Notifications:
+
+### Consume CDEvents:
+
+CDEvents can be consumed by existing Pub/Sub system types(google/amazon) as CDEvent is build upon CloudEvent and CloudEvent is supported by most of the event providers.
+
+The pipeline can be triggered when a specific event type is received, event type will be included as `ce-type` in the HTTP Header part of the event consumed and it will be configured as one of the Attribute Constraints
+
+![cdevent-consume-pubsub.png](cdevent-consume-pubsub.png)
+
 
 #### Produce CDEvents
-Spinnaker API endpoint `cdevents/produce` will be invoked with the type of event that needs to be sent to `events-broker`.
+A new Notification type `CDEvents` will be implemented to produce CDEvents using [Java SDK](https://github.com/cdevents/sdk-java).
+
+A Notification will be added at any stage of the pipeline from which we need to send a CDEvent.
+A CDEvent Notification will be sent to the selected `events-broker` and the event type configured when adding new Notification
+
 `CDEvents` can be created using [Java SDK](https://github.com/cdevents/sdk-java) that is available in `CDEvents` [GitHub Repositories](https://github.com/cdevents).
-`Java SDK` used to create variuos types of events alligning with `CDEvents` vocabulary specification using CloudEventBuilder. 
+`Java SDK` used to create various types of events aligning with `CDEvents` vocabulary specification using CloudEventBuilder. 
 
 `CDEvents` can be published to `events-broker` once created from Spinnaker application using CloudEvents HTTP libraries.
 
-Example: A sample serivce-deployed event published to `events-broker`
+Example: A sample service-deployed event published to `events-broker`
 ```
 curl -v -d '{"id": "1234", "subject": "event"}' -X POST -H "Ce-Id: HelloSpinnaker" -H "Ce-Specversion: 1.0" -H "Ce-Type: dev.cdevents.service.deployed" -H "Ce-Source: not-sendoff" -H "Content-Type: application/json" "http://<events-broker-url>/default/events-broker"
 ```
@@ -89,6 +124,9 @@ curl -v -d '{"id": "1234", "subject": "event"}' -X POST -H "Ce-Id: HelloSpinnake
 ### Dependencies
 
 The CloudEvent dependencies(io.cloudevents) are required to implement produce/consume events 
+
+## Drawbacks
+
 
 
 ## Prior Art and Alternatives
@@ -98,8 +136,13 @@ The existing approach is integration oriented and could sometimes result in outa
 
 The approach will be demonstrated with the Spinnaker Community using `CDEvents` PoC.
 
+## Security, Privacy, and Compliance
+
+
 ## Operations
 Admin needs to configure Pipelines that should run on consuming the different event types from `events-broker`
+
+## Risks
 
 ## Future Possibilities
 
