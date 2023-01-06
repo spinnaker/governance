@@ -79,7 +79,7 @@ EOF
 ```
 A pipeline will be triggered for which Webhook Automated trigger is configured as below:
 
-![cdevent-consume-webhook.png](cdevent-consume-webhook.png)
+![cdevent-consume-webhook.png](./cdevent-consume-webhook.png)
  
  Note: An additional validation is required to be added to the above Webhook configuration to include Attribute Constraints for triggering the pipeline only when a specific event type is received.
  Event type is included as `ce-type` in the HTTP Header part of the event consumed
@@ -89,7 +89,7 @@ A pipeline will be triggered for which Webhook Automated trigger is configured a
 
 A new Webhook stage will be configured in a pipeline from which we need to send a CDEvent
  
- ![cdevent-produce-webhook.png](cdevent-produce-webhook.png)
+ ![cdevent-produce-webhook.png](./cdevent-produce-webhook.png)
 
 The CDEvent will be received by a `events-broker` configured as Webhook URL.
 
@@ -104,7 +104,7 @@ CDEvents can be consumed by existing Pub/Sub system types(google/amazon) as CDEv
 
 The pipeline can be triggered when a specific event type is received, event type will be included as `ce-type` in the HTTP Header part of the event consumed and it will be configured as one of the Attribute Constraints
 
-![cdevent-consume-pubsub.png](cdevent-consume-pubsub.png)
+![cdevent-consume-pubsub.png](./cdevent-consume-pubsub.png)
 
 
 #### Produce CDEvents
@@ -126,7 +126,7 @@ curl -v -d '{"id": "1234", "subject": "event"}' -X POST -H "Ce-Id: HelloSpinnake
 #### Functional Diagram
 Below is the diagram shows how different CI/CD systems interact with each other using CDEvents managed by single events-broker
 
-![cdevents-spinnaker-functional.png](cdevents-spinnaker-functional.png)
+![cdevents-spinnaker-functional.png](./cdevents-spinnaker-functional.png)
 
 ### Dependencies
 
