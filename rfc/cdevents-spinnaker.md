@@ -126,7 +126,7 @@ curl -v -d '{"id": "1234", "subject": "event"}' -X POST -H "Ce-Id: HelloSpinnake
 #### Functional Diagram
 Below is the diagram shows how different CI/CD systems interact with each other using CDEvents managed by single events-broker
 
-![cdevents-spinnaker-functional.png](./cdevents-spinnaker-functional.png)
+![cdevents-spinnaker-functional.jpg](./cdevents-spinnaker-functional.jpg)
 
 ### Dependencies
 
