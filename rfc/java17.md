@@ -3,7 +3,7 @@
 | | |
 |-|-|
 | **Status**     | Proposed |
-| **RFC #**      | [62](https://github.com/spinnaker/governance/pull/325) |
+| **RFC #**      | [335](https://github.com/spinnaker/governance/pull/335) |
 | **Author(s)**  | Matt Gogerly ([`@mattgogerly`](https://github.com/mattgogerly)) |
 | **SIG / WG**   | Platform SIG |
 
