@@ -50,7 +50,7 @@ a Java 17 JRE. Only after that is done can we switch to the Java 17 JDK.
 
 For official Spinnaker containers, we control the JRE used to run Spinnaker. For
 those releases, this proposal takes a relatively slow ramp to the Java 17 JRE
-and provides an escape hatch back to Java 8 for users who experience problems.
+and provides an escape hatch back to Java 11 for users who experience problems.
 
 There are also some unknown number of customers who aren't using the Spinnaker-
 provided containers. We will need to do some outreach to make sure these users
