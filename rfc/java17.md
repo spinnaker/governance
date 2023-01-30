@@ -33,9 +33,9 @@ Non-Goals:
 *   Documenting and solving technical issues that present themselves in the
     migration; those will be handled separately, but this document concerns
     itself primarily with the larger processes and timeline
-*   Detailing the required release system changes; since the releases are still
-    entirely maintained by Google, these changes aren't particularly relevant to
-    the wider community
+*   Detailing the required release system changes; since the releases have recently been
+     significantly refactored, the specifics of the process should be straightforward and consistent
+     across repositories.
 
 ### JRE vs. JDK
 
