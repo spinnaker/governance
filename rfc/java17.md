@@ -129,7 +129,7 @@ and delay this part (but keep the compiler change) until the next release.
 Similarly, if the compiler change causes issues, we can revert that change and
 push that out to the next release.
 
-### 1.34 (early August)
+### 1.35 (early August)
 
 The compiler flags will change from `-source 11 -target 11` to `-source 17 -target
 17`. At this point, developers are able to commit Java 17 code to the
