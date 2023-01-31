@@ -3,7 +3,7 @@
 |               |                                                             |
 | ------------- |-------------------------------------------------------------|
 | **Status**    | Proposed                                                    |
-| **RFC #**     |     |
+| **RFC #**     | [336](https://github.com/spinnaker/governance/pull/336)     |
 | **Author(s)** | Joe Cavanagh ([`@jcavanagh`](https://github.com/jcavanagh)) |
 | **SIG / WG**  | Platform SIG                                                |
 
