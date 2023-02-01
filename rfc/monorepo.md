@@ -144,6 +144,10 @@ There are definitely concrete benefits to including it in the build cycle - it c
 
 Halyard will also be included in the monorepo.  While it is a tool everyone wants to see replaced, it has no replacement yet.  It consumes many Spinnaker service libraries, and would greatly benefit from composite builds.  
 
+### `spinnaker-monitoring`
+
+The `spinnaker-monitoring` project will not be included in the monorepo.  The project is frozen, and not part of a release build.  The final revision's artifact will continue to be pinned in Halyard and re-tagged as needed for external consumption.
+
 ### Integrating Gradle Build Plugins
 
 Gradle composite can also build plugins to be used in the same build, allowing us to also combine [Spinnaker's Gradle build plugin](https://github.com/spinnaker/spinnaker-gradle-project) into the project itself.
@@ -262,7 +266,6 @@ git subtree add -P keel git@github.com:spinnaker/keel.git master
 git subtree add -P kork git@github.com:spinnaker/kork.git master
 git subtree add -P orca git@github.com:spinnaker/orca.git master
 git subtree add -P rosco git@github.com:spinnaker/rosco.git master
-git subtree add -P spinnaker-monitoring git@github.com:spinnaker/spinnaker-monitoring.git master
 
 git fetch --all
 ```
@@ -299,7 +302,7 @@ set -e
 # ./scripts/pull.sh clouddriver orca -r release-1.27.x
 
 # Some OSS repos do not have release branches
-MAIN_ONLY_PULLS=(deck-kayenta spinnaker-monitoring)
+MAIN_ONLY_PULLS=(deck-kayenta)
 
 # Setup arguments
 REF='main'
@@ -323,7 +326,7 @@ done
 
 # Add in default repos if user did not provide any
 if [ ${#REPOS[@]} -eq 0 ]; then
-  REPOS=(clouddriver deck deck-kayenta echo fiat front50 gate igor kayenta keel kork orca rosco spin spinnaker-monitoring)
+  REPOS=(clouddriver deck deck-kayenta echo fiat front50 gate igor kayenta keel kork orca rosco spin)
 fi
 
 function pull() {
