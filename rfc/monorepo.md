@@ -266,6 +266,7 @@ git subtree add -P keel git@github.com:spinnaker/keel.git master
 git subtree add -P kork git@github.com:spinnaker/kork.git master
 git subtree add -P orca git@github.com:spinnaker/orca.git master
 git subtree add -P rosco git@github.com:spinnaker/rosco.git master
+git subtree add -P spinnaker-monitoring git@github.com:spinnaker/spinnaker-monitoring.git master
 
 git fetch --all
 ```
