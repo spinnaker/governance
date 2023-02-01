@@ -142,11 +142,7 @@ There are definitely concrete benefits to including it in the build cycle - it c
 
 ### Halyard
 
-The inclusion of Halyard into the monorepo merits some discussion.  It is a tool everyone wants to see replaced, but has no replacement yet.  It consumes many Spinnaker service libraries, and would greatly benefit from composite builds.
-
-However, it sits in the unique position of not really needing to be up to date with its Spinnaker dependencies.  We need to weigh the benefits of building Halyard more conveniently against failing pull request builds because a contributor broke something in Halyard.  We should also consider that Halyard being stale gets harder and harder to fix over time, so perhaps the possibility of disruption to pull request builds is worth it in the long run.
-
-A middle ground does exist, where we can deactivate Gradle's composite subsitution for one or more Halyard dependencies if needed, and pin a previously published version of the library instead.  This at least leaves the possibility for a better Halyard build (at least one dependency unpinned), and the status quo (everything pinned) is the lower bound.
+Halyard will also be included in the monorepo.  While it is a tool everyone wants to see replaced, it has no replacement yet.  It consumes many Spinnaker service libraries, and would greatly benefit from composite builds.  
 
 ### Integrating Gradle Build Plugins
 
