@@ -35,7 +35,7 @@ A monorepo significantly streamlines the contribution, build, test, publish, and
 
 A major goal of the project is to improve new developer accessiblity.  A single repository to checkout, build and test a change, and submit a pull request is about the minimum possible burden to place on a new contributor.
 
-Spinnaker's microservices have significant shared code.  For example, he `kork` library is used by every other service, including handling the key role of defining dependency versions across the application.  Changes here take many steps and pull requests to propagate across the application - the history is cluttered with auto-merges of `kork` bumps, and breaking changes downstream are difficult to catch early.  The `fiat` libraries parallel `kork` in most services, and are also widely shared and often version-bumped.
+Spinnaker's microservices have significant shared code.  For example, the `kork` library is used by every other service, including handling the key role of defining dependency versions across the application.  Changes here take many steps and pull requests to propagate across the application - the history is cluttered with auto-merges of `kork` bumps, and breaking changes downstream are difficult to catch early.  The `fiat` libraries parallel `kork` in most services, and are also widely shared and often version-bumped.
 
 Spinnaker's microservices also share a common build target (the JVM) and share common build tooling (Gradle).  Gradle composite builds are an extremely natural fit for this project.
 
