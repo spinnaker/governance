@@ -25,7 +25,7 @@ Goals:
 
 Non-Goals:
 - Creation of API end points to produce and consume CDEvents
-- Crearing a broker specific inplementation to consume/produce CDEvents
+- Creating a broker specific implementation to consume/produce CDEvents
 
 ## Motivation and Rationale
 
@@ -40,8 +40,6 @@ Non-Goals:
 - Operators can deploy Spinnaker with `CDEvents` to run multiple pipelines using different CI/CD tools with in ecosystem.
 
 ## Timeline
-Proof of concept with Spinnaker, Keptn and Tekton CI/CD tools developed to communicate with each other about occurrences and running pipelines from building an artifact to deploy.
-
 The CDEvents integration process will be achieved in two Goals:
 Goal-1: Introducing `CDEvents` to Spinnaker using existing infra(Pub/Sub Automated triggers and Webhook stage)
 
@@ -49,21 +47,44 @@ Goal-2: Integrating `CDEvents` to Spinnaker by implementing a new Webhook type a
 
 The final implementation aligning with `CDEvents` vocabulary specification will take from 4-6 weeks.
 
-## Design
-
 ## About CDEvents:
 
-CDEvents is build upon CloudEvent, the event received will be in CloudEvent format with additional CI/CD specific extensions added to it.
-CDEvent specifications can be found [here](https://cdevents.dev/)
+CDEvents is a common specification for Continuous Delivery events, it enables interoperability between the CI/CD tools.
+CDEvents builds upon CloudEvent by adding CI/CD specific extensions like artifact, build, test, pipeline, repository and environment.
 
-Specify http as the target to start with
+CDEvents specification is described as 4 categories;
+1. Core Events - pipelineRun, taskRun
+2. Source Code Control Events - repository, branch, change
+3. Continuous Integration Events - build, testCase, testSuite, artifact
+4. Continuous Deployment Events - environment, service
 
-## CDEvents Schema definition
+More detailed information on each of this specifications can be found [here](https://cdevents.dev/).
+
+HTTP is the supported protocol of a CDEvents for now and CDEvents are mapped to CloudEvents headers and body using [CloudEvents HTTP protocol binding](https://github.com/cdevents/spec/blob/v0.1.0/cloudevents-binding.md).
+
+Schema definitions for each of the CDEvents type with required/optional properties described at [CDEvents Schemas](https://github.com/cdevents/spec/tree/v0.1.0/schemas)
 
 
-## Events and Use Cases:
-Include list of potential events and possible use cases
+## CDEvents PoC Use Case:
+Proof of concept with Spinnaker, Keptn and Tekton CI/CD tools developed to communicate with each other about occurrences and running pipelines from building an artifact to deploy.
 
+The use case with the PoC described as below,
+1. Tekton builds a new version of docker image and produces `artifact.packaged` CDEvent.
+2. Keptn receives `artifact.packaged` CDEvent and be informed about this new image built by Tekton 
+3. Keptn decides what to do next following its orchestration manifest.
+4. Keptn sends an `artifact.published` CDEvent for the next operation/deployment to be started.
+5. Spinnaker receives `artifact.published` CDEvent and runs the deployment Pipeline.
+6. Spinnaker sends a `service.deployed` CDEvent once the Pipeline run is Successful. 
+7. Keptn receives `service.deployed` CDEvent and mark the deployment 
+operation is completed.
+
+[Recording is on YouTube for Events in Action With Spinnaker, Tekton and Keptn Demoed at SpinnakerSummit 2022](https://youtu.be/92Txy-USHg4)
+
+## PoC modules and interactions
+
+![cdevents-Spinnaker-PoC.png](./cdevents-spinnaker/cdevents-Spinnaker-PoC.png)
+
+## Design
 
 The CDEvents integration will be achieved in two Goals:
 ## Goal-1: 
@@ -106,7 +127,7 @@ Implementing a new `CDEvents` Webhook type in Automated triggers, to consume  `C
     ```
    - where `source` will be any of the (artifactCreated/testSuiteFinished/changeCreated) CDEvent types
 
-   - A Webhhok URL to consume CDEvent type `dev.cdevents.artifact.packaged` will be created as
+   - A Webhook URL to consume CDEvent type `dev.cdevents.artifact.packaged` will be created as
    ```
     http://<SPIN-HOST>:<GATE-PORT>/webhooks/cdevents/artifactPackaged
    ```
@@ -146,7 +167,7 @@ Implementing a new `CDEvents` Webhook type in Automated triggers, to consume  `C
    }
    ```
 
-   - An example configuration of CDEvents Webhook URL to invoke when a CDEvent `dev.cdevents.artifact.packaged` is produced from any other source to knative like `events-broker`
+   - An example configuration of CDEvents Webhook URL to invoke when a CDEvent `dev.cdevents.artifact.packaged` is produced from any other source to Knative like `events-broker`
 
    ``` 
     kubectl create -f - <<EOF
@@ -165,14 +186,14 @@ Implementing a new `CDEvents` Webhook type in Automated triggers, to consume  `C
    ```
    - When Spinnaker CDEvents webhook receives a CDEvent, it will be invoked with the POST RequestMapping(`/webhooks/cdevents/artifactPackaged`) using `WebhooksController` in `echo-webhooks` project.
     - The CDEvent will be converted to the Spinnaker event (`com.netflix.spinnaker.echo.api.events.Event`), Spinnaker Event may need some changes to convert from CDEvent
-    - And the Event will be propogated to the `EventPropagator` to process the request 
+    - And the Event will be propagated to the `EventPropagator` to process the request 
     - Using `TriggerMonitor` in `echo-pipelinetriggers` project, the matching pipeline will be triggered by `PipelineInitiator`
 
       #### Sequence Diagram:
 
       ![sequence-cdevent-consume-webhook.png](./cdevents-spinnaker/sequence-cdevent-consume-webhook.png)
 
-    - A sample CURL command to send a `dev.cdevents.artifact.packaged` CDEvent to the knative like `events-broker` URL.
+    - A sample CURL command to send a `dev.cdevents.artifact.packaged` CDEvent to the Knative like `events-broker` URL.
 
    ```
    curl -X POST -d '{"id": "1234", "subject": "event"}' -H "Ce-Id: say-hello" -H "Ce-Specversion: 1.0" -H "Ce-Type: dev.cdevents.artifact.packaged" -H "Ce-Source: not-sendoff" -H "Content-Type: application/json" "http://events-broker-host/default/events-broker"
@@ -183,8 +204,8 @@ Implementing a new `CDEvents` Webhook type in Automated triggers, to consume  `C
 ### Produce CDEvents
 A new Notification Preference `CDEvents` will be implemented to produce CDEvents using [Java SDK](https://github.com/cdevents/sdk-java).
 
-### Implementaion details:
-  - A new CDEvents Notification Preference will be implemented parellel to 
+### Implementation details:
+  - A new CDEvents Notification Preference will be implemented parallel to 
 Email, Microsoft Teams, slack, SMS what exists today.
 
     - Using CDEvents type Notification we can send a CDEvent at any stage of the 
