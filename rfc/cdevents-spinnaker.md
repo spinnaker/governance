@@ -117,7 +117,7 @@ With this existing Webhook configuration CDEvents will not be fulfilled as addit
 Implementing a new Webhook and Notification to consume/produce CDEvents by using HTTP binding
 
 ### Consume CDEvents:
-Implementing a new `CDEvents` Webhook type in Automated triggers, to consume  `CDEvents`
+Implementing a new `CDEvents` Webhook type in [Automated Triggers](https://spinnaker.io/docs/guides/user/pipeline/triggers/pubsub/), to consume  `CDEvents`
 
 ### Implementation details:
 
