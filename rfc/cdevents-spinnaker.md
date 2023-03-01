@@ -40,7 +40,7 @@ Non-Goals:
 - Operators can deploy Spinnaker with `CDEvents` to run multiple pipelines using different CI/CD tools with in ecosystem.
 
 ## Timeline
-The CDEvents integration process will be achieved in two Goals:
+The CDEvents integration process will be achieved in two goals:
 Goal-1: Introducing `CDEvents` to Spinnaker using existing infra(Pub/Sub Automated triggers and Webhook stage)
 
 Goal-2: Integrating `CDEvents` to Spinnaker by implementing a new Webhook type and a new Notification preference for `CDEvents`
