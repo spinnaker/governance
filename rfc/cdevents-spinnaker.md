@@ -12,7 +12,7 @@
 
 Many organisations use more than one CI/CD tools as part of their pipelines and most of the times the organisations implement their own glue code in order to make the tools work with each other.
 
-Implementing [CDEvents](https://cdevents.dev/) to Spinnaker enables Spinnaker to communicate with other CI/CD tools with in the ecosystem. [CDEvents](https://cdevents.dev/) is a common specification for Continuous Delivery events based on CloudEvents.
+Implementing [CDEvents](https://cdevents.dev/) to Spinnaker enables Spinnaker to communicate with other CI/CD tools within the ecosystem. [CDEvents](https://cdevents.dev/) is a common specification for Continuous Delivery events based on the [CloudEvents protocol](https://cloudevents.io/).
 Spinnaker can produce and consume [CDEvents](https://cdevents.dev/) using [Java SDK](https://github.com/cdevents/sdk-java) which is developed and maintained by the [CDEvents community](https://cdevents.dev/community/).
 
 ## Goals and Non-Goals
