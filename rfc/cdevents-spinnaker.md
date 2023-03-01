@@ -139,7 +139,7 @@ Implementing a new `CDEvents` Webhook type in [Automated Triggers](https://spinn
    - Note: A new attribute constraints need to be created and mapped from CDEvents request header to trigger the pipeline when a specific event type is received.
    Event type is included as `ce-type` in the HTTP Request Header part of the event consumed
 
-   - The new endpoint `/webhooks/cdevents/{source}` will receive the `CloudEvent` as input in the @RequestBody, then the CloudEvent will be extracted for requestHeaders, content and payload to process and run the matching pipelines with the CDEvent configuration. 
+   - The new endpoint `/webhooks/cdevents/{source}` will receive the `CloudEvent` as input in the body. The CDEvent SDK will extract the necessary information from the headers and payload to run the matching pipeline with any specified configuration.
 
    - When the Pipeline is saved with the `CDEvents` type Automated Trigger, the trigger will be created as below with the pipeline configuration.
 
