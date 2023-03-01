@@ -60,9 +60,9 @@ CDEvents specification is described as 4 categories;
 
 More detailed information on each of this specifications can be found [here](https://cdevents.dev/).
 
-HTTP is the supported protocol of a CDEvents for now and CDEvents are mapped to CloudEvents headers and body using [CloudEvents HTTP protocol binding](https://github.com/cdevents/spec/blob/v0.1.0/cloudevents-binding.md).
-
 Schema definitions for each of the CDEvents type with required/optional properties described at [CDEvents Schemas](https://github.com/cdevents/spec/tree/v0.1.0/schemas)
+
+HTTP is the supported protocol of a CDEvents for now and CDEvents are mapped to CloudEvents headers and body using [CloudEvents HTTP protocol binding](https://github.com/cdevents/spec/blob/v0.1.0/cloudevents-binding.md).
 
 
 ## CDEvents PoC Use Case:
