@@ -184,7 +184,7 @@ Implementing a new `CDEvents` Webhook type in [Automated Triggers](https://spinn
         uri: http://<SPIN-HOST>:<GATE-PORT>/webhooks/cdevents/artifactPackaged
     EOF 
    ```
-   - When Spinnaker CDEvents webhook receives a CDEvent, it will be invoked with the POST RequestMapping(`/webhooks/cdevents/artifactPackaged`) using `WebhooksController` in `echo-webhooks` project.
+   - When Spinnaker CDEvents webhook receives a CDEvent, it will be invoked with the POST API(`/webhooks/cdevents/artifactPackaged`) using `WebhooksController` in `echo-webhooks` project.
     - The CDEvent will be converted to the Spinnaker event (`com.netflix.spinnaker.echo.api.events.Event`), Spinnaker Event may need some changes to convert from CDEvent
     - And the Event will be propagated to the `EventPropagator` to process the request 
     - Using `TriggerMonitor` in `echo-pipelinetriggers` project, the matching pipeline will be triggered by `PipelineInitiator`
