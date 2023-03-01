@@ -42,10 +42,9 @@ Non-Goals:
 ## Timeline
 The CDEvents integration process will be achieved in two goals:
 
-1. [Introducing `CDEvents` to Spinnaker using existing infra(Pub/Sub Automated triggers and Webhook stage).](##Goal-1)
-2. [Integrating `CDEvents` to Spinnaker by implementing a new Webhook type and a new Notification preference for `CDEvents`.](##Goal-2)
+1. [Introducing `CDEvents` to Spinnaker using existing infra(Pub/Sub Automated triggers and Webhook stage).](#Goal-1)
+2. [Integrating `CDEvents` to Spinnaker by implementing a new Webhook type and a new Notification preference for `CDEvents`.](#Goal-2)
 
-The final implementation aligning with `CDEvents` vocabulary specification will take from 4-6 weeks.
 
 ## About CDEvents:
 
