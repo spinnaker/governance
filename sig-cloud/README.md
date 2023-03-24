@@ -56,9 +56,9 @@ _OpsMx_
 
 
 ### Meeting Cadence
- - 1 hour, monthly, on **[Zoom](TODO-need-zoom-link)**
+ - 1 hour, monthly, on **[Google Meet](https://meet.google.com/afb-rppx-zye)**
  - Last Wednesday of every month at 10:00 AM US/Pacific ([See in your time zone](https://www.thetimezoneconverter.com/?t=10:00am&tz=San%20Francisco))
- - [Cloud SIG Notes](need_google_doc)
+ - [Cloud SIG Notes](https://docs.google.com/document/d/1LOJE19m5zwy6QYEylMKamIfQZvqNL7gVhQgVCm_9hg0/)
 
 # Responsibilities
 
