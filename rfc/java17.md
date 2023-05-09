@@ -60,7 +60,7 @@ convert to a Java 17 JRE too.
 
 The timeline in which this was implemented is detailed below.
 
-### 1.31 (early March)
+### 1.32 (early June)
 
 Before we can upgrade to Java 17 we must first upgrade from Gradle 6 to Gradle 7.
 The [compatibility matrix](https://docs.gradle.org/current/userguide/compatibility.html)
@@ -70,7 +70,7 @@ adding more technical debt this RFC proposes we upgrade to the latest Gradle, 7.
 Early testing suggests this shouldn't be too much of a hassle - I was able to compile
 Orca and Clouddriver using Gradle 7 without _any_ changes.
 
-### 1.32 (early April)
+### 1.33 (mid July)
 
 For our container builds, we'll first move just two (of approximately ten)
 services to the new JRE. The two services will be `igor` and `front50`. By
@@ -96,7 +96,7 @@ runtime, we will switch the containers back to Java 11 and shift the timeline
 back one release. Since we're providing the `java11` variants, we will not adjust
 the timeline for any other reason.
 
-### 1.33 (mid May)
+### 1.34 (late August)
 
 _All_ containers built by the build process will now use the Java 17 JRE. As
 before, the `java11` variants will offer a way to opt out of this change.
@@ -104,7 +104,7 @@ before, the `java11` variants will offer a way to opt out of this change.
 Other than that, everything from the previous section applies to this release as
 well.
 
-### 1.34 (mid June)
+### 1.35 (early October)
 
 For this release, we will do two things:
 
@@ -129,7 +129,7 @@ and delay this part (but keep the compiler change) until the next release.
 Similarly, if the compiler change causes issues, we can revert that change and
 push that out to the next release.
 
-### 1.35 (early August)
+### 1.36 (mid November)
 
 The compiler flags will change from `-source 11 -target 11` to `-source 17 -target
 17`. At this point, developers are able to commit Java 17 code to the
