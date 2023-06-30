@@ -62,7 +62,7 @@ equivalent in each service's source set, as described [here](https://stackoverfl
 Introduce a set of libraries as dependencies in Kork, and wire them up to OkHttp and logging. This RFC proposes
 using [Spring Sleuth](https://spring.io/projects/spring-cloud-sleuth). [Micrometer Tracing](https://github.com/micrometer-metrics/tracing) is the successor to Spring Sleuth but does not support versions of Spring Boot < 3 or Kotlin versions < 1.7.
 
-`org.springframework.cloud:spring-cloud-starter-zipkin` will be added as an api dependency to `kork-web`. As Spring Sleuth is a wrapper for Brave and brings it in transitively, we can remove the existing dependency on `io.zipkin.brave:brave-bom`.
+`org.springframework.cloud:spring-cloud-starter-zipkin` will be added as an `api` dependency to `kork-web`. Each `{service}-web` will need to declare it as an `implementation` dependency. I envisage this will be much easier once the monorepo is in place. As Spring Sleuth is a wrapper for Brave and brings it in transitively, we can remove the existing dependency on `io.zipkin.brave:brave-bom`.
 
 Alternatively, we can exclude `org.springframework.cloud:spring-cloud-sleuth-brave` and opt to add a dependency on `org.springframework.cloud:spring-cloud-sleuth-otel-autoconfigure` to use OpenTelemetry instead. We would also need to replace the [Brave OkHttp instrumentation](https://github.com/openzipkin/brave/blob/master/instrumentation/okhttp3) with the equivalent [OpenTelemetry instrumentation](https://github.com/open-telemetry/opentelemetry-java-instrumentation/tree/main/instrumentation/okhttp/okhttp-3.0/library).
 
