@@ -60,58 +60,36 @@ equivalent in each service's source set, as described [here](https://stackoverfl
 ### Stage Two
 
 Introduce a set of libraries as dependencies in Kork, and wire them up to OkHttp and logging. This RFC proposes
-using [Micrometer Tracing](https://micrometer.io/docs/tracing), the [successor](https://spring.io/projects/spring-cloud-sleuth)
-to Spring Sleuth.
+using [Spring Sleuth](https://spring.io/projects/spring-cloud-sleuth). [Micrometer Tracing](https://github.com/micrometer-metrics/tracing) is the successor to Spring Sleuth but does not support versions of Spring Boot < 3 or Kotlin versions < 1.7.
 
-The Micrometer Tracing dependencies will be added to Kork as below:
+`org.springframework.cloud:spring-cloud-starter-zipkin` will be added as an api dependency to `kork-web`. As Spring Sleuth is a wrapper for Brave and brings it in transitively, we can remove the existing dependency on `io.zipkin.brave:brave-bom`.
 
-```text
-implementation platform('io.micrometer:micrometer-tracing-bom:${version}')
-implementation 'io.micrometer:micrometer-tracing:${version}'
-```
+Alternatively, we can exclude `org.springframework.cloud:spring-cloud-sleuth-brave` and opt to add a dependency on `org.springframework.cloud:spring-cloud-sleuth-otel-autoconfigure` to use OpenTelemetry instead. We would also need to replace the [Brave OkHttp instrumentation](https://github.com/openzipkin/brave/blob/master/instrumentation/okhttp3) with the equivalent [OpenTelemetry instrumentation](https://github.com/open-telemetry/opentelemetry-java-instrumentation/tree/main/instrumentation/okhttp/okhttp-3.0/library).
 
-The next step will be to choose between [OpenTelemetry](https://opentelemetry.io/docs/concepts/signals/traces/) and
-[Brave](https://zipkin.io/pages/tracers_instrumentation.html). Brave was added to Spinnaker in
-[kork#744](https://github.com/spinnaker/kork/pull/774) and is already wired up to OkHttp.
+I leave the choice between Brave and OpenTelemetry open to discussion in this RFC.
 
-Both [OpenTelemetry](https://github.com/open-telemetry/opentelemetry-java-instrumentation/tree/main/instrumentation/okhttp/okhttp-3.0/library)
-and [Zipkin](https://github.com/openzipkin/brave/blob/master/instrumentation/okhttp3) provide instrumentation for OkHttp,
-therefore we are free to choose. OpenTelemetry has been gaining a lot of momentum, but Brave is also widely used.
-I leave this choice for discussion in this RFC.
-
-Optionally, we can add instrumentation to the HTTP client(s) in Deck, to include the initial call from Deck -> Gate as part
+Additionally, we can add instrumentation to the HTTP client(s) in Deck, to include the initial call from Deck -> Gate as part
 of each trace.
 
-Finally, update the `logback-config.xml` in Kork to include the trace data in each log. At this point, assuming a
+Finally, we update the `logback-config.xml` in Kork to include the trace data in each log. At this point, assuming a
 Spinnaker operator is forwarding logs to an aggregator like Splunk or Elasticsearch, it will be possible to query
 by trace ID and retrieve all logs relating to a single request.
 
 ### Stage Three
 
-Add a way to export traces (or samples of traces) to a backend. Micrometer Tracing
-[supports Zipkin and Tanzu Observability](https://micrometer.io/docs/tracing#_supported_reporters). As Tanzu Observability
-is a paid product, this RFC proposes adding support for Zipkin as a backend.
+Add a way to export traces (or samples of them) to a backend. This RFC proposes adding support for Zipkin as a backend.
 
-Spinnaker operators will be able to enable sending traces to Zipkin, providing visualisation tooling.
+Spinnaker operators will be able to enable sending traces to Zipkin, providing visualisation tooling, using standard Spring Sleuth configuration options in their `spinnaker-local.yml` profile as described [here](https://cloud.spring.io/spring-cloud-sleuth/reference/html/#sending-spans-to-zipkin).
 
 ## Design
 
 ### Dependencies
 
-The following dependencies will be added as Spinnaker dependencies:
-
-* `io.micrometer:micrometer-tracing-bom`
-* `io.micrometer:micrometer-tracing`
-* `io.micrometer:micrometer-tracing-bridge-brave` OR `io.micrometer:micrometer-tracing-bridge-otel`
-
-`io.zipkin.brave:brave-bom` will be removed, replaced by the above.
+`org.springframework.cloud:spring-cloud-starter-zipkin` will be added as a dependency, replacing `io.zipkin.brave:brave-bom`.
 
 If OpenTelemetry is chosen over Brave `io.zipkin.brave:brave-instrumentation-okhttp3` will be replaced by
 `io.opentelemetry.instrumentation:opentelemetry-okhttp-3.0` in `kork-retrofit`, `kork-retrofit2` and `kork-web` in
 stage two.
-
-`io.zipkin.reporter2:zipkin-reporter-brave` OR `io.opentelemetry:opentelemetry-exporter-zipkin` will be added in stage
-three.
 
 ## Drawbacks
 
