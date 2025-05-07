@@ -3,7 +3,7 @@
 ## Meetings
 
 * Regular Meeting
-  * Every 4 weeks, TBD
+  * Every 2 weeks, Friday
   * [Meeting Notes](https://docs.google.com/document/d/1PxIA1XE3nzqLykOFW-AqdU5u9F8cFh3jDvUA41P2cUM/edit#heading=h.6f8ltgro4ste)
 * TOC / SIG Lead Sync
   * Every 4 weeks, Thursday at 4:30pm EST, 1:30pm PST
@@ -23,8 +23,9 @@
 * [David Byron](https://github.com/dbyron-sf) (Salesforce)
 * [Gopinath Rebala](https://github.com/rebalag) (OpsMX)
 * [James Guido](https://github.com/guido9j) (The Home Depot)
-* [Matt Gogerly](https://github.com/mattgogerly) (JPMC)
+* [Matt Gogerly](https://github.com/mattgogerly) ((Wise)
 * [Praseeda Sathaye](https://github.com/praseedasathaye) (AWS)
+* [Jaime O'Byrne](https://github.com/Jaimeoby) (JPMorganChase)
 
 ## Contact
 
