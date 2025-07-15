@@ -17,8 +17,9 @@
 <!-- When updating this list, make sure to also update CODEOWNERS -->
 
 * [Amy Smidutz](https://github.com/asmidutz) (Netflix)
-* [Cameron Motevasselani](https://github.com/link108) (Harness) - Chair
+* [Cameron Motevasselani](https://github.com/link108) - Chair
 * [Cole Duclos](https://github.com/coleduclos) (Autodesk)
+* [Jason McIntosh](https://github.com/jasonmcintosh) (Harness)
 * [Dadisi Sanyika](https://github.com/dsanyika) (Apple)
 * [David Byron](https://github.com/dbyron-sf) (Salesforce)
 * [Gopinath Rebala](https://github.com/rebalag) (OpsMX)
