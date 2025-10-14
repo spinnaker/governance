@@ -3,7 +3,7 @@ name: Plugin Ownership Transfer
 about: Propose a plugin ownership transfer to the `spinnaker-plugins` organization. For more information, please see the documentation for community donated plugins in the governance repository.
 title: 'Plugin Transfer: <plugin name>'
 labels: committee/technical-oversight
-assignees: asmidutz link108 coleduclos dsanyika dbyron-sf rebalag guido9j mattgogerly praseedasathaye
+assignees: asmidutz link108 dsanyika dbyron-sf rebalag guido9j mattgogerly praseedasathaye
 
 ---
 
