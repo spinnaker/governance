@@ -68,7 +68,6 @@ organization:
       - danielas12
       - edgarulg
       - oscarmichelh
-      - xibz
       - christosarvanitis
     oss-approvers:
       description: Approvers Role
@@ -133,6 +132,7 @@ organization:
       - stewchen
       - ttomsu
       - wjoel
+      - xibz
       - vigneshm
       - zachsmith1
     oss-kayenta-approvers:
