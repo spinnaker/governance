@@ -19,11 +19,11 @@
 * [Amy Smidutz](https://github.com/asmidutz) (Netflix)
 * [Cameron Motevasselani](https://github.com/link108) - Chair
 * [Jason McIntosh](https://github.com/jasonmcintosh) (Harness)
-* [Dadisi Sanyika](https://github.com/dsanyika) (Apple)
+* [Dadisi Sanyika](https://github.com/dsanyika) (Sol Duara)
 * [David Byron](https://github.com/dbyron-sf) (Salesforce)
 * [Gopinath Rebala](https://github.com/rebalag) (OpsMX)
 * [James Guido](https://github.com/guido9j) (The Home Depot)
-* [Matt Gogerly](https://github.com/mattgogerly) ((Wise)
+* [Matt Gogerly](https://github.com/mattgogerly) (Wise)
 * [Praseeda Sathaye](https://github.com/praseedasathaye) (AWS)
 * [Jaime O'Byrne](https://github.com/Jaimeoby) (JPMorganChase)
 
