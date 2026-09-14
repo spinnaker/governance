@@ -17,6 +17,7 @@
 <!-- When updating this list, make sure to also update CODEOWNERS -->
 
 * [Amy Smidutz](https://github.com/asmidutz) (Netflix)
+* [Apoorv Mahajan](https://github.com/apoorvmahajandd) (DoorDash)
 * [Cameron Motevasselani](https://github.com/link108) - Chair
 * [Jason McIntosh](https://github.com/jasonmcintosh) (Harness)
 * [Dadisi Sanyika](https://github.com/dsanyika) (Sol Duara)
